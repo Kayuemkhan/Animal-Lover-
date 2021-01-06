@@ -1,93 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/catback"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".LaunchActivity">
 
+    <ImageView
+        android:id="@+id/imagevim"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_80sdp"
+        android:layout_marginBottom="40dp"
+        android:src="@mipmap/animal_lover_foreground" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/overlay_dark_80" />
     <LinearLayout
-
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imagevim"
+        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginTop="20dp"
-            android:src="@mipmap/animal_lover_foreground" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            />
         <TextView
-            android:padding="10dp"
-            android:layout_margin="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Guest User"
+            android:text="Stay Connected"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            android:background="@drawable/buttonborderonly"
-            />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            />
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
         <TextView
-            android:padding="10dp"
-            android:layout_margin="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Log In"
+            android:text="@string/doing_great_work"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            android:background="@drawable/buttonborderonly"
-            />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            />
-
+            android:textColor="@color/overlay_dark_80"
+            android:textSize="18sp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="vertical"
-        android:layout_marginBottom="20dp"
-        >
+        android:background="@color/app_color"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/registerfromlaunch"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Not a Member Yet? "
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="15dp"
             android:text="Register"
-            android:textColor="@color/white"
             android:textAlignment="center"
-            android:textSize="25sp"
-            />
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#EEE" />
 
-
+        <TextView
+            android:id="@+id/loginfromlaunch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="15dp"
+            android:text="Login"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
     </LinearLayout>
-
-
 </RelativeLayout>

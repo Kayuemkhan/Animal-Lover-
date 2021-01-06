@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context="LoginActivity">
 
     <ImageView
@@ -30,7 +31,7 @@
             android:layout_marginBottom="@dimen/_2sdp"
             android:text="Hello"
             android:textColor="@color/app_color"
-            android:textSize="@dimen/_20sdp"
+            android:textSize="@dimen/_30sdp"
             android:textStyle="bold" />
 
         <TextView
@@ -43,6 +44,7 @@
             />
 
         <EditText
+            android:textColor="@color/black"
             android:id="@+id/emailET"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
@@ -55,6 +57,7 @@
             android:text="a@me.com" />
 
         <EditText
+            android:textColor="@color/black"
             android:id="@+id/passwordET"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
@@ -71,7 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
             android:layout_gravity="center"
-            android:background="@color/app_color"
+            android:background="@drawable/buttonbackgroung"
             android:text="Login"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
