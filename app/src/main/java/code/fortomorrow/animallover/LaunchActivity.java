@@ -32,7 +32,6 @@ public class LaunchActivity extends AppCompatActivity {
                     Intent i=new Intent(getApplicationContext(),LoginActivity.class);
                     startActivity(i);
 
-                    //Remove activity
                     finish();
                 } catch (Exception e) {
                 }
