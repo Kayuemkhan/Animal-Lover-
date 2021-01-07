@@ -4,78 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/red"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".LaunchActivity">
+
 
     <ImageView
         android:id="@+id/imagevim"
         android:layout_width="@dimen/_200sdp"
         android:layout_height="@dimen/_150sdp"
-        android:layout_marginLeft="@dimen/_50sdp"
-        android:layout_marginTop="@dimen/_80sdp"
-        android:layout_marginBottom="40dp"
         android:src="@mipmap/animal_lover_foreground" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imagevim"
-        android:orientation="vertical">
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/imagevim"-->
+<!--        android:orientation="vertical">-->
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Stay Connected"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Stay Connected"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="30sp"-->
+<!--            android:textStyle="bold" />-->
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/doing_great_work"
-            android:textAlignment="center"
-            android:textColor="@color/overlay_dark_80"
-            android:textSize="18sp" />
-    </LinearLayout>
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/doing_great_work"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/overlay_dark_80"-->
+<!--            android:textSize="18sp" />-->
+<!--    </LinearLayout>-->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/app_color"
-        android:orientation="horizontal"
-        android:weightSum="2">
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:background="@color/app_color"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:weightSum="2">-->
 
-        <TextView
-            android:id="@+id/registerfromlaunch"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="15dp"
-            android:text="Register"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+<!--        <TextView-->
+<!--            android:id="@+id/registerfromlaunch"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:padding="15dp"-->
+<!--            android:text="Register"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="20sp" />-->
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:background="#EEE" />
+<!--        <View-->
+<!--            android:layout_width="2dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:background="#EEE" />-->
 
-        <TextView
-            android:id="@+id/loginfromlaunch"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="15dp"
-            android:text="Login"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
-    </LinearLayout>
+<!--        <TextView-->
+<!--            android:id="@+id/loginfromlaunch"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:padding="15dp"-->
+<!--            android:text="Login"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="20sp" />-->
+<!--    </LinearLayout>-->
 </RelativeLayout>
