@@ -36,7 +36,10 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    //Third Party Library
+    implementation 'com.balysv:material-ripple:1.0.2' // ripple effect
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
     implementation 'com.jakewharton:butterknife:10.2.3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+
 }
