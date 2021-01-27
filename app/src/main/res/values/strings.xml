@@ -3,4 +3,7 @@
     <string name="new_user_sign_here">New User?    <u>SIGN UP</u> Here</string>
     <string name="already_registered_login_here">Already Registered? <u>Login here</u> </string>
     <string name="doing_great_work">Help the Animals\n If you love them</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_message">This Guide will help you setup\n everything</string>
 </resources>
