@@ -3,14 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.PetGenderSelectionFragment">
+    android:layout_margin="30dp"
+    tools:context=".fragments.PetNameFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="@dimen/_30sdp"
-        android:layout_marginRight="@dimen/_30sdp"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -59,30 +57,31 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:background="@color/red"
-            android:padding="8dp"
-            android:text="MALE"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="18sp"
+            android:text="What is the name of your pet?"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textColor="#0a304a" />
 
-        <TextView
+        <EditText
+            android:id="@+id/emailId"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@color/red"
-            android:padding="8dp"
-            android:text="FEMALE"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
-
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/border_black"
+            android:hint="Your pet name"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="center" />
         <ImageView
+            android:id="@+id/arrowbuttonfrompetname"
+            android:layout_marginTop="100dp"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginTop="100dp"
-            android:src="@drawable/arrroww" />
+            android:src="@drawable/arrroww"
+            />
     </LinearLayout>
 
 

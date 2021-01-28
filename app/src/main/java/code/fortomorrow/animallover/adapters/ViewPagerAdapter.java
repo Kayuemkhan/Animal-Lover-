@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import code.fortomorrow.animallover.fragments.ChildFragment2;
 import code.fortomorrow.animallover.fragments.ChildFragment3;
 import code.fortomorrow.animallover.fragments.PetGenderSelectionFragment;
+import code.fortomorrow.animallover.fragments.PetNameFragment;
 import code.fortomorrow.animallover.fragments.WelcomeFragment;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
@@ -18,7 +19,8 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
                 new WelcomeFragment(), //0
                 new ChildFragment2(), //1
                 new ChildFragment3() ,//2
-                new PetGenderSelectionFragment()
+                new PetGenderSelectionFragment(),
+                new PetNameFragment()
         };
 
     }

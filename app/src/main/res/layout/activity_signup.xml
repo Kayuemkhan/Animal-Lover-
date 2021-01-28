@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".SignupActivity">
 
     <LinearLayout
@@ -13,31 +13,31 @@
         android:layout_height="220dp"
         android:background="@drawable/deginupper"
         android:gravity="center"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/animal_lover_foreground"
-            />
+            android:src="@mipmap/animal_lover_foreground" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="SIGN UP"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="25sp"
-            android:layout_marginTop="20dp"
 
             />
+
         <View
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="#EEE"
             android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="100dp"
-            />
+            android:background="#EEE" />
 
     </LinearLayout>
 
@@ -51,10 +51,7 @@
         android:orientation="vertical">
 
 
-
         <EditText
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
             android:id="@+id/emailETSignUp"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
@@ -64,10 +61,11 @@
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:padding="@dimen/_10sdp"
-            android:text="a@me.com" />
+            android:text="a@me.com"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
 
         <EditText
-            android:textColor="@color/black"
             android:id="@+id/passwordETSignUp"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
@@ -77,7 +75,8 @@
             android:hint="Password"
             android:inputType="textPassword"
             android:padding="@dimen/_10sdp"
-            android:text="123456" />
+            android:text="123456"
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/signUpButton"
