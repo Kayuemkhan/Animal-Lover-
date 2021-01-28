@@ -20,16 +20,12 @@ public class MainActivity extends AppCompatActivity {
     private TextView skiptext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
         init();
-//        View decorView = getWindow().getDecorView();
-//// Hide the status bar.
-//        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-//        decorView.setSystemUiVisibility(uiOptions);
 
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -37,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
                 if (position == 0) {
-                    imageView1.setColorFilter(getResources().getColor(R.color.primary1));
+                    imageView1.setColorFilter(getResources().getColor(R.color.red));
                     imageView2.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
                     imageView3.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
                     imageView4.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
@@ -45,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                     imageView6.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
                 } else if (position == 1) {
                     imageView1.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
-                    imageView2.setColorFilter(getResources().getColor(R.color.primary1));
+                    imageView2.setColorFilter(getResources().getColor(R.color.red));
                     imageView3.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
                     imageView4.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
                     imageView5.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
@@ -55,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     skiptext.setVisibility(View.VISIBLE);
                     imageView1.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
                     imageView2.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
-                    imageView3.setColorFilter(getResources().getColor(R.color.primary1));
+                    imageView3.setColorFilter(getResources().getColor(R.color.red));
                     imageView4.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
                     imageView5.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
                     imageView6.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
@@ -63,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                     imageView1.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
                     imageView2.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
                     imageView3.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
-                    imageView4.setColorFilter(getResources().getColor(R.color.primary1));
+                    imageView4.setColorFilter(getResources().getColor(R.color.red));
                     imageView5.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
                     imageView6.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
                 }

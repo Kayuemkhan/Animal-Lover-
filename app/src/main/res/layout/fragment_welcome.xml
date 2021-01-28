@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:text="Welcome"
                 android:textAlignment="center"
-                android:textColor="@color/primary2"
+                android:textColor="@color/red"
                 android:textSize="35sp"
                 android:textStyle="bold" />
 
@@ -43,11 +43,10 @@
         </LinearLayout>
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/arrw"
             android:id="@+id/next"
-            />
+            android:layout_width="50dp"
+            android:layout_height="49dp"
+            android:src="@drawable/arrroww" />
 
     </LinearLayout>
 
