@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="5dp"
             android:fontFamily="sans-serif-light"
             android:text="What pet do you have"
             android:textAlignment="center"
@@ -26,9 +26,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
             android:orientation="horizontal"
-            android:weightSum="3">
+            android:weightSum="2">
 
             <LinearLayout
                 android:id="@+id/rabbit"
@@ -47,6 +48,7 @@
                     android:background="@color/overlay_dark_10"
                     />
                 <ImageView
+                    android:layout_gravity="center"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="10dp"
@@ -70,6 +72,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/border"
                 android:orientation="vertical"
+
                 android:padding="5dp">
                 <ImageView
                     android:layout_width="wrap_content"
@@ -80,6 +83,7 @@
                     />
                 <ImageView
 
+                    android:layout_gravity="center"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="20dp"
@@ -95,6 +99,20 @@
                     android:textColor="@color/overlay_dark_80" />
             </LinearLayout>
 
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+
             <LinearLayout
                 android:id="@+id/dog"
                 android:layout_width="0dp"
@@ -102,7 +120,8 @@
                 android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:background="@drawable/border"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="5dp">
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -111,11 +130,11 @@
                     android:background="@color/overlay_dark_10"
                     />
                 <ImageView
+
+                    android:layout_gravity="center"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_marginTop="5dp"
-
-                    android:padding="5dp"
+                    android:layout_marginLeft="20dp"
                     android:src="@drawable/dog" />
                 />
 
@@ -127,7 +146,10 @@
                     android:textAlignment="center"
                     android:textColor="@color/overlay_dark_80" />
             </LinearLayout>
+
+
         </LinearLayout>
+
 
         <TextView
             android:layout_width="wrap_content"

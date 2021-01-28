@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                Toast.makeText(getApplicationContext(),"This is "+position+" Fragment",Toast.LENGTH_LONG).show();
+
             }
 
             @Override
