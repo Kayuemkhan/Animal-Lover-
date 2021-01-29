@@ -3,6 +3,7 @@ package code.fortomorrow.animallover;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -63,6 +64,18 @@ public class MainActivity extends AppCompatActivity {
                     imageView5.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
                     imageView6.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
                 }
+                else if (position == 4) {
+                    imageView1.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
+                    imageView2.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
+                    imageView3.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
+                    imageView4.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
+                    imageView5.setColorFilter(getResources().getColor(R.color.red));
+                    imageView6.setColorFilter(getResources().getColor(R.color.overlay_dark_30));
+                }
+                else {
+                    
+                }
+
 
             }
 
