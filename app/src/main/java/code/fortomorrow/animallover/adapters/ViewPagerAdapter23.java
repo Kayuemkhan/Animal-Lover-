@@ -3,6 +3,7 @@ package code.fortomorrow.animallover.adapters;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import code.fortomorrow.animallover.fragments.ChildFragment2;
 import code.fortomorrow.animallover.fragments.ChildFragment3;
@@ -10,10 +11,10 @@ import code.fortomorrow.animallover.fragments.PetDetailsFragment;
 import code.fortomorrow.animallover.fragments.PetNameFragment;
 import code.fortomorrow.animallover.fragments.WelcomeFragment;
 
-public class ViewPagerAdapter extends FragmentPagerAdapter {
+public class ViewPagerAdapter23 extends FragmentStatePagerAdapter {
     private Fragment[] childFragments;
 
-    public ViewPagerAdapter(FragmentManager fm) {
+    public ViewPagerAdapter23(FragmentManager fm) {
         super(fm);
         childFragments = new Fragment[]{
                 new WelcomeFragment(), //0

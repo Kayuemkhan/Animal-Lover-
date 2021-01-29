@@ -10,6 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -36,11 +38,11 @@
                     android:src="@drawable/ic_baseline_check_24" />
 
                 <ImageView
+                    android:id="@+id/imageselectedfittingview"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_gravity="center"
                     android:layout_marginLeft="20dp"
-                    android:src="@drawable/dog" />
+                    android:src="@drawable/cattrack" />
                 />
 
                 <TextView
@@ -68,8 +70,7 @@
             android:id="@+id/emailId"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+
             android:layout_marginBottom="@dimen/_20sdp"
             android:background="@drawable/border_black"
             android:hint="Your pet name"

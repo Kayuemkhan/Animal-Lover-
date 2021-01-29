@@ -18,7 +18,7 @@ import code.fortomorrow.animallover.R;
 
 public class PetNameFragment extends Fragment {
     private ImageView arrowbuttonfrompetname;
-
+    private ImageView imageselectedfittingview;
     public PetNameFragment() {
 
     }
@@ -39,7 +39,7 @@ public class PetNameFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        arrowbuttonfrompetname= view.findViewById(R.id.arrowbuttonfrompetname);
+        init(view);
         arrowbuttonfrompetname.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,4 +47,11 @@ public class PetNameFragment extends Fragment {
             }
         });
     }
+
+    private void init(View view) {
+        arrowbuttonfrompetname= view.findViewById(R.id.arrowbuttonfrompetname);
+        imageselectedfittingview = view.findViewById(R.id.imageselectedfittingview);
+        imageselectedfittingview.setImageResource(R.drawable.cat);
+    }
+
 }

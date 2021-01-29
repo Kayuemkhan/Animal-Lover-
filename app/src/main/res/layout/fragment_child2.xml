@@ -25,6 +25,7 @@
                 android:src="@drawable/person1" />
 
             <TextView
+                android:id="@+id/iAmanewuserTV"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
@@ -48,6 +49,7 @@
                 android:src="@drawable/person2" />
 
             <TextView
+                android:id="@+id/ihaveanaccountTV"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"

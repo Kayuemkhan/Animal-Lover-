@@ -13,11 +13,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import code.fortomorrow.animallover.adapters.ViewPagerAdapter;
+import code.fortomorrow.animallover.adapters.ViewPagerAdapter23;
+import code.fortomorrow.animallover.utils.SharedPref;
 
 public class MainActivity extends AppCompatActivity {
 
-    ViewPager viewPager;
-    ImageView imageView1, imageView2, imageView3, imageView4,imageView5,imageView6;
+    private ViewPager viewPager;
+    private ImageView imageView1, imageView2, imageView3, imageView4,imageView5,imageView6;
     private TextView skiptext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +29,12 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
         init();
-
-        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
+        SharedPref.init(MainActivity.this);
+        SharedPref.write("LOGGEDIN","NO");
+        skiptext.setOnClickListener(v ->{
+            skip_preview();
+        });
+        viewPager.setAdapter(new ViewPagerAdapter23(getSupportFragmentManager()));
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -90,8 +96,8 @@ public class MainActivity extends AppCompatActivity {
         });
         setBackgroundColor();
 
-
     }
+
 
     private void init() {
         viewPager = findViewById(R.id.view_pager);
@@ -120,4 +126,10 @@ public class MainActivity extends AppCompatActivity {
     public void nextfragment(){
         viewPager.setCurrentItem(viewPager.getCurrentItem()+1);
     }
+    private void skip_preview() {
+        startActivity(new Intent(MainActivity.this,HomeActivity.class));
+        //finish();
+
+    }
+
 }
