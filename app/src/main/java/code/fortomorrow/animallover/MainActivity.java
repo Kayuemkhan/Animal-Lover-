@@ -10,10 +10,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import code.fortomorrow.animallover.adapters.ViewPagerAdapter;
-import code.fortomorrow.animallover.adapters.ViewPagerAdapter23;
 import code.fortomorrow.animallover.utils.SharedPref;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         skiptext.setOnClickListener(v ->{
             skip_preview();
         });
-        viewPager.setAdapter(new ViewPagerAdapter23(getSupportFragmentManager()));
+        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

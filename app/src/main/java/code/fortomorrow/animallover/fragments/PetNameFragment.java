@@ -51,7 +51,7 @@ public class PetNameFragment extends Fragment {
     private void init(View view) {
         arrowbuttonfrompetname= view.findViewById(R.id.arrowbuttonfrompetname);
         imageselectedfittingview = view.findViewById(R.id.imageselectedfittingview);
-        imageselectedfittingview.setImageResource(R.drawable.cat);
+//        imageselectedfittingview.setImageResource(R.drawable.cat);
     }
 
 }
