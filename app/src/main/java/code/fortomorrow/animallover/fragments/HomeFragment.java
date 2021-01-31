@@ -12,12 +12,13 @@ import android.widget.Adapter;
 import android.widget.LinearLayout;
 
 import code.fortomorrow.animallover.AdoptPetActivity;
+import code.fortomorrow.animallover.ProfessionalsActivity;
 import code.fortomorrow.animallover.R;
 
 
 public class HomeFragment extends Fragment {
     private LinearLayout adopt;
-
+    private LinearLayout professionals;
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -33,13 +34,24 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home,container,false);
-        adopt = view.findViewById(R.id.adopt);
+        init(view);
         adopt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity(), AdoptPetActivity.class));
             }
         });
+        professionals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ProfessionalsActivity.class));
+            }
+        });
         return view;
+    }
+
+    private void init(View view) {
+        adopt = view.findViewById(R.id.adopt);
+        professionals = view.findViewById(R.id.professionals);
     }
 }
