@@ -9,19 +9,36 @@
     tools:context=".AdoptPetActivity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_50sdp"
         android:background="@color/red"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pets for Adopt"
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:padding="10dp"
-            android:textSize="18sp"
-            />
+        android:layout_marginBottom="10dp">
+        <ImageView
+            android:id="@+id/backImageViewId"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,MissingConstraints" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_margin="@dimen/_5sdp"
+            >
 
+            <EditText
+                android:background="@drawable/border_black"
+                android:hint="\tSearch Here"
+                android:paddingLeft="@dimen/_10sdp"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:id="@+id/searchviewId"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                app:iconifiedByDefault="false"
+                />
+        </LinearLayout>
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_gravity="center"
