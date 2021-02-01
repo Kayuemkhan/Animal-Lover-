@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="@color/overlay_dark_20"
+    >
+
+    <RelativeLayout
+        android:id="@+id/blogpicture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/peta">
+
+        <TextView
+            android:id="@+id/blogheadline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/overlay_dark_20"
+            android:fontFamily="sans-serif-light"
+            android:padding="5dp"
+            android:text="Save Pets Blog "
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/actionId"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="#E8E8E8"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_writing"
+                    android:drawableTint="#42cb2a"
+                    android:gravity="center"
+                    android:text=" View"
+                    android:textColor="#42cb2a" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
