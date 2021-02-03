@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -36,7 +37,8 @@ public class BlogsAdapters extends RecyclerView.Adapter<BlogsAdapters.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull BlogsAdapters.ViewHolder holder, int i) {
         holder.blogheadline.setText(blogslist.get(i).getProfessionalName());
-        holder.blogpicture.setBackgroundResource(blogslist.get(i).getImageResource());
+        holder.blogpicture.setImageResource(blogslist.get(i).getImageResource());
+        holder.writeer.setText("Author: "+blogslist.get(i).getEmail());
     }
 
     @Override
@@ -45,13 +47,15 @@ public class BlogsAdapters extends RecyclerView.Adapter<BlogsAdapters.ViewHolder
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private RelativeLayout blogpicture;
+        private ImageView blogpicture;
         private TextView blogheadline;
+        private TextView writeer;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             blogpicture = itemView.findViewById(R.id.blogpicture);
             //actionId = itemView.findViewById(R.id.actionId);
             blogheadline = itemView.findViewById(R.id.blogheadline);
+            writeer = itemView.findViewById(R.id.writeer);
         }
     }
 }

@@ -29,6 +29,7 @@ import code.fortomorrow.animallover.utils.SharedPref;
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
    // private ImageView imginhome;
     private DrawerLayout drawerLayout;
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +50,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 //        }
         drawerLayout = findViewById(R.id.drawerLayout);
         NavigationView navigationView = findViewById(R.id.nav_view);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("Home");
         ActionBarDrawerToggle actionBarDrawerToggle =new ActionBarDrawerToggle(HomeActivity.this,drawerLayout,toolbar,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
@@ -71,6 +72,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if(id == R.id.nav_home){
+            toolbar.setTitle("Home");
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.framelayout, new HomeFragment());
             ft.commit();
@@ -102,9 +104,25 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             }
         }
         else if(id == R.id.share){
+            String[] TO = {""};
+            String[] CC = {""};
+            Intent emailIntent = new Intent(Intent.ACTION_SEND);
 
+            emailIntent.setData(Uri.parse("mailto:"));
+            emailIntent.setType("text/plain");
+            emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+            emailIntent.putExtra(Intent.EXTRA_CC, CC);
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Your subject");
+            emailIntent.putExtra(Intent.EXTRA_TEXT, "Email message goes here");
+            try {
+                startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+                Log.i("Finished sending email...", "");
+            } catch (android.content.ActivityNotFoundException ex) {
+                Toast.makeText(HomeActivity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+            }
         }
         else if(id == R.id.about){
+            toolbar.setTitle("About");
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 // Replace the contents of the container with the new fragment
             ft.replace(R.id.framelayout, new AboutFragment());

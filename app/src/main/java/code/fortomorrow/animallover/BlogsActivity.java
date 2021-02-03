@@ -23,10 +23,10 @@ public class BlogsActivity extends AppCompatActivity {
         blogsrecylerview = findViewById(R.id.blogsrecylerview);
         blogsrecylerview.setLayoutManager(new LinearLayoutManager(BlogsActivity.this));
         exampleList = new ArrayList<>();
-        exampleList.add(new ProfessionalData (R.drawable.peta, "Save Cats", "ranju@gmail.com"));
-        exampleList.add(new ProfessionalData(R.drawable.petb, "Save Dogs", "sanju@gmail.com"));
-        exampleList.add(new ProfessionalData(R.drawable.petc, "Panedemic Health Tips", "rana@gmail.com"));
-        exampleList.add(new ProfessionalData(R.drawable.petd, "Save Rabbit", "sana@gmail.com"));
+        exampleList.add(new ProfessionalData (R.drawable.peta, "Save Cats from many harmful Disease", "Abu Sayem"));
+        exampleList.add(new ProfessionalData(R.drawable.petb, "Save Dogs from many harmful Disease", "Rakib Khan"));
+        exampleList.add(new ProfessionalData(R.drawable.petc, "Panedemic Health Tips", "Saifa Borsha"));
+        exampleList.add(new ProfessionalData(R.drawable.petd, "Save Rabbit", "Maruf Hossain"));
         blogsrecylerview.setAdapter(new BlogsAdapters(BlogsActivity.this,exampleList));
     }
 }

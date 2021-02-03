@@ -5,7 +5,7 @@
         <item name="colorPrimary">@color/primary2</item>
         <item name="colorPrimaryVariant">@color/primary1</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="android:statusBarColor" tools:targetApi="l">@color/overlay_dark_20 </item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/red </item>
 
         <!-- Customize your theme here. -->
     </style>

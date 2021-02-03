@@ -13,13 +13,15 @@ import android.widget.LinearLayout;
 
 import code.fortomorrow.animallover.AdoptPetActivity;
 import code.fortomorrow.animallover.BlogsActivity;
+import code.fortomorrow.animallover.FoodActivity;
+import code.fortomorrow.animallover.HealthActivity;
 import code.fortomorrow.animallover.ProfessionalsActivity;
 import code.fortomorrow.animallover.R;
 
 
 public class HomeFragment extends Fragment {
     private LinearLayout adopt;
-    private LinearLayout professionals,blogs;
+    private LinearLayout professionals,blogs,food,health;
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -54,6 +56,15 @@ public class HomeFragment extends Fragment {
                 startActivity(new Intent(getActivity(), BlogsActivity.class));
             }
         });
+        food.setOnClickListener(v -> {
+            startActivity(new Intent(getActivity(), FoodActivity.class));
+        });
+        health.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), HealthActivity.class));
+            }
+        });
         return view;
     }
 
@@ -61,5 +72,7 @@ public class HomeFragment extends Fragment {
         adopt = view.findViewById(R.id.adopt);
         professionals = view.findViewById(R.id.professionals);
         blogs = view.findViewById(R.id.blogs);
+        food= view.findViewById(R.id.food);
+        health = view.findViewById(R.id.health);
     }
 }

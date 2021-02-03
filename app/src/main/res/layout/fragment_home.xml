@@ -94,6 +94,7 @@
             android:weightSum="2">
 
             <LinearLayout
+                android:id="@+id/health"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -196,44 +197,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:padding="@dimen/_20sdp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_80sdp"
-                    android:layout_gravity="bottom"
-                    android:layout_marginBottom="10dp"
-                    android:src="@drawable/ic_baseline_live_help_24" />
-
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/overlay_dark_20" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Help"
-
-                    android:textAlignment="center"
-                    android:textColor="@color/overlay_dark_60" />
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="2">
-
-            <LinearLayout
                 android:id="@+id/food"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -242,12 +205,12 @@
                 android:padding="@dimen/_20sdp">
 
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_80sdp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="10dp"
-                        android:src="@drawable/ic_baseline_food_bank_24" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/ic_baseline_food_bank_24" />
 
 
                 <View
@@ -264,8 +227,6 @@
                     android:textColor="@color/overlay_dark_60" />
 
             </LinearLayout>
-
-
 
 
         </LinearLayout>

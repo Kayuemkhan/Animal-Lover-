@@ -5,7 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".BlogsActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Blogs"
+        android:background="@color/red"
+        android:textColor="@color/white"
+        android:padding="15dp"
+        android:textSize="20sp"
+        />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/blogsrecylerview"
         android:layout_width="match_parent"
