@@ -15,6 +15,7 @@ import android.widget.TextView;
 import code.fortomorrow.animallover.LoginActivity;
 import code.fortomorrow.animallover.MainActivity;
 import code.fortomorrow.animallover.R;
+import code.fortomorrow.animallover.utils.SharedPref;
 
 public class ChildFragment2 extends Fragment {
     private TextView iAmanewuserTV;
@@ -23,7 +24,7 @@ public class ChildFragment2 extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        SharedPref.init(getActivity());
     }
 
     @Override
@@ -41,13 +42,16 @@ public class ChildFragment2 extends Fragment {
         iAmanewuserTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity)getActivity()).nextfragment();
+                SharedPref.write("UserStatus","SignUp");
+                startActivity(new Intent(getActivity(),LoginActivity.class));
+//                ((MainActivity)getActivity()).nextfragment();
             }
         });
         ihaveanaccountTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), LoginActivity.class));
+                SharedPref.write("UserStatus","SignIn");
+                startActivity(new Intent(getActivity(),LoginActivity.class));
             }
         });
     }

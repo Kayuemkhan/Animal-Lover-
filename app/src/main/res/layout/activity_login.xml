@@ -31,7 +31,7 @@
                 android:fontFamily="sans-serif"
                 android:paddingLeft="20dp"
                 android:text="User Account"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
         </LinearLayout>
@@ -58,6 +58,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/loginSelector"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -72,16 +73,19 @@
                 android:id="@+id/viewborder1"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@android:color/holo_red_light" />
+                android:background="@android:color/holo_red_light"
+                android:visibility="gone" />
         </LinearLayout>
 
         <LinearLayout
+
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/signupSelector"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -93,14 +97,17 @@
                 android:textStyle="" />
 
             <View
+
                 android:id="@+id/viewborder2"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@android:color/holo_red_light" />
+                android:background="@android:color/holo_red_light"
+                android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>
 
     <FrameLayout
+        android:id="@+id/signinSignUpFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp">
