@@ -23,16 +23,16 @@ public class LoginActivity extends AppCompatActivity {
         SharedPref.init(LoginActivity.this);
 
         if(SharedPref.read("UserStatus","").contains("SignUp") ){
-            viewborder1.setVisibility(View.VISIBLE);
-            viewborder2.setVisibility(View.INVISIBLE);
+            viewborder1.setVisibility(View.INVISIBLE);
+            viewborder2.setVisibility(View.VISIBLE);
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.signinSignUpFragment, new SignUpFragment());
             ft.commit();
             SharedPref.write("UserStatus","");
         }
         else if(SharedPref.read("UserStatus","").contains("SignIn")) {
-            viewborder1.setVisibility(View.INVISIBLE);
-            viewborder2.setVisibility(View.VISIBLE);
+            viewborder1.setVisibility(View.VISIBLE);
+            viewborder2.setVisibility(View.INVISIBLE);
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.signinSignUpFragment, new SignInFragment());
             ft.commit();
