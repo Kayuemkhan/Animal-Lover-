@@ -8,4 +8,16 @@
     <string name="welcome_message">This Guide will help you setup\n everything</string>
     <string name="open">open</string>
     <string name="close">close</string>
+    <string-array name="pet">
+        <item>Rabbit</item>
+        <item>Cat</item>
+        <item>Dog</item>
+        <item>Bird</item>
+        <item>Fish</item>
+    </string-array>
+
+    <string-array name="sex">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
 </resources>

@@ -15,13 +15,14 @@ import code.fortomorrow.animallover.AdoptPetActivity;
 import code.fortomorrow.animallover.BlogsActivity;
 import code.fortomorrow.animallover.FoodActivity;
 import code.fortomorrow.animallover.HealthActivity;
+import code.fortomorrow.animallover.MyPetActivity;
 import code.fortomorrow.animallover.ProfessionalsActivity;
 import code.fortomorrow.animallover.R;
 
 
 public class HomeFragment extends Fragment {
     private LinearLayout adopt;
-    private LinearLayout professionals,blogs,food,health;
+    private LinearLayout professionals,blogs,food,health,mypetsIcon;
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -65,6 +66,12 @@ public class HomeFragment extends Fragment {
                 startActivity(new Intent(getActivity(), HealthActivity.class));
             }
         });
+        mypetsIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), MyPetActivity.class));
+            }
+        });
         return view;
     }
 
@@ -74,5 +81,6 @@ public class HomeFragment extends Fragment {
         blogs = view.findViewById(R.id.blogs);
         food= view.findViewById(R.id.food);
         health = view.findViewById(R.id.health);
+        mypetsIcon = view.findViewById(R.id.mypetsIcon);
     }
 }

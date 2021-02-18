@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private ImageView imageView1, imageView2, imageView3, imageView4,imageView5,imageView6;
     private TextView skiptext;
+    private String loginstatus;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,9 +29,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         SharedPref.init(MainActivity.this);
         init();
-        Log.d("LoggedIn",SharedPref.read("LOGGEDIN",""));
         SharedPref.init(MainActivity.this);
-        SharedPref.write("LOGGEDIN","NO");
+        loginstatus =SharedPref.read("Visited","");
+        if(loginstatus.contains("Yes")){
+            startActivity(new Intent(MainActivity.this,HomeActivity.class));
+            finish();
+        }
+
         skiptext.setOnClickListener(v ->{
             skip_preview();
         });
@@ -125,9 +130,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void nextfragment(){
         viewPager.setCurrentItem(viewPager.getCurrentItem()+1);
+        SharedPref.write("Visited","Yes");
     }
     private void skip_preview() {
         startActivity(new Intent(MainActivity.this,HomeActivity.class));
+        SharedPref.write("Visited","Yes");
         //finish();
 
     }

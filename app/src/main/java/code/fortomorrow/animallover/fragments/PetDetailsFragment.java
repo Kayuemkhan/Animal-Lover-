@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Objects;
+
 import code.fortomorrow.animallover.MainActivity;
 import code.fortomorrow.animallover.R;
 import code.fortomorrow.animallover.utils.SharedPref;
@@ -23,6 +25,7 @@ public class PetDetailsFragment extends Fragment {
     private ImageView imageselectedfittingviewinpetdetails;
     SharedPreferences pref;
     private TextView malePet, femalePet;
+    private Fragment fragment;
     String selected;
     public PetDetailsFragment() {
     }
@@ -35,6 +38,7 @@ public class PetDetailsFragment extends Fragment {
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         SharedPref.init(getActivity());
+        fragment = this;
     }
 
     @Override
@@ -52,6 +56,8 @@ public class PetDetailsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 ((MainActivity)getActivity()).nextfragment();
+                requireActivity().onBackPressed();
+                //getActivity().getFragmentManager().beginTransaction().remove(fragment).commit();
             }
         });
         imageselectedfittingviewinpetdetails = view.findViewById(R.id.imageselectedfittingviewinpetdetails);
@@ -69,12 +75,16 @@ public class PetDetailsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 SharedPref.write("GENDER","Male");
+                ((MainActivity)getActivity()).nextfragment();
+                requireActivity().onBackPressed();
             }
         });
         femalePet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SharedPref.write("GENDER","FEMALE");
+                ((MainActivity)getActivity()).nextfragment();
+                requireActivity().onBackPressed();
             }
         });
         return view;

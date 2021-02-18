@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyPetActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/cattrack"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/ic_add_24"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <EditText
+                        android:id="@+id/petnameSetET"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:hint="Name" />
+
+                    <Spinner
+                        android:id="@+id/mypetSpinnerSet"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:entries="@array/pet" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:background="@color/black" />
+
+                    <Spinner
+                        android:id="@+id/spinnerGenderid"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:entries="@array/sex" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:background="@color/black" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:weightSum="3">
+
+
+
+
+                <EditText
+                    android:id="@+id/petBirthDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:hint="Birthday" />
+
+
+
+                <EditText
+                    android:id="@+id/petColorET"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:hint="Color" />
+
+                <EditText
+                    android:id="@+id/notesPet"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:hint="Notes" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:textColor="@color/white"
+        android:background="@color/red"
+        android:padding="15dp"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

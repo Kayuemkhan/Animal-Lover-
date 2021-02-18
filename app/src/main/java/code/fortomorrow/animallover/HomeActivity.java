@@ -36,9 +36,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_home);
         //imginhome = findViewById(R.id.imginhome);
         SharedPref.init(HomeActivity.this);
-        SharedPreferences pref;
-        pref = HomeActivity.this.getSharedPreferences("pref", Context.MODE_PRIVATE);
-        String selected = pref.getString("Animal", "");
+
 //        if(selected.contains("dog")){
 //            imginhome.setImageResource(R.drawable.dog);
 //        }
@@ -71,6 +69,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
+        if(id == R.id.log_out){
+            SharedPref.write("Visited","");
+            SharedPref.write("LOGGEDIN","");
+            startActivity(new Intent(this,MainActivity.class));
+        }
         if(id == R.id.nav_home){
             toolbar.setTitle("Home");
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
