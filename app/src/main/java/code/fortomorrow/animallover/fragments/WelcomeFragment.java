@@ -38,7 +38,6 @@ public class WelcomeFragment extends Fragment {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 ((MainActivity) getActivity()).nextfragment();
             }
         });

@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import code.fortomorrow.animallover.MainActivity;
 import code.fortomorrow.animallover.R;
@@ -21,26 +22,27 @@ public class PetDetailsFragment extends Fragment {
     private ImageView arrowinpetdetailsIV;
     private ImageView imageselectedfittingviewinpetdetails;
     SharedPreferences pref;
+    private TextView malePet, femalePet;
     String selected;
     public PetDetailsFragment() {
     }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        pref = androidx.preference.PreferenceManager.getDefaultSharedPreferences(this.getActivity().getApplicationContext());
     }
 
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-//        pref = this.getActivity().getSharedPreferences("pref",Context.MODE_PRIVATE);
-       // pref = androidx.preference.PreferenceManager.getDefaultSharedPreferences(this.getActivity().getApplicationContext());
+        SharedPref.init(getActivity());
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_pet_details,container,false);
+        malePet = view.findViewById(R.id.malePet);
+        femalePet = view.findViewById(R.id.femalePet);
         pref = container.getContext().getSharedPreferences("pref", Context.MODE_PRIVATE);
 //        String selected = pref.getString("Animal", "");
         selected = ChildFragment3.animals;
@@ -63,6 +65,18 @@ public class PetDetailsFragment extends Fragment {
         else if(selected.contains("rabbit")){
             imageselectedfittingviewinpetdetails.setImageResource(R.drawable.rabbit);
         }
+        malePet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPref.write("GENDER","Male");
+            }
+        });
+        femalePet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPref.write("GENDER","FEMALE");
+            }
+        });
         return view;
     }
 

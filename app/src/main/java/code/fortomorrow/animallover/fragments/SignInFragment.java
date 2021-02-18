@@ -1,13 +1,16 @@
 package code.fortomorrow.animallover.fragments;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +30,7 @@ import code.fortomorrow.animallover.HomeActivity;
 import code.fortomorrow.animallover.MainActivity;
 import code.fortomorrow.animallover.ModelClass.Users;
 import code.fortomorrow.animallover.R;
+import code.fortomorrow.animallover.utils.SharedPref;
 
 
 public class SignInFragment extends Fragment {
@@ -44,6 +48,10 @@ public class SignInFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPref.init(this.getActivity());
+        Log.d("logeesf",SharedPref.read("LOGGEDIN",""));
+
+        //SharedPreferences preferences = this.getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
     }
 
     @Override
@@ -55,6 +63,10 @@ public class SignInFragment extends Fragment {
         InputPassword = view.findViewById(R.id.login_password_input);
         loadingBar1 = new ProgressDialog(getActivity());
         chkBoxRememberMe = view.findViewById(R.id.remember_me_chkb);
+        if(SharedPref.read("LOGGEDIN","").contains("Y")){
+            InputNumber.setText(SharedPref.read("Phone",""));
+            InputPassword.setText(SharedPref.read("Password",""));
+        }
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,7 +98,6 @@ public class SignInFragment extends Fragment {
         }
     }
     private void AllowAccssAccount(final String phone, final String password) {
-
         final DatabaseReference Rootref;
         Rootref = FirebaseDatabase.getInstance().getReference();
         Rootref.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -100,6 +111,9 @@ public class SignInFragment extends Fragment {
                             if (parentDbName.equals("Users")) {
                                 loadingBar1.dismiss();
                                 Intent intent = new Intent(getActivity(), HomeActivity.class);
+                                SharedPref.write("LOGGEDIN","Y");
+                                SharedPref.write("Phone",phone);
+                                SharedPref.write("Password",password);
                                 startActivity(intent);
                                 getActivity().finish();
                             }

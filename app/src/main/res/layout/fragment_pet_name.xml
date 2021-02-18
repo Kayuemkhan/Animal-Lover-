@@ -49,7 +49,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Dog"
                     android:textAlignment="center"
                     android:textColor="@color/overlay_dark_80" />
             </LinearLayout>
@@ -67,10 +66,9 @@
             android:textColor="#0a304a" />
 
         <EditText
-            android:id="@+id/emailId"
+            android:id="@+id/petnameET"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
-
             android:layout_marginBottom="@dimen/_20sdp"
             android:background="@drawable/border_black"
             android:hint="Your pet name"

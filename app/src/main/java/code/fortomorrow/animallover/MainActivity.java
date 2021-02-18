@@ -5,6 +5,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -21,12 +22,13 @@ public class MainActivity extends AppCompatActivity {
     private TextView skiptext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+        SharedPref.init(MainActivity.this);
         init();
+        Log.d("LoggedIn",SharedPref.read("LOGGEDIN",""));
         SharedPref.init(MainActivity.this);
         SharedPref.write("LOGGEDIN","NO");
         skiptext.setOnClickListener(v ->{

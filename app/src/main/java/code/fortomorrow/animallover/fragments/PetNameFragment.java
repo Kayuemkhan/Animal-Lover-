@@ -7,18 +7,25 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import code.fortomorrow.animallover.HomeActivity;
 import code.fortomorrow.animallover.LoginActivity;
+import code.fortomorrow.animallover.MainActivity;
 import code.fortomorrow.animallover.R;
+import code.fortomorrow.animallover.utils.SharedPref;
 
 
 public class PetNameFragment extends Fragment {
     private ImageView arrowbuttonfrompetname;
     private ImageView imageselectedfittingview;
+    private TextView petnameET;
     public PetNameFragment() {
 
     }
@@ -32,8 +39,26 @@ public class PetNameFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_pet_name, container, false);
+        petnameET = view.findViewById(R.id.petnameET);
+        petnameET.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-        return inflater.inflate(R.layout.fragment_pet_name, container, false);
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String petname = s.toString();
+                SharedPref.read("PetName",petname);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        return view;
     }
 
     @Override
@@ -43,7 +68,7 @@ public class PetNameFragment extends Fragment {
         arrowbuttonfrompetname.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), LoginActivity.class));
+                startActivity(new Intent(getActivity(), HomeActivity.class));
             }
         });
     }
