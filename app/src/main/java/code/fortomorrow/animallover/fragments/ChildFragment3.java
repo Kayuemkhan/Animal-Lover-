@@ -78,7 +78,7 @@ public class ChildFragment3 extends Fragment {
 
         });
         fish.setOnClickListener(v -> {
-            Toast.makeText(getActivity(),"Rabbit",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(),"fish",Toast.LENGTH_SHORT).show();
             imagetickinfish.setBackgroundColor(getResources().getColor(R.color.red));
             SharedPref.write("Animal","fish");
             animals = "fish";
@@ -86,7 +86,7 @@ public class ChildFragment3 extends Fragment {
 
         });
         bird.setOnClickListener(v -> {
-            Toast.makeText(getActivity(),"Rabbit",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(),"bird",Toast.LENGTH_SHORT).show();
             imagetickinbird.setBackgroundColor(getResources().getColor(R.color.red));
             SharedPref.write("Animal","bird");
             animals = "bird";

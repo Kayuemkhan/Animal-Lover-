@@ -132,6 +132,7 @@
     </ScrollView>
 
     <TextView
+        android:id="@+id/savePetDetails"
         android:textColor="@color/white"
         android:background="@color/red"
         android:padding="15dp"
