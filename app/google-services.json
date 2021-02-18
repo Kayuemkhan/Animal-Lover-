@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "139268364357",
+    "project_id": "animal-lover-386da",
+    "storage_bucket": "animal-lover-386da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139268364357:android:444e381554a98353e26b2c",
+        "android_client_info": {
+          "package_name": "code.fortomorrow.animallover"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139268364357-7p082otq3fh8rglio25cbrbe9u7rn9bb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDy_jjlMqC_NlBZ9VgUHSMKCQwmDXQ0S6Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139268364357-7p082otq3fh8rglio25cbrbe9u7rn9bb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
