@@ -56,7 +56,7 @@ public class PetDetailsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 ((MainActivity)getActivity()).nextfragment();
-                requireActivity().onBackPressed();
+                //requireActivity().onBackPressed();
                 //getActivity().getFragmentManager().beginTransaction().remove(fragment).commit();
             }
         });
@@ -76,7 +76,7 @@ public class PetDetailsFragment extends Fragment {
             public void onClick(View v) {
                 SharedPref.write("GENDER","Male");
                 ((MainActivity)getActivity()).nextfragment();
-                requireActivity().onBackPressed();
+                //requireActivity().onBackPressed();
             }
         });
         femalePet.setOnClickListener(new View.OnClickListener() {
@@ -84,7 +84,7 @@ public class PetDetailsFragment extends Fragment {
             public void onClick(View v) {
                 SharedPref.write("GENDER","FEMALE");
                 ((MainActivity)getActivity()).nextfragment();
-                requireActivity().onBackPressed();
+                //requireActivity().onBackPressed();
             }
         });
         return view;
