@@ -8,6 +8,73 @@
     <string name="welcome_message">This Guide will help you setup\n everything</string>
     <string name="open">open</string>
     <string name="close">close</string>
+    <string name="typesfoodcat">
+         1.Dry food diet\n
+        2.Wet food diet\n
+        3.Renal diet\n
+        4.Gastrointestinal health diets\n
+        5.High energy diet\n
+
+    </string>
+    <string name="typesmedicinecat">
+         1.Fluids for Cats\n
+        2.Digestive Disorder Products for Cats\n
+        3.Hormone Replacement or Inhibition for Cats\n
+        4.Heart and Blood Pressure Drugs for Cats\n
+        5.Bronchodilators for Cats\n
+
+    </string>
+    <string name="foodlistcat">
+          1.Salmon\n
+         2.Trout\n
+         3.Herring\n
+         4.Mackerel\n
+         5.Tuna\n
+         6.Whitefish\n
+         7.Chicken\n
+         8.Turkey\n
+         9.Pheasant\n
+         10.Beef\n
+
+    </string>
+    <string name="typesfoodbird">
+        #1: Bird seed mixtures\n
+        #2: Bird cake and food bars\n
+        #3: Live foods and other insect foods\n
+        #4: Breed your own mealworms\n
+        #5: Household scraps for birds
+    </string>
+    <string name="foodlistbird">
+       Top Food Names for Female Dogs:\n
+        1.Sunflower\n
+        2.Safflower\n
+        3.Nyjer (thistle)
+        4.Peanuts
+        5.White Proso Millet\n
+        6.Mealworms\n
+    </string>
+    <string name="typesfooddog">
+        #1: Kibble/Dry\n
+        #2: Canned\n
+        #3: Semi-Moist\n
+        #4: Home Cooked\n
+        #5: Raw
+    </string>
+    <string name="foodlistdog">
+       Top Food Names for Female Dogs:\n
+        1.Ginger\n
+        2.Pepper\n
+        3.Cookie
+        4.Cinnamon
+        5.Snickers\n\n
+        Top Food Names for Male Dogs\n
+        1.Pickles\n
+        2.Peanut\n
+        3.Pepper\n
+        4.Brownie\n
+        5.Chip\n
+    </string>
+
     <string-array name="pet">
         <item>Rabbit</item>
         <item>Cat</item>

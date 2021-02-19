@@ -1,17 +1,19 @@
 package code.fortomorrow.animallover.ModelClass;
 
-public class ProfessionalData {
+public class BlogModelClass {
     private int imageResource;
     private String professionalName;
     private String email;
-    
-    public ProfessionalData() {
+    private String description;
+
+    public BlogModelClass() {
     }
 
-    public ProfessionalData(int imageResource, String professionalName, String email) {
+    public BlogModelClass(int imageResource, String professionalName, String email, String description) {
         this.imageResource = imageResource;
         this.professionalName = professionalName;
         this.email = email;
+        this.description = description;
     }
 
     public int getImageResource() {
@@ -36,5 +38,13 @@ public class ProfessionalData {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
