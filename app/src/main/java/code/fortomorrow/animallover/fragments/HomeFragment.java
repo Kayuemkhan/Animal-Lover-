@@ -15,9 +15,11 @@ import code.fortomorrow.animallover.AdoptPetActivity;
 import code.fortomorrow.animallover.BlogsActivity;
 import code.fortomorrow.animallover.FoodActivity;
 import code.fortomorrow.animallover.HealthActivity;
+import code.fortomorrow.animallover.LoginActivity;
 import code.fortomorrow.animallover.MyPetActivity;
 import code.fortomorrow.animallover.ProfessionalsActivity;
 import code.fortomorrow.animallover.R;
+import code.fortomorrow.animallover.utils.SharedPref;
 
 
 public class HomeFragment extends Fragment {
@@ -42,34 +44,65 @@ public class HomeFragment extends Fragment {
         adopt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), AdoptPetActivity.class));
+                if(SharedPref.read("LOGGEDIN","").contains("Y")){
+                    startActivity(new Intent(getActivity(), AdoptPetActivity.class));
+                }
+                else {
+                    startActivity(new Intent(getActivity(), LoginActivity.class));
+                }
             }
+
         });
         professionals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), ProfessionalsActivity.class));
+                if(SharedPref.read("LOGGEDIN","").contains("Y")){
+                    startActivity(new Intent(getActivity(), ProfessionalsActivity.class));
+                }
+                else {
+                    startActivity(new Intent(getActivity(), LoginActivity.class));
+                }
             }
         });
         blogs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), BlogsActivity.class));
+                if(SharedPref.read("LOGGEDIN","").contains("Y")){
+                    startActivity(new Intent(getActivity(), BlogsActivity.class));
+                }
+                else {
+                    startActivity(new Intent(getActivity(), LoginActivity.class));
+                }
             }
         });
         food.setOnClickListener(v -> {
-            startActivity(new Intent(getActivity(), FoodActivity.class));
+            if(SharedPref.read("LOGGEDIN","").contains("Y")){
+                startActivity(new Intent(getActivity(), FoodActivity.class));
+            }
+            else {
+                startActivity(new Intent(getActivity(), LoginActivity.class));
+            }
         });
         health.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), HealthActivity.class));
+                if(SharedPref.read("LOGGEDIN","").contains("Y")){
+                    startActivity(new Intent(getActivity(), HealthActivity.class));
+                }
+                else {
+                    startActivity(new Intent(getActivity(), LoginActivity.class));
+                }
             }
         });
         mypetsIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), MyPetActivity.class));
+                if(SharedPref.read("LOGGEDIN","").contains("Y")){
+                    startActivity(new Intent(getActivity(), MyPetActivity.class));
+                }
+                else {
+                    startActivity(new Intent(getActivity(), LoginActivity.class));
+                }
             }
         });
         return view;

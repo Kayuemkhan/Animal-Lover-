@@ -133,9 +133,6 @@ public class MyPetActivity extends AppCompatActivity {
                 if (animal.equals("rabbit")) {
                     mypetSpinnerSet.setSelection(0);
                 }
-                if (animal.equals("cat")) {
-                    mypetSpinnerSet.setSelection(1);
-                }
                 if (animal.equals("bird")) {
                     mypetSpinnerSet.setSelection(3);
                 }
