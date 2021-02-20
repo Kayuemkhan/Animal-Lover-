@@ -16,7 +16,10 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -30,10 +33,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
    // private ImageView imginhome;
     private DrawerLayout drawerLayout;
     Toolbar toolbar;
+    MenuItem menuItem;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
         //imginhome = findViewById(R.id.imginhome);
         SharedPref.init(HomeActivity.this);
 
@@ -65,10 +70,31 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         ft.commit();
     }
 
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        menuItem = menu.findItem(R.id.log_in);
+        if(SharedPref.read("LOGGEDIN","").contains("Y"))
+        {
+            menuItem.setVisible(true);
+        }
+        else
+        {
+            menuItem.setVisible(false);
+        }
+        return true;
+    }
+
+
     @SuppressLint("LongLogTag")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
+
+        if(SharedPref.read("LOGGEDIN","").contains("Y")){
+
+        }
         if(id == R.id.log_out){
             SharedPref.write("Visited","");
             SharedPref.write("LOGGEDIN","");

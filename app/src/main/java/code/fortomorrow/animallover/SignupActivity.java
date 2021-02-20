@@ -19,12 +19,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class SignupActivity extends AppCompatActivity {
-    @BindView(R.id.emailETSignUp)
-    EditText emailETSignUp;
-    @BindView(R.id.passwordETSignUp)
-    EditText passwordSignUp;
-    @BindView(R.id.signUpButton)
-    public Button signupButton;
+
 //    private FirebaseAuth mAuth;
 //    private DatabaseReference usersData ;
 //    private DatabaseReference cash ;
@@ -36,61 +31,5 @@ public class SignupActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         loadingBar1 = new ProgressDialog(this);
     }
-    @OnClick(R.id.signUpButton)
-    public void signUp() {
-        String email = emailETSignUp.getText().toString();
-        String pass = passwordSignUp.getText().toString();
-        startActivity(new Intent(SignupActivity.this,LoginActivity.class));
-//        if (TextUtils.isEmpty(email)) {
-//            emailETSignUp.setError("Phone Field can't be Blank");
-//            return;
-//        } else if (TextUtils.isEmpty(pass)) {
-//            passwordSignUp.setError("Password Field can't be Blank");
-//            return;
-//        } else {
-//            loadingBar1.setTitle("Login Account");
-//            loadingBar1.setMessage("Please Wait, While we are checking the credentials");
-//            loadingBar1.setCanceledOnTouchOutside(false);
-//            loadingBar1.show();
-//
-////            AllowAccssAccount(email, pass);
-//        }
-    }
 
-//    private void AllowAccssAccount(String email, String pass) {
-//        mAuth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(task -> {
-//            if(task.isSuccessful()){
-//                FirebaseUser user = mAuth.getCurrentUser();
-//                HashMap<String,Object> usersdata= new HashMap<>();
-//                usersdata.put("email",email);
-//                usersdata.put("pass",pass);
-//                String user2 = user.getUid();
-//                usersData.child(user2).updateChildren(usersdata);
-//                HashMap<String, Object> cashammount = new HashMap<>();
-//                cashammount.put("amount",amount);
-//                cash.child(user2).updateChildren(cashammount);
-//                //cash.child(user2).setValue("200");
-//                startActivity(new Intent(getApplicationContext(),LoginActivity.class));
-//                loadingBar1.dismiss();
-//                finish();
-//            }
-//            else {
-//                Toast.makeText(SignupActivity.this, "Authentication failed.",
-//                        Toast.LENGTH_SHORT).show();
-//            }
-//        }).addOnFailureListener(new OnFailureListener() {
-//            @Override
-//            public void onFailure(@NonNull Exception e) {
-//                Log.e("error",e.getMessage());
-//                Toast.makeText(getApplicationContext(),"error"+e.getMessage(),Toast.LENGTH_LONG).show();
-//                loadingBar1.dismiss();
-//
-//
-//            }
-//        });
-//    }
-//    @OnClick(R.id.sign_in_back)
-//    public void signup(){
-//        startActivity(new Intent(getApplicationContext(),LaunchActivity.class));
-//    }
 }
