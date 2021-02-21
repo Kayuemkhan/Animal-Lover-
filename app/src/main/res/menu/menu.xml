@@ -20,6 +20,16 @@
             android:title="Log in / Register" />
     </group>
     <group
+        android:visible="false"
+        android:id="@+id/groupmyprofile"
+        android:checkableBehavior="single">
+        <item
+            android:visible="true"
+            android:id="@+id/my_profile"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:title="My Profile" />
+    </group>
+    <group
         android:id="@+id/settings"
         android:checkableBehavior="single">
 

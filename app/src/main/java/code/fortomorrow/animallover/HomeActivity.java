@@ -60,6 +60,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         actionBarDrawerToggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(HomeActivity.this);
+        if(SharedPref.read("LOGGEDIN","").contains("Y")){
+            navigationView.getMenu().setGroupVisible(R.id.grouplogin,false);
+            navigationView.getMenu().setGroupVisible(R.id.groupmyprofile,true);
+        }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             actionBarDrawerToggle.getDrawerArrowDrawable().setColor(getColor(R.color.white));
         } else {
@@ -70,30 +74,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         ft.commit();
     }
 
-    @Override
-    public boolean onPrepareOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-        menuItem = menu.findItem(R.id.log_in);
-        if(SharedPref.read("LOGGEDIN","").contains("Y"))
-        {
-            menuItem.setVisible(true);
-        }
-        else
-        {
-            menuItem.setVisible(false);
-        }
-        return true;
-    }
-
 
     @SuppressLint("LongLogTag")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-
-        if(SharedPref.read("LOGGEDIN","").contains("Y")){
-
+        if(id == R.id.my_profile){
+            startActivity(new Intent(HomeActivity.this,MyprofileActivity.class));
         }
         if(id == R.id.log_out){
             SharedPref.write("Visited","");
@@ -107,7 +94,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             ft.commit();
         }
         else if(id == R.id.log_in){
+
             startActivity(new Intent(HomeActivity.this,LoginActivity.class));
+
         }
         else if(id == R.id.settings){
 
