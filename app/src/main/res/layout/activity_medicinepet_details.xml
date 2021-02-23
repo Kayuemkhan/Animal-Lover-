@@ -17,12 +17,35 @@
         android:textSize="20sp"
         />
     <LinearLayout
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="Medicines"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/acme"
+                android:padding="10dp"
+                android:text="@string/when_your_pet_has_a_medical_condition_your_veterinarian_might_prescribe_one_or_more_medications_intended_to_manage_treat_or_cure_the_problem_although_there_are_some_veterinary_specific_drugs_many_of_the_drugs_used_in_veterinary_medicine_are_the_same_as_those_used_in_people_ata_medicine_er_vitor_deoa_lagbe_jeta_already_medicines_doc_file_deoa_ache_amra_kono_vabe_daye_thakbo_na_jekono_kisu_medicine_use_korar_agee_doctor_or_prescribe_hoa_lagbe"
+                android:textColor="@color/red"
+                android:textStyle="bold" />
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

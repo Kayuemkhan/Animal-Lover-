@@ -15,6 +15,7 @@
         android:padding="20dp">
 
         <ImageView
+            android:id="@+id/backfrommyprofile"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_gravity="center"
@@ -43,6 +44,7 @@
             app:cardElevation="5dp">
 
             <LinearLayout
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
