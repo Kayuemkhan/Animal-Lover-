@@ -44,15 +44,7 @@
         #4: Breed your own mealworms\n
         #5: Household scraps for birds
     </string>
-    <string name="foodlistbird">
-       Top Food Names for Female Dogs:\n
-        1.Sunflower\n
-        2.Safflower\n
-        3.Nyjer (thistle)
-        4.Peanuts
-        5.White Proso Millet\n
-        6.Mealworms\n
-    </string>
+
     <string name="typesfooddog">
         #1: Kibble/Dry\n
         #2: Canned\n
@@ -75,6 +67,12 @@
         5.Chip\n
     </string>
     <string name="when_your_pet_has_a_medical_condition_your_veterinarian_might_prescribe_one_or_more_medications_intended_to_manage_treat_or_cure_the_problem_although_there_are_some_veterinary_specific_drugs_many_of_the_drugs_used_in_veterinary_medicine_are_the_same_as_those_used_in_people_ata_medicine_er_vitor_deoa_lagbe_jeta_already_medicines_doc_file_deoa_ache_amra_kono_vabe_daye_thakbo_na_jekono_kisu_medicine_use_korar_agee_doctor_or_prescribe_hoa_lagbe">When your pet has a medical condition, your veterinarian might prescribe one or more medications intended to manage, treat or cure the problem. Although there are some veterinary-specific drugs, many of the drugs used in veterinary medicine are the same as those used in people. ata medicine er vitor deoa lagbe jeta already medicines doc file deoa ache ... amra kono vabe daye thakbo na . jekono kisu medicine use korar agee doctor or prescribe hoa lagbe</string>
+    <string name="warning"><b>Warning- </b>As with any fresh food you offer your bird, remove and discard any leftovers a
+        couple of hours after serving. This prevents bacteria growth inside of your pet’s cage. Take it easy on the grapes,
+        however. They contain a lot of sugar. </string>
+    <string name="warning2" >
+        <b>Warning- </b>Remember to never serve raw beans to your companion bird as they can be toxic unless cooked.
+    </string>
 
     <string-array name="pet">
         <item>Rabbit</item>

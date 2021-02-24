@@ -7,9 +7,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 public class HealthActivity extends AppCompatActivity {
-    private CardView medicinecard,diseasecard,healthcard;
+    private LinearLayout medicinecard,diseasecard,firstAidCard;
     private ImageView backfrommyhealth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,6 @@ public class HealthActivity extends AppCompatActivity {
         medicinecard = findViewById(R.id.medicinecard);
         backfrommyhealth = findViewById(R.id.backfrommyhealth);
         diseasecard = findViewById(R.id.diseasecard);
-        healthcard = findViewById(R.id.healthcard);
+        firstAidCard = findViewById(R.id.firstAidCard);
     }
 }
