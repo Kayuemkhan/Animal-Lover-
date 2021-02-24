@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -28,17 +29,9 @@ public class FoodActivity extends AppCompatActivity {
         carfoodcard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(FoodActivity.this);
-                LayoutInflater inflater = (LayoutInflater) FoodActivity.this.
-                        getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                View view2 = inflater.inflate(R.layout.aleartcatfood, null);
-                builder.setView(view2);
-                ImageView close = view2.findViewById(R.id.closeId);
-                AlertDialog alert = builder.create();
-                close.setOnClickListener(view -> alert.dismiss());
-                alert.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                alert.setCancelable(false);
-                alert.show();
+                Intent intent = new Intent(FoodActivity.this,SingleFoodsActivity.class);
+                intent.putExtra("animal","cat");
+                startActivity(intent);
 
             }
         });
@@ -61,25 +54,9 @@ public class FoodActivity extends AppCompatActivity {
         birdfoodcard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(FoodActivity.this);
-                LayoutInflater inflater = (LayoutInflater) FoodActivity.this.
-                        getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                View view2 = inflater.inflate(R.layout.aleartfoodbird, null);
-                builder.setView(view2);
-                ImageView close = view2.findViewById(R.id.closeId);
-                AlertDialog alert = builder.create();
-                close.setOnClickListener(view -> alert.dismiss());
-                alert.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                alert.setCancelable(false);
-                alert.show();
-                WindowManager wm = (WindowManager) FoodActivity.this.getSystemService(Context.WINDOW_SERVICE);
-                Display display = wm.getDefaultDisplay();
-                DisplayMetrics metrics = new DisplayMetrics();
-                display.getMetrics(metrics);
-                Double width = metrics.widthPixels * .9;
-                Double height = metrics.heightPixels * .9;
-                Window win = alert.getWindow();
-                win.setLayout(width.intValue(), height.intValue());
+                Intent intent = new Intent(FoodActivity.this,SingleFoodsActivity.class);
+                intent.putExtra("animal","bird");
+                startActivity(intent);
             }
         });
     }
