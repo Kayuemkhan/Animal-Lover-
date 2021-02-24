@@ -39,14 +39,7 @@ public class FoodActivity extends AppCompatActivity {
                 alert.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 alert.setCancelable(false);
                 alert.show();
-                WindowManager wm = (WindowManager) FoodActivity.this.getSystemService(Context.WINDOW_SERVICE);
-                Display display = wm.getDefaultDisplay();
-                DisplayMetrics metrics = new DisplayMetrics();
-                display.getMetrics(metrics);
-                Double width = metrics.widthPixels * .7;
-                Double height = metrics.heightPixels * .7;
-                Window win = alert.getWindow();
-                win.setLayout(width.intValue(), height.intValue());
+
             }
         });
         dogfoodcard.setOnClickListener(new View.OnClickListener() {
@@ -79,6 +72,14 @@ public class FoodActivity extends AppCompatActivity {
                 alert.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 alert.setCancelable(false);
                 alert.show();
+                WindowManager wm = (WindowManager) FoodActivity.this.getSystemService(Context.WINDOW_SERVICE);
+                Display display = wm.getDefaultDisplay();
+                DisplayMetrics metrics = new DisplayMetrics();
+                display.getMetrics(metrics);
+                Double width = metrics.widthPixels * .9;
+                Double height = metrics.heightPixels * .9;
+                Window win = alert.getWindow();
+                win.setLayout(width.intValue(), height.intValue());
             }
         });
     }
