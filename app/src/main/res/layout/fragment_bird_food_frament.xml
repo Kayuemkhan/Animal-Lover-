@@ -44,7 +44,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed"
-                        android:lineSpacingExtra="2dp"
+                        android:lineSpacingExtra="4dp"
                         android:paddingLeft="10dp"
                         android:text="Sharing a meal with your bird can be a wonderful bonding experience, but did you know that it can also benefit your pet's health?
 Many bird diets lack certain vitamins and minerals that birds need, which can lead to a host of serious health conditions. Feeding your bird a healthy diet does not have to be costly or time-consuming. When you feel like your bird deserves a special treat, try serving up one of these healthy and easy options that are packed with taste as well as beneficial nutrients.
@@ -66,7 +66,7 @@ Many bird diets lack certain vitamins and minerals that birds need, which can le
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed"
-                        android:lineSpacingExtra="2dp"
+                        android:lineSpacingExtra="4dp"
                         android:paddingLeft="10dp"
                         android:text="\nMango, pomegranate, bananas, cantaloupe, or apples: It's your choice, and it's also about what your birds prefer. Just about any food imaginable is good for your bird's diet. Full of taste and nutritional value, fruits are a wonderful source of vitamins, and these choices are a favorite among the vast majority of pet birds.\n"
                         android:textColor="@color/black"
@@ -76,7 +76,7 @@ Many bird diets lack certain vitamins and minerals that birds need, which can le
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed"
-                        android:lineSpacingExtra="2dp"
+                        android:lineSpacingExtra="4dp"
                         android:paddingLeft="10dp"
                         android:text="@string/warning"
                         android:textColor="@color/black"
@@ -96,7 +96,7 @@ Many bird diets lack certain vitamins and minerals that birds need, which can le
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed"
-                        android:lineSpacingExtra="2dp"
+                        android:lineSpacingExtra="4dp"
                         android:paddingLeft="10dp"
                         android:text="\nBeans are a wonderful source of vegetable protein. They're good for you and good for your bird, too! Beans are also an outstanding source of fiber for your companion bird which helps keep its digestive system running smoothly. Try boiling a 15-bean soup mix without any seasoning. Allow the beans to cool, and then offer a scoop to your bird. The chances are that this will become a fast favorite with your little friend.\n"
                         android:textColor="@color/black"
@@ -106,7 +106,7 @@ Many bird diets lack certain vitamins and minerals that birds need, which can le
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed"
-                        android:lineSpacingExtra="2dp"
+                        android:lineSpacingExtra="4dp"
                         android:paddingLeft="10dp"
                         android:text="@string/warning2"
                         android:textColor="@color/black"
@@ -126,9 +126,85 @@ Many bird diets lack certain vitamins and minerals that birds need, which can le
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed"
-                        android:lineSpacingExtra="2dp"
+                        android:lineSpacingExtra="4dp"
                         android:paddingLeft="10dp"
                         android:text="\nDo you like alfalfa sprouts on your salad? Your bird will like them too! Learning to safely sprout in your kitchen is not difficult at all! Be sure to thoroughly wash any sprouts that you offer your bird. Some may have come into contact with pesticides in their journey from the garden to your local supermarket, and you don't want to pass these toxins on to your pet. Growing your own sprouts is a healthy way to give live, raw nutrition to your flock. \n"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:paddingLeft="10dp"
+                        android:text="\nVegetables:"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:lineSpacingExtra="4dp"
+                        android:paddingLeft="10dp"
+                        android:text="\nWild birds feast on an amazing variety of vegetables in their natural habitats, so it only makes sense that fresh veggies are good for companion birds as well. Try offering your pet some thoroughly washed and rinsed broccoli, yellow squash, or greens next time you serve these veggies in your home. Other avian favorites include carrots, kale, root vegetables, and peas. \n"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:paddingLeft="10dp"
+                        android:text="\nCereal/Grains:"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:lineSpacingExtra="4dp"
+                        android:paddingLeft="10dp"
+                        android:text="\nGrain farmers often complain when flocks of wild birds descend on their crops to feast. A hungry group of birds can strip a field of grain in no time. Grains are nutritious and very good for birds. They offer nutritional values that some other foods cannot. Whole grains are an excellent source of vital protein, not to mention beneficial carbohydrates. Try serving your bird oats, quinoa or Grain Bake and watch the feeding frenzy begin! \n"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:paddingLeft="10dp"
+                        android:text="\nNuts:"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:lineSpacingExtra="4dp"
+                        android:paddingLeft="10dp"
+                        android:text="\nNuts are extremely healthy for your companion bird. Walnuts, in particular, have many nutritional features not found in other nuts. Nuts are also very tasty, and many birds appreciate them as special treats. Nuts are natural foraging toys as well as treats. Many birds will spend time exercising their beak and jaw muscles on the shells of some varieties, trying to pry them open. If they find one they simply cannot open, give them a hand and use a nutcracker to assist in cracking them. Always make sure that any nuts that you serve your bird are clean and unsalted. Nuts can be frozen to preserve freshness over the long term. \n"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:paddingLeft="10dp"
+                        android:text="\nPeppers:"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:lineSpacingExtra="4dp"
+                        android:paddingLeft="10dp"
+                        android:text="\nAlthough many humans have trouble eating spicy peppers, birds can take the heat. It seems that our avian friends lack the taste receptors that pick up on a pepper's stinging bite, which makes them a favorite of birds around the world. Try giving your pet a nice fresh chili or banana pepper and watch it chomp through it to get to the meat and seeds inside. You may find out that you have quite a hot little tamale on your hands! Jalapeño peppers are another favorite of companion birds.  \n"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 

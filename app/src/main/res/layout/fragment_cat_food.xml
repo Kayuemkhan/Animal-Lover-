@@ -5,10 +5,129 @@
     android:layout_height="match_parent"
     tools:context=".fragments.CatFoodFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Cat Food" />
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/catback" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:paddingLeft="10dp"
+                        android:text="Some  foods Cats like to eat are:\n"
+                        android:textColor="@color/red_700"
+                        android:textSize="20sp" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:paddingLeft="10dp"
+                        android:text="\nWeek0-week4: "
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:lineSpacingExtra="4dp"
+                        android:paddingLeft="10dp"
+                        android:text="\nMother's milk is the ideal food for cats at this time. In this time the cat can eat only liquid food. There is no need to eat solid foods. If the baby is an orphan, the baby should be fed liquid milk or powdered milk through baby feeder/ dropper/syringe. If the milk is thick, the baby may get diarrhea. So mix it with equal amount of water (1 cup liquid milk = 1 cup water in this ratio), if it is powder milk than mix it very thinly and then feed the baby. Cow's milk is harmful for kitten because of it’s high lactose . Kitten Formula for orphaned kittens is also available at various pet shops which can be used as an alternative of breast milk. It is fed every 2-3 hours till the age of four weeks.\n"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:paddingLeft="10dp"
+                        android:text="\nWeek4-week12:"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:lineSpacingExtra="4dp"
+                        android:paddingLeft="10dp"
+                        android:text="\nDuring this time, kittens can eat milk as well as other foods. Different foods like fish without thorns, mashed boiled meat (without spices) etc. should be eaten. If you want to give rice, you have to mix a small amount of rice. The food should be crushed well and softened with a little water. Kitten Food can be fed and if necessary it should be softened by mixing with water. The packet is instructed to feed according to the weight. At this time children need more nutrition which is available in Kitten Food. The baby should be fed 3-5 times a day and breastfeeding should be gradually reduced. However, after the age of 8-10 weeks, there is no need to breastfeed.\n"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:paddingLeft="10dp"
+                        android:text="\nWeek12/3 months later: "
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:lineSpacingExtra="4dp"
+                        android:paddingLeft="10dp"
+                        android:text="\nAt this time the cat eats all kinds of food such as different types of fish, chicken, beef, eggs, cat wet food, cat dry food etc. With plenty of pure water to drink. Since cats are carnivores, even if you give them rice, you should mix more meat with less rice. However, the food must be boiled in water without oil, spices, salt, sugar, onion, garlic. It is better not to eat raw fish meat because it contains bacteria and cats get infected. At this time he has to be fed 2-3 times a day. \n"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:paddingLeft="10dp"
+                        android:text="\nPregnant/Mother cat food: "
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:lineSpacingExtra="4dp"
+                        android:paddingLeft="10dp"
+                        android:text="\nThe gestation period of the cat is approximately 9 weeks. During this time the demand for food for a pregnant cat increases 50 times. At this time you need to eat more nutritious food and have different nutrients in different ways. Mother cats also need separate nutrition during lactation. After 8-9 weeks of calving, the mother cat stops producing milk. Then he slowly returns to the amount of the previous meal. At this time the health of the cat may deteriorate, so if you lose excess weight, you should contact the vet. \n"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+
+    </androidx.cardview.widget.CardView>
 
 </FrameLayout>
