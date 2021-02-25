@@ -46,5 +46,10 @@ public class SingleFoodsActivity extends AppCompatActivity {
             ft.replace(R.id.framelayout1, new CatFoodFragment());
             ft.commit();
         }
+        if(animall.contains("dog")){
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.framelayout1, new CatFoodFragment());
+            ft.commit();
+        }
     }
 }

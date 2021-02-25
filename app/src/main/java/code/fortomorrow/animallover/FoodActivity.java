@@ -38,17 +38,9 @@ public class FoodActivity extends AppCompatActivity {
         dogfoodcard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(FoodActivity.this);
-                LayoutInflater inflater = (LayoutInflater) FoodActivity.this.
-                        getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                View view2 = inflater.inflate(R.layout.aleartdogfood, null);
-                builder.setView(view2);
-                ImageView close = view2.findViewById(R.id.closeId);
-                AlertDialog alert = builder.create();
-                close.setOnClickListener(view -> alert.dismiss());
-                alert.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                alert.setCancelable(false);
-                alert.show();
+                Intent intent = new Intent(FoodActivity.this,SingleFoodsActivity.class);
+                intent.putExtra("animal","dog");
+                startActivity(intent);
             }
         });
         birdfoodcard.setOnClickListener(new View.OnClickListener() {
