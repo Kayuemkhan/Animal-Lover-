@@ -10,6 +10,8 @@ import android.widget.ImageView;
 
 import code.fortomorrow.animallover.fragments.BirdFoodFrament;
 import code.fortomorrow.animallover.fragments.CatFoodFragment;
+import code.fortomorrow.animallover.fragments.DogFoodFragment;
+import code.fortomorrow.animallover.fragments.FishFoodFragment;
 
 public class SingleFoodsActivity extends AppCompatActivity {
     String animall;
@@ -48,7 +50,17 @@ public class SingleFoodsActivity extends AppCompatActivity {
         }
         if(animall.contains("dog")){
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.framelayout1, new CatFoodFragment());
+            ft.replace(R.id.framelayout1, new DogFoodFragment());
+            ft.commit();
+        }
+        if(animall.contains("fish")){
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.framelayout1, new FishFoodFragment());
+            ft.commit();
+        }
+        if(animall.contains("rabbit")){
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.framelayout1, new FishFoodFragment());
             ft.commit();
         }
     }

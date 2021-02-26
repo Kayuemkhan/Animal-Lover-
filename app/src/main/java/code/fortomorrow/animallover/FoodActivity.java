@@ -21,6 +21,7 @@ import android.widget.ImageView;
 
 public class FoodActivity extends AppCompatActivity {
     private CardView carfoodcard,birdfoodcard,dogfoodcard,fishfoodcard,rabbitfood;
+    private ImageView backfromfoods;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +52,29 @@ public class FoodActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        fishfoodcard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FoodActivity.this,SingleFoodsActivity.class);
+                intent.putExtra("animal","fish");
+                startActivity(intent);
+            }
+        });
+        backfromfoods.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(FoodActivity.this,HomeActivity.class));
+                finish();
+            }
+        });
+        rabbitfood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FoodActivity.this,SingleFoodsActivity.class);
+                intent.putExtra("animal","rabbit");
+                startActivity(intent);
+            }
+        });
     }
 
     private void init() {
@@ -59,5 +83,6 @@ public class FoodActivity extends AppCompatActivity {
         dogfoodcard = findViewById(R.id.dogfoodcard);
         fishfoodcard = findViewById(R.id.fishfoodcard);
         rabbitfood = findViewById(R.id.rabbitfood);
+        backfromfoods = findViewById(R.id.backfromfoods);
     }
 }
