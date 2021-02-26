@@ -12,6 +12,7 @@ import code.fortomorrow.animallover.fragments.BirdFoodFrament;
 import code.fortomorrow.animallover.fragments.CatFoodFragment;
 import code.fortomorrow.animallover.fragments.DogFoodFragment;
 import code.fortomorrow.animallover.fragments.FishFoodFragment;
+import code.fortomorrow.animallover.fragments.RabbitFoodFragment;
 
 public class SingleFoodsActivity extends AppCompatActivity {
     String animall;
@@ -60,7 +61,7 @@ public class SingleFoodsActivity extends AppCompatActivity {
         }
         if(animall.contains("rabbit")){
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.framelayout1, new FishFoodFragment());
+            ft.replace(R.id.framelayout1, new RabbitFoodFragment());
             ft.commit();
         }
     }

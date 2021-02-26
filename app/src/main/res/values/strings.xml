@@ -98,6 +98,22 @@
         \n\nDon\'t take the size of the aquarium as an indication of how much food is needed. Five fish in a large aquarium need the same amount of food as five fish in a smaller aquarium—just spread it out across the aquarium so everyone can get to it easily.
 
     </string>
+    <string name="rabbbit_food">"Like other animals, rabbits like to eat a variety of fun foods. Regular nutritious and balanced diet helps to keep your favorite rabbit healthy. Take a look at what foods should be on your rabbit\'s food list.
+        \n\n<b>Fresh hay:</b>
+        \nHay is a very important food for rabbits. It is very important to have it in the daily food list. Older rabbits can be fed grass, oat straw, Timothy Hay. And baby rabbits should be fed Alfalfa. Alfalfa should not be given to adult rabbits due to high protein and sugar. Straw provides the rabbit with the essential fiber needed for good digestive health and it helps to keep a rabbit\’s teeth constantly growing down.
+        \n\n<b>Vegetables:</b> \n Vegetables are a varied asset that should be a part of your rabbit\'s daily diet. Always choose fresh and pesticide-free vegetables. Vegetables should be washed well before feeding. Indoor decorative herbs can often be toxic to them.
+        Vegetables that should be on the food list –
+        \n\tBroccoli leaves- ব্রোকলি পাতা
+        \n\tCarrot tops-গাজর একাংশ
+        \n\tDill -শুলফা Kale -পাতা কপি
+        \n\tLettuce – লেটুস
+        \n\tMint/Basil- পুদিনা
+        \n\tMustard greens- সরিষা সবুজ শাক
+        \n\tParsley- পার্সলে
+        \n\tWater cress- জল শাক
+        \n\n<b>Water:</b> \n Always keep water for your rabbit. Always keep water in a hanging water bowl or bowl. On hot days you can leave an ice cube in the rabbit water container. If your rabbit does not drink enough water, let it eat wet vegetables.
+        \n\n<b>Pellets:</b> \n Rabbit pellets of different brands are available in pet shops. These foods, which are rich in adequate fiber and protein, are very popular with rabbits.
+        \n\n<b>Treat:</b> \n You can treat your rabbit occasionally to make it happy, but you have to pay attention to your health. Bread, pasta, salty biscuits, cookies, chips, or cereals should not be fed because they are high in sugar. Never give chocolate, it is toxic to rabbits. The best way to treat is to feed the fruit. But you have to give less amount to have more sugar. Fruits that can be given are- Strawberries, Raspberries, Bananas, Pineapple, Apples (no seeds).     "</string>
 
     <string-array name="pet">
         <item>Rabbit</item>
