@@ -26,6 +26,8 @@ public class SingleMedicineActivity extends AppCompatActivity {
                 finish();
             }
         });
+        Bundle bundle = new Bundle();
+
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             if(extras == null) {
@@ -42,7 +44,26 @@ public class SingleMedicineActivity extends AppCompatActivity {
 //        }
         if(animalls.contains("fish")){
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.framelayoutmedicine,new FishMedicineFragment());
+            FishMedicineFragment fishMedicineFragment = new FishMedicineFragment();
+            bundle.putString("animalnow", "fish");
+            fishMedicineFragment.setArguments(bundle);
+            fragmentTransaction.replace(R.id.framelayoutmedicine,fishMedicineFragment);
+            fragmentTransaction.commit();
+        }
+        if(animalls.contains("bird")){
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            FishMedicineFragment fishMedicineFragment = new FishMedicineFragment();
+            bundle.putString("animalnow", "bird");
+            fishMedicineFragment.setArguments(bundle);
+            fragmentTransaction.replace(R.id.framelayoutmedicine,fishMedicineFragment);
+            fragmentTransaction.commit();
+        }
+        if(animalls.contains("rabbit")){
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            FishMedicineFragment fishMedicineFragment = new FishMedicineFragment();
+            bundle.putString("animalnow", "rabbit");
+            fishMedicineFragment.setArguments(bundle);
+            fragmentTransaction.replace(R.id.framelayoutmedicine,fishMedicineFragment);
             fragmentTransaction.commit();
         }
     }

@@ -23,6 +23,12 @@ public class HealthActivity extends AppCompatActivity {
                 startActivity(new Intent(HealthActivity.this, MedicinePetActivity.class));
             }
         });
+        firstAidCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HealthActivity.this,FirstAidActivity.class));
+            }
+        });
         backfrommyhealth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -29,6 +29,14 @@ public class MedicinePetActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        rabbitMedicinefood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MedicinePetActivity.this,SingleMedicineActivity.class);
+                intent.putExtra("animalm","rabbit");
+                startActivity(intent);
+            }
+        });
         fishmedicinecard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,6 +45,22 @@ public class MedicinePetActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        birdmedicinecard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MedicinePetActivity.this,SingleMedicineActivity.class);
+                intent.putExtra("animalm","bird");
+                startActivity(intent);
+            }
+        });
+//        dogmedicinecard.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MedicinePetActivity.this,SingleMedicineActivity.class);
+//                intent.putExtra("animalm","bird");
+//                startActivity(intent);
+//            }
+//        });
         backfromedicine.setOnClickListener(v -> {
             startActivity(new Intent(MedicinePetActivity.this,HealthActivity.class));
             finish();

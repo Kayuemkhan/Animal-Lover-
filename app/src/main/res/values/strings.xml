@@ -151,6 +151,62 @@ Aqua MedZyme permanently reduces ALL strains of deadly ulcer causing Aeromonas, 
 \n\t3.Does NOT contain chemicals, antibiotics or medications
 \n\t4.100% natural - safe for filters, plants, pets and wildlife
 \n\t5.Formula has been tested extensively in koi ponds, commercial aquaculture applications, private veterinary laboratories and University Studies    </string>
+    <string name="fish_medicine">
+        "\tCelecoxib Oral Suspension.
+        \n\tCelecoxib Oral Suspension.
+        \n\tFluconazole Oral Suspension.
+        \n\tAmikacin Injection Solution.
+        \n\tMetronidazole Oral Suspension.
+        \n\tCalcium Glubionate Oral Syrup.
+        \n\tAmphotericin B Oral Suspension.
+        \n\tCiprofloxacin Oral Oil Suspension.  "</string>
+    <string name="rabbit_medicine">
+        	Furosemide Oral Suspension.
+\n\n	Amikacin Injection Solution.
+\n\n	Metronidazole Oral Suspension.
+\n\n	Buprenorphine Injection Solution.
+\n\n	Albendazole Capsule.
+\n\n	Meloxicam Oral Suspension.
+\n\n	Meloxicam Oral Suspension.
+\n\n	Doxycycline Oral Suspension.
+
+ "</string>
+    <string name="peraid">"<b>Your Kit Should Contain</b>
+        \n\n\t•\tAbsorbent gauze pads
+        \n\t•\tAdhesive tape
+        \n\t•\tCotton balls or swabs
+        \n\t•\tFresh 3% hydrogen peroxide to induce vomiting (always check with veterinarian or animal poison control expert before giving to your pet)
+        \n\t•\tIce pack
+        \n\t•\tDisposable gloves
+        \n\t•\tScissors with blunt end
+        \n\t•\tTweezers
+        \n\t•\tOral syringe or turkey baster
+        \n\t•\tLiquid dishwashing detergent (for bathing)
+        \n\t•\tTowels
+        \n\t•\tSmall flashlight
+        \n\t•\tAlcohol wipes
+        \n\t•\tStyptic powder
+        \n\t•\tSaline eye solution
+        \n\t•\tArtificial tear gel
+        \n\t•\tPhone number, clinic name, address of your veterinarian as well as local veterinary emergency clinics.   Make sure to check your pack every few months to make sure nothing has expired or needs to be replaced. And of course keep your kit out of the reach of children. "</string>
+    <string name="peraid2">"<b>Here’s What You’ll Need:</b>
+        \n\n\t•\tPhone number, clinic name, address of your veterinarian PLUS contact info for local veterinary emergency clinics
+        \n\t•\tAbsorbent gauze pads
+        \n\t•\tAdhesive tape
+        \n\t•\tCotton balls or swabs
+        \n\t•\tFresh 3% hydrogen peroxide to induce vomiting (always check with veterinarian or animal poison control expert before giving to your pet)
+        \n\t•\tIce pack
+        \n\t•\tDisposable gloves
+        \n\t•\tScissors with blunt end PLUS tweezers
+        \n\t•\tOver-the-counter antibiotic ointment
+        \n\t•\tLiquid dishwashing detergent for bathing PLUS towels
+        \n\t•\tSmall flashlight
+        \n\t•\tOral syringe or kitchen baster
+        \n\t•\tAlcohol wipes
+        \n\t•\tStyptic powder
+        \n\t•\tSaline eye solution
+
+</string>
     <string-array name="pet">
         <item>Rabbit</item>
         <item>Cat</item>
