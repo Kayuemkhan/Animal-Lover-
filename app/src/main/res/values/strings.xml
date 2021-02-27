@@ -114,7 +114,43 @@
         \n\n<b>Water:</b> \n Always keep water for your rabbit. Always keep water in a hanging water bowl or bowl. On hot days you can leave an ice cube in the rabbit water container. If your rabbit does not drink enough water, let it eat wet vegetables.
         \n\n<b>Pellets:</b> \n Rabbit pellets of different brands are available in pet shops. These foods, which are rich in adequate fiber and protein, are very popular with rabbits.
         \n\n<b>Treat:</b> \n You can treat your rabbit occasionally to make it happy, but you have to pay attention to your health. Bread, pasta, salty biscuits, cookies, chips, or cereals should not be fed because they are high in sugar. Never give chocolate, it is toxic to rabbits. The best way to treat is to feed the fruit. But you have to give less amount to have more sugar. Fruits that can be given are- Strawberries, Raspberries, Bananas, Pineapple, Apples (no seeds).     "</string>
+    <string name="fish_medicine_header">"Tropical fish medicine is used to treat tropical fish diseases. Tropical fish diseases can be caused by bacteria, fungus or by parasites. Commonly seen tropical fish diseases are Septicemia, Cotton Disease, Dropsy, Fin Rot, Ich, Swim bladder Infection, Pop Eye, Hole in the Head etc. Tropical fish medicine includes Antibiotics, Anti-fungals, Anti-parasitics.
 
+    </string>
+    <string name="medicine_fish_1">Praziquantel is known to be one of the safest most effective pond fish medications available for treating a vast array of external and internal parasites. It will not stress pond fish, damage filtration systems, or negatively affect the balance of your pond. One of the biggest advantages in large ponds is that water changes are not necessary and it only takes one treatment.  \n<b>How much:</b> 5 ml treats 25 gallons.  \n<b> How often:</b> One dose per treatment, repeat after 7 days if necessary. \n<b> How to: </b> Dilute liquid treatment in 1 gallon of pond water. Distribute evenly around the pond or add to an area with good circulation.</string>
+    <string name="medicine_fish_2">Microbe-Lift Lice  Anchor Worm is the most effective treatment for diseases of fish caused by lice and anchor worms. When used as directed, it will not harm biological filtration and may be used on scaleless fish. Can be used in any water temperatures above 40º F. Should be stored in the original container above 40ºF and under 100ºF. Do not store in direct sunlight and do not allow to freeze.
+
+    This product is intended for use with all ornamental pond fish. Not for use with fish or aquatic invertebrates intended for human consumption. Not for human or veterinary use.
+    </string>
+    <string name="medicine_fish_3">
+        Microbe-Lift BSDT is the preeminent broad spectrum malachite green and formalin treatment. The only malachite green and formalin treatment that can be used in water temperatures as low as 50°F, thus allowing treatment in early Spring and late Fall.
+
+Malachite green and formalin are two drugs that are more effective and less toxic in combination than when used individually. This is the definition of synergism. What makes Microbe-Lift BSDT the preeminent product in this field is the fact that it is formulated with malachite green chloride, instead of the more toxic oxalate salt. As with any malachite green and formalin treatment, do NOT use with other medications.
+    </string>
+    <string name="medicine_fish_4">
+A unique, natural parasite repellant. Proven to work against bacterial dropsy, fungus and ulcers in fish. Expels pathogens from fish and stimulates its immune system response. Can speed up damaged tissue regeneration.
+
+\n\nSabbactisun is made with plant and herbal extracts making it environmentally friendly. Supports immune system, driving off the excess parasites. Product is harmless to all nitrifying filter bacteria and aquatic plants
+
+\n\n<b>Benefits:</b>
+\n\n\t100% natural plant and herbal product
+\n\tCompletely safe to use
+\n\tNontoxic to animals and plants
+\n\tProduct can be used during feeding
+\n\tDoes not adversely affect either nitrifying filter bacteria or beneficial bacteria additives
+\n\tNo significant reduction in the level of dissolved oxygen in the water
+\n\tFully Biodegradable
+\n\tSabbactisun and Parazoryne can be used 12 hours apart
+    </string>
+
+    <string name="medicine_fish_5">
+Aqua MedZyme permanently reduces ALL strains of deadly ulcer causing Aeromonas, Pseudomonas in your pond by starving them to death. These deadly bacteria live in every koi fish pond, causing life threatening bacterial infections such as ulcers, fin rot, tail rot and more. Attacking koi when they are stressed, causing thousands of fish deaths each year. Aqua MedZyme contains 760,000,000 yes, seven hundred and sixty million hungry beneficial bacteria per ml that eat the same food as Aeromonas, Pseudomonas, which starves them to levels so low they can not harm your fish.
+
+\n\t1.Treats pond water as low as 40°F
+\n\t2.Great for early spring and fall treatments
+\n\t3.Does NOT contain chemicals, antibiotics or medications
+\n\t4.100% natural - safe for filters, plants, pets and wildlife
+\n\t5.Formula has been tested extensively in koi ponds, commercial aquaculture applications, private veterinary laboratories and University Studies    </string>
     <string-array name="pet">
         <item>Rabbit</item>
         <item>Cat</item>
