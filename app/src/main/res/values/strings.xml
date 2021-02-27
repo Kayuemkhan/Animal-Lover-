@@ -207,6 +207,37 @@ Aqua MedZyme permanently reduces ALL strains of deadly ulcer causing Aeromonas, 
         \n\t•\tSaline eye solution
 
 </string>
+    <string name="antrax">
+        Anthrax, a highly infectious and fatal disease of cattle, is caused by a relatively large spore-forming rectangular shaped bacterium called Bacillus anthraces. Anthrax causes acute mortality in ruminants. The bacteria produce extremely potent toxins which are responsible for the ill effects, causing a high mortality rate. Signs of the illness usually appear 3 to 7 days after the spores are swallowed or inhaled. Once signs begin in animals, they usually die within two days.
+
+Hoofed animals, such as deer, cattle, goats, and sheep, are the main animals affected by this disease. They usually get the disease by swallowing anthrax spores while grazing on pasture contaminated (made impure) with anthrax spores. Inhaling (breathing in) the spores, which are odorless, colorless, and tasteless, may also cause infection in animals and people.
+
+\n\n<b>Symptoms:</b>
+\n\n\t	Sudden death (often within 2 or 3 hours of being apparently normal) is by far the most common sign;
+\n\t	Very occasionally some animals may show trembling, a high temperature
+\n\t	Difficulty breathing, collapse and convulsions before death. This usually occurs over a period of 24 hours;
+\n\t	After death blood, may not clot, resulting in a small amount of bloody discharge from the nose, mouth and other openings
+Treatment and control
+\n\t	Due to the acute nature of the disease resulting in sudden death, treatment is usually not possible in animals even though Anthrax bacilli are clines. Treatment is of use in cases showing sub-acute form of the disease.
+\n\t	In most cases, early treatment can cure anthrax. The cutaneous (skin) form of anthrax can be treated with common antibiotics.
+
+
+
+
+\n\n<b>Preventive measures:</b>
+\n\t	Regular annual vaccination of animals in endemic areas will prevent the disease from occurring.
+\n\t	Vaccination may be carried out at least a month prior to expected disease occurrence in endemic areas.
+\n\t	Never open a carcass of an animal suspected to have died from anthrax.
+\nContact a veterinarian immediately if the following symptoms are seen and seek advice on control measures to be adopted.
+\n\t	Fever (106-108°F), loss of appetite, depression and dullness
+\n\t	Suspended rumination3. Rapid pulse and heart rates
+\n\t	Difficult breathing (dyspnea)
+\n\t	Lameness in affected leg
+\n\t	Crepitation swelling over hip, back and shoulder
+\n\t	Swelling is hot and painful in early stages whereas cold and painless inter.
+\n\t	Recumbence (prostration) followed by death within 12-48 hrs.
+
+    </string>
     <string-array name="pet">
         <item>Rabbit</item>
         <item>Cat</item>
@@ -219,4 +250,5 @@ Aqua MedZyme permanently reduces ALL strains of deadly ulcer causing Aeromonas, 
         <item>Male</item>
         <item>Female</item>
     </string-array>
+
 </resources>
