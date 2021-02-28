@@ -80,12 +80,12 @@
                             android:layout_weight="1"
                             android:gravity="center">
 
-                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            <ImageView
                                 android:id="@+id/profile_image"
                                 android:layout_width="96dp"
                                 android:layout_height="96dp"
-                                android:src="@drawable/catback"
-                                app:civ_border_color="#FF000000" />
+                                android:src="@drawable/cat"
+                                />
                         </LinearLayout>
 
                         <TextView
@@ -93,7 +93,7 @@
                             android:layout_height="wrap_content"
                             android:text="Cat"
                             android:textAlignment="center"
-                            android:textColor="@color/black"
+                            android:textColor="#AA2E2E"
                             android:textSize="25sp"
                             android:textStyle="bold" />
 
@@ -129,12 +129,12 @@
                             android:layout_weight="1"
                             android:gravity="center">
 
-                            <de.hdodenhof.circleimageview.CircleImageView
+                            <ImageView
                                 android:id="@+id/profile_image3"
                                 android:layout_width="96dp"
                                 android:layout_height="96dp"
-                                android:src="@drawable/health"
-                                app:civ_border_color="#FF000000" />
+                                android:src="@drawable/dog"
+                                 />
                         </LinearLayout>
 
                         <TextView
@@ -142,7 +142,7 @@
                             android:layout_height="wrap_content"
                             android:text="Dog"
                             android:textAlignment="center"
-                            android:textColor="@color/black"
+                            android:textColor="#AA2E2E"
                             android:textSize="25sp"
                             android:textStyle="bold" />
 
@@ -199,7 +199,7 @@
                             android:layout_height="wrap_content"
                             android:text="Bird"
                             android:textAlignment="center"
-                            android:textColor="@color/black"
+                            android:textColor="#AA2E2E"
                             android:textSize="25sp"
                             android:textStyle="bold" />
 
@@ -248,7 +248,7 @@
                             android:layout_height="wrap_content"
                             android:text="Fish"
                             android:textAlignment="center"
-                            android:textColor="@color/black"
+                            android:textColor="#AA2E2E"
                             android:textSize="25sp"
                             android:textStyle="bold" />
 
@@ -292,12 +292,12 @@
                             android:layout_weight="1"
                             android:gravity="center">
 
-                            <de.hdodenhof.circleimageview.CircleImageView
+                            <ImageView
                                 android:id="@+id/profile_image5"
                                 android:layout_width="96dp"
                                 android:layout_height="96dp"
-                                android:src="@drawable/rabit"
-                                app:civ_border_color="#FF000000" />
+                                android:src="@drawable/rabbit"
+                                />
                         </LinearLayout>
 
                         <TextView
@@ -305,7 +305,7 @@
                             android:layout_height="wrap_content"
                             android:text="Rabbit"
                             android:textAlignment="center"
-                            android:textColor="@color/black"
+                            android:textColor="#AA2E2E"
                             android:textSize="25sp"
                             android:textStyle="bold" />
 

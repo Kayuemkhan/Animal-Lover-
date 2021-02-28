@@ -29,7 +29,7 @@
                         android:layout_height="150dp"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
-                        android:src="@drawable/rabit" />
+                        android:src="@drawable/rabbit" />
 
                     <TextView
                         android:padding="10dp"
