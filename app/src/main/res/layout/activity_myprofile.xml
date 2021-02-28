@@ -49,12 +49,12 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <de.hdodenhof.circleimageview.CircleImageView
+                <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="20dp"
-
+                    android:id="@+id/petprofilepic"
                     android:src="@drawable/catback" />
 
                 <TextView
@@ -122,6 +122,7 @@
                         />
 
                     <TextView
+                        android:id="@+id/mypet"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/acme"
@@ -143,6 +144,7 @@
                         />
 
                     <TextView
+                        android:id="@+id/mypetcolor"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/acme"
@@ -155,6 +157,7 @@
                     android:orientation="horizontal"
                     >
                     <TextView
+
                         android:textColor="@color/black"
                         android:fontFamily="sans-serif-medium"
                         android:layout_width="wrap_content"
@@ -164,6 +167,7 @@
                         />
 
                     <TextView
+                        android:id="@+id/mypetgender"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/acme"
