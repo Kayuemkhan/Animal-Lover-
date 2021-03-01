@@ -36,27 +36,27 @@ public class MyPetActivity extends AppCompatActivity {
         setContentView(R.layout.activity_my_pet);
         SharedPref.init(this);
         init();
-        if (SharedPref.read("Animal", "").contains("dog")) {
+        if (SharedPref.read("Animal", "").contains("dog") && !String.valueOf(SharedPref.read("Animal", "")).isEmpty()) {
             animal = "dog";
             imageView.setImageResource(R.drawable.dog);
             petnameSetET.setText("dog");
         }
-        if (SharedPref.read("Animal", "").contains("cat")) {
+        if (SharedPref.read("Animal", "").contains("cat") && !String.valueOf(SharedPref.read("Animal", "")).isEmpty()) {
             animal = "cat";
             imageView.setImageResource(R.drawable.cat);
             petnameSetET.setText("cat");
         }
-        if (SharedPref.read("Animal", "").contains("rabbit")) {
+        if (SharedPref.read("Animal", "").contains("rabbit") && !String.valueOf(SharedPref.read("Animal", "")).isEmpty()) {
             animal = "rabbit";
             imageView.setImageResource(R.drawable.rabbit);
             petnameSetET.setText("rabbit");
         }
-        if (SharedPref.read("Animal", "").contains("fish")) {
+        if (SharedPref.read("Animal", "").contains("fish") && !String.valueOf(SharedPref.read("Animal", "")).isEmpty()) {
             animal = "fish";
             imageView.setImageResource(R.drawable.fish);
             petnameSetET.setText("fish");
         }
-        if (SharedPref.read("Animal", "").contains("bird")) {
+        if (SharedPref.read("Animal", "").contains("bird") && !String.valueOf(SharedPref.read("Animal", "")).isEmpty()) {
             animal = "bird";
             imageView.setImageResource(R.drawable.bird);
             petnameSetET.setText("bird");
@@ -127,7 +127,7 @@ public class MyPetActivity extends AppCompatActivity {
                 if (animal.equals("cat")) {
                     mypetSpinnerSet.setSelection(1);
                 }
-                if (animal.equals("cat")) {
+                if (animal.equals("dog")) {
                     mypetSpinnerSet.setSelection(1);
                 }
                 if (animal.equals("rabbit")) {
