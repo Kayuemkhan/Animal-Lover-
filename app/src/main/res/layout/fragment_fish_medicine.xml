@@ -237,9 +237,9 @@
                     android:src="@drawable/cat" />
 
                 <TextView
-                    android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
                     android:fontFamily="serif"
                     android:lineSpacingExtra="4dp"
                     android:text="The list below contains the most commonly used types of medications in dogs and cats, but is by no means a complete list of all of the types of medications used in veterinary medicine."
@@ -248,21 +248,49 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="serif"
                     android:lineSpacingExtra="4dp"
-                    android:layout_marginTop="10dp"
                     android:text="@string/medicinecat"
                     android:textColor="#385623" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="\n\nDrug interactions"
-                        android:textColor="#385623"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:lineSpacingExtra="4dp"
-                        />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4dp"
+                    android:text="\n\nDrug interactions"
+                    android:textColor="#385623"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="serif"
+                    android:lineSpacingExtra="4dp"
+                    android:text="@string/medicinecat2"
+                    android:textColor="#385623" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4dp"
+                    android:text="\n\nSide effects and adverse reactions"
+                    android:textColor="#385623"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="serif"
+                    android:lineSpacingExtra="4dp"
+                    android:text="@string/medicinecat3"
+                    android:textColor="#385623" />
+
+
             </LinearLayout>
 
         </LinearLayout>
