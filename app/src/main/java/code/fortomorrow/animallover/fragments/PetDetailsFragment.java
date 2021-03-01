@@ -22,7 +22,6 @@ import code.fortomorrow.animallover.utils.SharedPref;
 
 public class PetDetailsFragment extends Fragment {
     private ImageView arrowinpetdetailsIV;
-    private ImageView imageselectedfittingviewinpetdetails;
     SharedPreferences pref;
     private TextView malePet, femalePet;
     private Fragment fragment;
@@ -60,17 +59,7 @@ public class PetDetailsFragment extends Fragment {
                 //getActivity().getFragmentManager().beginTransaction().remove(fragment).commit();
             }
         });
-        imageselectedfittingviewinpetdetails = view.findViewById(R.id.imageselectedfittingviewinpetdetails);
 
-        if(selected.contains("dog")){
-            imageselectedfittingviewinpetdetails.setImageResource(R.drawable.dog);
-        }
-        else if(selected.contains("cat")){
-            imageselectedfittingviewinpetdetails.setImageResource(R.drawable.cat);
-        }
-        else if(selected.contains("rabbit")){
-            imageselectedfittingviewinpetdetails.setImageResource(R.drawable.rabbit);
-        }
         malePet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

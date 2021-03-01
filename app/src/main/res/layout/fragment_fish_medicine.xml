@@ -196,6 +196,7 @@
                     android:textColor="@color/black" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/rabbitfragment"
                 android:layout_width="match_parent"
@@ -218,6 +219,50 @@
                     android:text="@string/rabbit_medicine"
                     android:textColor="@color/black" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/catfragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/cat" />
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:lineSpacingExtra="4dp"
+                    android:text="The list below contains the most commonly used types of medications in dogs and cats, but is by no means a complete list of all of the types of medications used in veterinary medicine."
+                    android:textColor="#385623" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/medicinecat"
+                    android:textColor="#385623" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="\n\nDrug interactions"
+                        android:textColor="#385623"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="4dp"
+                        />
             </LinearLayout>
 
         </LinearLayout>

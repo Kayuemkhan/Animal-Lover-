@@ -24,7 +24,6 @@ import code.fortomorrow.animallover.utils.SharedPref;
 
 public class PetNameFragment extends Fragment {
     private ImageView arrowbuttonfrompetname;
-    private ImageView imageselectedfittingview;
     private TextView petnameET;
     public PetNameFragment() {
 
@@ -75,7 +74,6 @@ public class PetNameFragment extends Fragment {
 
     private void init(View view) {
         arrowbuttonfrompetname= view.findViewById(R.id.arrowbuttonfrompetname);
-        imageselectedfittingview = view.findViewById(R.id.imageselectedfittingview);
 //        imageselectedfittingview.setImageResource(R.drawable.cat);
     }
 

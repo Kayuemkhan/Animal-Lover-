@@ -238,6 +238,20 @@ Treatment and control
 \n\t	Recumbence (prostration) followed by death within 12-48 hrs.
 
     </string>
+    <string name="medicinecat"><b>Antibiotics:</b> these are drugs that kill microbes, such as bacteria and yeast, and are used to treat infections.
+        They don’t kill viruses, but they are sometimes prescribed to treat secondary bacterial infections that can occur when an animal is ill from a viral infection.
+        Examples in dogs and cats include penicillin, trimethoprim-sulfa, cephalexin and enrofloxacin.
+        \n\n<b>Non-steroidal anti-inflammatories:</b> these common drugs reduce swelling, inflammation, pain and lameness. Examples include carprofen, deracoxib, firocoxib,
+        and meloxicam. Opioid pain relievers: these medications are generally derived from morphine and can be potent pain relievers. Examples include oxycodone,
+        hydromorphone, butorphanol, meperidine and fentanyl. Most of these drugs are controlled substances because of their addictive potential.
+        \n\n<b>Steroids: </b>steroids have many different uses. They can be potent anti-inflammatories and are frequently used to reduce allergic and anaphylactic reactions.
+        They are also used at high doses to suppress the immune system.  Examples include prednisone, prednisolone and dexamethasone.
+        \n\n<b>Antiparasitics: </b>these products are intended to prevent, repel or kill internal or external parasites such as intestinal worms, intestinal protozoans
+        (Giardia, etc.), heartworms, fleas and ticks.
+        \n\n<b>Behavior-modifying drugs and sedatives: </b>these drugs are used to quiet anxious pets or help in reducing anxiety associated with various behavioral issues in pets, prepare pets for anesthesia, and to reduce pet movement during delicate procedures.
+        Examples include diazepam, xylazine, acepromazine and midazolam.
+        \n\n<b>Hormones and other medications used to treat specific conditions:</b> Examples include insulin used for diabetes treatment, methimazole or levothyroxine for abnormal thyroid hormone levels, and heart medications such as atenolol, digoxin, and pimobendan.
+        \n\n<b>Chemotherapeutics:</b> these drugs are used to treat tumors and cancer. Examples include cisplatin, vincristine, doxorubicin and cyclophosphamide. "</string>
     <string-array name="pet">
         <item>Rabbit</item>
         <item>Cat</item>

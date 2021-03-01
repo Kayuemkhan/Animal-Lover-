@@ -7,323 +7,335 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MedicinePetActivity">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/red"
-        android:orientation="horizontal"
-        android:padding="15dp">
-
-        <ImageView
-            android:id="@+id/backfromedicine"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_baseline_arrow_back_24" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/red"
-            android:text="\tMedicine Direction of Pets"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
-    </LinearLayout>
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         >
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/acme"
-                android:padding="10dp"
-                android:text="@string/when_your_pet_has_a_medical_condition_your_veterinarian_might_prescribe_one_or_more_medications_intended_to_manage_treat_or_cure_the_problem_although_there_are_some_veterinary_specific_drugs_many_of_the_drugs_used_in_veterinary_medicine_are_the_same_as_those_used_in_people_ata_medicine_er_vitor_deoa_lagbe_jeta_already_medicines_doc_file_deoa_ache_amra_kono_vabe_daye_thakbo_na_jekono_kisu_medicine_use_korar_agee_doctor_or_prescribe_hoa_lagbe"
-                android:textColor="@color/red"
-                 />
+                android:background="@color/red"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/backfromedicine"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_arrow_back_24" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/red"
+                    android:text="\tMedicine Direction of Pets"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/acme"
+                        android:padding="10dp"
+                        android:text="@string/when_your_pet_has_a_medical_condition_your_veterinarian_might_prescribe_one_or_more_medications_intended_to_manage_treat_or_cure_the_problem_although_there_are_some_veterinary_specific_drugs_many_of_the_drugs_used_in_veterinary_medicine_are_the_same_as_those_used_in_people_ata_medicine_er_vitor_deoa_lagbe_jeta_already_medicines_doc_file_deoa_ache_amra_kono_vabe_daye_thakbo_na_jekono_kisu_medicine_use_korar_agee_doctor_or_prescribe_hoa_lagbe"
+                        android:textColor="@color/red"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/carmedicinecard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/buttonborderonly"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:background="#4B878B"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="5dp"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:id="@+id/profile_image"
+                                        android:layout_width="96dp"
+                                        android:layout_height="96dp"
+                                        android:src="@drawable/cat"
+                                        />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cat"
+                                    android:textAlignment="center"
+                                    android:textColor="#AA2E2E"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/dogmedicinecard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/buttonborderonly"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:background="#4B878B"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="5dp"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:id="@+id/profile_image3"
+                                        android:layout_width="96dp"
+                                        android:layout_height="96dp"
+                                        android:src="@drawable/dog"
+                                        />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Dog"
+                                    android:textAlignment="center"
+                                    android:textColor="#AA2E2E"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/birdmedicinecard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/buttonborderonly"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:background="#4B878B"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="5dp"
+                                android:weightSum="3">
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:id="@+id/profile_image2"
+                                        android:layout_width="96dp"
+                                        android:layout_height="96dp"
+                                        android:src="@drawable/bird"
+                                        app:civ_border_color="#FF000000" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bird"
+                                    android:textAlignment="center"
+                                    android:textColor="#AA2E2E"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/fishmedicinecard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/buttonborderonly"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:background="#4B878B"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="5dp"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:id="@+id/profile_image4"
+                                        android:layout_width="96dp"
+                                        android:layout_height="96dp"
+                                        android:src="@drawable/fish"
+                                        app:civ_border_color="#FF000000" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Fish"
+                                    android:textAlignment="center"
+                                    android:textColor="#AA2E2E"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/rabbitMedicinefood"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/buttonborderonly"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:background="#4B878B"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="5dp"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:id="@+id/profile_image5"
+                                        android:layout_width="96dp"
+                                        android:layout_height="96dp"
+                                        android:src="@drawable/rabbit"
+                                        />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rabbit"
+                                    android:textAlignment="center"
+                                    android:textColor="#AA2E2E"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="2">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/carmedicinecard"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/buttonborderonly"
-                    android:padding="5dp">
-
-                    <LinearLayout
-                        android:background="#4B878B"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="5dp"
-                        android:weightSum="3">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center">
-
-                            <ImageView
-                                android:id="@+id/profile_image"
-                                android:layout_width="96dp"
-                                android:layout_height="96dp"
-                                android:src="@drawable/cat"
-                                />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Cat"
-                            android:textAlignment="center"
-                            android:textColor="#AA2E2E"
-                            android:textSize="25sp"
-                            android:textStyle="bold" />
-
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/dogmedicinecard"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/buttonborderonly"
-                    android:padding="5dp">
-
-                    <LinearLayout
-                        android:background="#4B878B"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="5dp"
-                        android:weightSum="3">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center">
-
-                            <ImageView
-                                android:id="@+id/profile_image3"
-                                android:layout_width="96dp"
-                                android:layout_height="96dp"
-                                android:src="@drawable/dog"
-                                 />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Dog"
-                            android:textAlignment="center"
-                            android:textColor="#AA2E2E"
-                            android:textSize="25sp"
-                            android:textStyle="bold" />
-
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:layout_gravity="center"
-            android:gravity="center"
-            >
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/birdmedicinecard"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/buttonborderonly"
-                    android:padding="5dp">
-
-                    <LinearLayout
-                        android:background="#4B878B"
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="5dp"
-                        android:weightSum="3">
-
-                        <LinearLayout
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center">
-
-                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                android:id="@+id/profile_image2"
-                                android:layout_width="96dp"
-                                android:layout_height="96dp"
-                                android:src="@drawable/bird"
-                                app:civ_border_color="#FF000000" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Bird"
-                            android:textAlignment="center"
-                            android:textColor="#AA2E2E"
-                            android:textSize="25sp"
-                            android:textStyle="bold" />
-
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fishmedicinecard"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/buttonborderonly"
-                    android:padding="5dp">
-
-                    <LinearLayout
-                        android:background="#4B878B"
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="5dp"
-                        android:weightSum="3">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center">
-
-                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                android:id="@+id/profile_image4"
-                                android:layout_width="96dp"
-                                android:layout_height="96dp"
-                                android:src="@drawable/fish"
-                                app:civ_border_color="#FF000000" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Fish"
-                            android:textAlignment="center"
-                            android:textColor="#AA2E2E"
-                            android:textSize="25sp"
-                            android:textStyle="bold" />
-
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:layout_gravity="center"
-            android:gravity="center"
-            >
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/rabbitMedicinefood"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/buttonborderonly"
-                    android:padding="5dp">
-
-                    <LinearLayout
-                        android:background="#4B878B"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="5dp"
-                        android:weightSum="3">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center">
-
-                            <ImageView
-                                android:id="@+id/profile_image5"
-                                android:layout_width="96dp"
-                                android:layout_height="96dp"
-                                android:src="@drawable/rabbit"
-                                />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Rabbit"
-                            android:textAlignment="center"
-                            android:textColor="#AA2E2E"
-                            android:textSize="25sp"
-                            android:textStyle="bold" />
-
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
-
-
-        </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

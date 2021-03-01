@@ -38,14 +38,20 @@ public class SingleMedicineActivity extends AppCompatActivity {
         } else {
             animalls= (String) savedInstanceState.getSerializable("animalm");
         }
-//        if(animall.contains("cat")){
-//            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-//            fragmentTransaction.replace(R.id.framelayoutmedicine,new Fr)
-//        }
+
         if(animalls.contains("fish")){
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             FishMedicineFragment fishMedicineFragment = new FishMedicineFragment();
             bundle.putString("animalnow", "fish");
+            fishMedicineFragment.setArguments(bundle);
+            fragmentTransaction.replace(R.id.framelayoutmedicine,fishMedicineFragment);
+            fragmentTransaction.commit();
+        }
+
+        if(animalls.contains("cat")){
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            FishMedicineFragment fishMedicineFragment = new FishMedicineFragment();
+            bundle.putString("animalnow", "cat");
             fishMedicineFragment.setArguments(bundle);
             fragmentTransaction.replace(R.id.framelayoutmedicine,fishMedicineFragment);
             fragmentTransaction.commit();
