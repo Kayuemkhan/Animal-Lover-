@@ -14,6 +14,7 @@ import java.util.List;
 
 import code.fortomorrow.animallover.ModelClass.ProfessionalData;
 import code.fortomorrow.animallover.adapters.ProfessionalsAdapters;
+import code.fortomorrow.animallover.fragments.DoctordetailsBottomsheetFragment;
 
 public class ProfessionalsActivity extends AppCompatActivity {
     private RecyclerView professionalsrecylerview;
@@ -39,5 +40,12 @@ public class ProfessionalsActivity extends AppCompatActivity {
                 startActivity(new Intent(ProfessionalsActivity.this,HomeActivity.class));
             }
         });
+    }
+
+    public void showDoctorDetails() {
+        DoctordetailsBottomsheetFragment addPhotoBottomDialogFragment =
+                DoctordetailsBottomsheetFragment.newInstance();
+        addPhotoBottomDialogFragment.show(getSupportFragmentManager(),
+                DoctordetailsBottomsheetFragment.TAG);
     }
 }
