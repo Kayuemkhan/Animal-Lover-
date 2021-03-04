@@ -25,10 +25,10 @@ public class AdoptPetActivity extends AppCompatActivity {
         petrecylerview = findViewById(R.id.petrecylerview);
         petrecylerview.setLayoutManager(new GridLayoutManager(AdoptPetActivity.this, 2));
         professionalData= new ArrayList<>();
-        professionalData.add(new ProfessionalData (R.drawable.peta, "Mew", "Dhaka"));
-        professionalData.add(new ProfessionalData(R.drawable.petb, "Bunny", "Rajshahi"));
-        professionalData.add(new ProfessionalData(R.drawable.petc, "Popcorn", "Khulna"));
-        professionalData.add(new ProfessionalData(R.drawable.petd, "Papaya", "CTG"));
+        professionalData.add(new ProfessionalData (R.drawable.peta, "Mew", "Dhaka","","","",""));
+        professionalData.add(new ProfessionalData (R.drawable.petb, "Rao", "CTG","","","",""));
+        professionalData.add(new ProfessionalData (R.drawable.petc, "Piano", "Rajshai","","","",""));
+        professionalData.add(new ProfessionalData (R.drawable.petd, "Arr", "ara","","","",""));
         petrecylerview.setAdapter(new PetAdoptAdapters(AdoptPetActivity.this,professionalData));
 
     }

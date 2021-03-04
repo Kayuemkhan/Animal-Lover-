@@ -25,7 +25,7 @@ public class MyPetActivity extends AppCompatActivity {
     private EditText petColorET;
     private EditText notesPet;
     private TextView savePetDetails;
-    private String animal,petBirthday,petColor;
+    private String animal = "", petBirthday, petColor;
     private EditText yourplaceET;
     String petnamelist[] = {"Rabbit", "Cat", "Dog", "Bird", "Fish"};
     String gen[] = {"Male", "Female"};
@@ -36,27 +36,27 @@ public class MyPetActivity extends AppCompatActivity {
         setContentView(R.layout.activity_my_pet);
         SharedPref.init(this);
         init();
-        if (SharedPref.read("Animal", "").contains("dog")) {
+        if (SharedPref.read("Animal", "").contains("dog") && !String.valueOf(SharedPref.read("Animal", "")).isEmpty()) {
             animal = "dog";
             imageView.setImageResource(R.drawable.dog);
             petnameSetET.setText("dog");
         }
-        if (SharedPref.read("Animal", "").contains("cat")) {
+        if (SharedPref.read("Animal", "").contains("cat") && !String.valueOf(SharedPref.read("Animal", "")).isEmpty()) {
             animal = "cat";
             imageView.setImageResource(R.drawable.cat);
             petnameSetET.setText("cat");
         }
-        if (SharedPref.read("Animal", "").contains("rabbit")) {
+        if (SharedPref.read("Animal", "").contains("rabbit") && !String.valueOf(SharedPref.read("Animal", "")).isEmpty()) {
             animal = "rabbit";
             imageView.setImageResource(R.drawable.rabbit);
             petnameSetET.setText("rabbit");
         }
-        if (SharedPref.read("Animal", "").contains("fish")) {
+        if (SharedPref.read("Animal", "").contains("fish") && !String.valueOf(SharedPref.read("Animal", "")).isEmpty()) {
             animal = "fish";
             imageView.setImageResource(R.drawable.fish);
             petnameSetET.setText("fish");
         }
-        if (SharedPref.read("Animal", "").contains("bird")) {
+        if (SharedPref.read("Animal", "").contains("bird") && !String.valueOf(SharedPref.read("Animal", "")).isEmpty()) {
             animal = "bird";
             imageView.setImageResource(R.drawable.bird);
             petnameSetET.setText("bird");
@@ -64,7 +64,8 @@ public class MyPetActivity extends AppCompatActivity {
         savePetDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MyPetActivity.this,HomeActivity.class));
+
+                startActivity(new Intent(MyPetActivity.this, HomeActivity.class));
                 finish();
             }
         });
@@ -76,8 +77,8 @@ public class MyPetActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                petBirthday= s.toString();
-                SharedPref.write("PetBirthDay",petBirthday);
+                petBirthday = s.toString();
+                SharedPref.write("PetBirthDay", petBirthday);
             }
 
             @Override
@@ -93,8 +94,8 @@ public class MyPetActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                petColor= s.toString();
-                SharedPref.write("petColor",petBirthday);
+                petColor = s.toString();
+                SharedPref.write("petColor", petBirthday);
             }
 
             @Override
@@ -124,20 +125,22 @@ public class MyPetActivity extends AppCompatActivity {
         mypetSpinnerSet.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (animal.equals("cat")) {
-                    mypetSpinnerSet.setSelection(1);
-                }
-                if (animal.equals("cat")) {
-                    mypetSpinnerSet.setSelection(1);
-                }
-                if (animal.equals("rabbit")) {
-                    mypetSpinnerSet.setSelection(0);
-                }
-                if (animal.equals("bird")) {
-                    mypetSpinnerSet.setSelection(3);
-                }
-                if (animal.equals("fish")) {
-                    mypetSpinnerSet.setSelection(4);
+                if (!animal.isEmpty()) {
+                    if (animal.equals("cat") && !animal.isEmpty()) {
+                        mypetSpinnerSet.setSelection(1);
+                    }
+                    if (animal.equals("dog") && !animal.isEmpty()) {
+                        mypetSpinnerSet.setSelection(1);
+                    }
+                    if (animal.equals("rabbit") && !animal.isEmpty()) {
+                        mypetSpinnerSet.setSelection(0);
+                    }
+                    if (animal.equals("bird") && !animal.isEmpty()) {
+                        mypetSpinnerSet.setSelection(3);
+                    }
+                    if (animal.equals("fish") && !animal.isEmpty()) {
+                        mypetSpinnerSet.setSelection(4);
+                    }
                 }
             }
 

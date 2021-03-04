@@ -33,7 +33,9 @@ public class ProfessionalsAdapters extends RecyclerView.Adapter<ProfessionalsAda
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int i) {
         holder.doctor.setText(professionalData.get(i).getProfessionalName());
-        holder.emaildoctor.setText(professionalData.get(i).getEmail());
+        holder.designation.setText(professionalData.get(i).getDesination());
+        holder.qualification.setText(professionalData.get(i).getQualification());
+        holder.cell.setText(professionalData.get(i).getCell());
     }
 
     @Override
@@ -42,13 +44,14 @@ public class ProfessionalsAdapters extends RecyclerView.Adapter<ProfessionalsAda
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView doctor;
-        private TextView emaildoctor;
+        private TextView doctor,designation,qualification,cell;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             doctor = itemView.findViewById(R.id.doctor);
-            emaildoctor = itemView.findViewById(R.id.emaildoctor);
+            designation = itemView.findViewById(R.id.designation);
+            qualification = itemView.findViewById(R.id.qualification);
+            cell = itemView.findViewById(R.id.cell);
         }
     }
 }

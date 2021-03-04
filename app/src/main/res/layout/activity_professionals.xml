@@ -42,14 +42,24 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <TextView
             android:textSize="@dimen/_18sdp"
-            android:padding="10dp"
-            android:textColor="@color/light_blue_A400"
+            android:paddingLeft="10dp"
+            android:textColor="#414a68"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Stay With Veterinary Doctor"
+            android:text="Hey, Sam"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:textSize="@dimen/_10sdp"
+            android:paddingLeft="10dp"
+            android:textColor="#414a68"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stay With Vetenary Doctor"
             />
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView

@@ -2,5 +2,9 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/acme</item>
+        <item>@font/alike_angular</item>
+        <item>@font/baloo_paaji</item>
+        <item>@font/basic</item>
+        <item>@font/coiny</item>
     </array>
 </resources>
