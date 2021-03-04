@@ -43,7 +43,7 @@ public class ProfessionalsAdapters extends RecyclerView.Adapter<ProfessionalsAda
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                professionalsActivity.showDoctorDetails();
+                professionalsActivity.showDoctorDetails(professionalData.get(i).getProfessionalName());
             }
         });
     }

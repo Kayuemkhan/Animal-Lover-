@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -42,10 +43,23 @@ public class ProfessionalsActivity extends AppCompatActivity {
         });
     }
 
-    public void showDoctorDetails() {
+    public void showDoctorDetails(String professionalName) {
+        Log.d("professionalNameMain",""+professionalName);
         DoctordetailsBottomsheetFragment addPhotoBottomDialogFragment =
-                DoctordetailsBottomsheetFragment.newInstance();
+                new DoctordetailsBottomsheetFragment();
+        Bundle bundle = new  Bundle();
+        bundle.putString("key", professionalName);
+        addPhotoBottomDialogFragment.setArguments(bundle);
         addPhotoBottomDialogFragment.show(getSupportFragmentManager(),
-                DoctordetailsBottomsheetFragment.TAG);
+                "DoctordetailsBottomsheetFragment");
+//        addPhotoBottomDialogFragment.setListData(exampleList,professionalName);
+//        if(!professionalName.isEmpty()){
+//            setData(professionalName);
+//        }
+    }
+
+    private void setData(String professionalName) {
+        DoctordetailsBottomsheetFragment fragmentDemo = (DoctordetailsBottomsheetFragment) getSupportFragmentManager().findFragmentByTag("DoctordetailsBottomsheetFragment");
+        fragmentDemo.setListData(exampleList,professionalName);
     }
 }
