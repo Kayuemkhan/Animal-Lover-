@@ -97,15 +97,22 @@
                                         android:src="@drawable/cat"
                                         />
                                 </LinearLayout>
-
+                                <View
+                                    android:layout_marginTop="10dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/overlay_dark_40"
+                                    />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="Cat"
                                     android:textAlignment="center"
                                     android:textColor="@color/white"
-                                    android:textSize="25sp"
-                                    android:textStyle="bold" />
+                                    android:padding="5dp"
+                                    android:textSize="18sp"
+                                    android:fontFamily="@font/roboto_medium"
+                                     />
 
 
                             </LinearLayout>
@@ -147,15 +154,22 @@
                                         android:src="@drawable/dog"
                                         />
                                 </LinearLayout>
-
+                                <View
+                                    android:layout_marginTop="10dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/overlay_dark_40"
+                                    />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="Dog"
+                                    android:fontFamily="@font/roboto_medium"
                                     android:textAlignment="center"
                                     android:textColor="#FFF"
-                                    android:textSize="25sp"
-                                    android:textStyle="bold" />
+                                    android:textSize="18sp"
+                                    android:padding="5dp"
+                                     />
 
 
                             </LinearLayout>
@@ -207,15 +221,22 @@
                                         android:src="@drawable/bird"
                                         app:civ_border_color="#FF000000" />
                                 </LinearLayout>
-
+                                <View
+                                    android:layout_marginTop="10dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/overlay_dark_40"
+                                    />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="Bird"
                                     android:textAlignment="center"
                                     android:textColor="#FFF"
-                                    android:textSize="25sp"
-                                    android:textStyle="bold" />
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:textSize="18sp"
+                                    android:padding="5dp"
+                                     />
 
 
                             </LinearLayout>
@@ -258,15 +279,21 @@
                                         android:src="@drawable/fish"
                                         app:civ_border_color="#FF000000" />
                                 </LinearLayout>
-
+                                <View
+                                    android:layout_marginTop="10dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/overlay_dark_40"
+                                    />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="Fish"
                                     android:textAlignment="center"
                                     android:textColor="#FFF"
-                                    android:textSize="25sp"
-                                    android:textStyle="bold" />
+                                    android:textSize="18sp"
+                                    android:padding="5dp"
+                                     />
 
 
                             </LinearLayout>
@@ -316,15 +343,21 @@
                                         android:src="@drawable/rabbit"
                                         />
                                 </LinearLayout>
-
+                                <View
+                                    android:layout_marginTop="10dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/overlay_dark_40"
+                                    />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="Rabbit"
                                     android:textAlignment="center"
                                     android:textColor="#FFF"
-                                    android:textSize="25sp"
-                                    android:textStyle="bold" />
+                                    android:textSize="18sp"
+                                    android:padding="5dp"
+                                    />
 
 
                             </LinearLayout>

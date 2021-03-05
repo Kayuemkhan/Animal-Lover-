@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import java.util.ArrayList;
@@ -34,6 +35,7 @@ public class DoctordetailsBottomsheetFragment extends BottomSheetDialogFragment 
     String professionalName;
     ProfessionalData[] langs;
     ProfessionalsActivity professionalsActivity;
+    private BottomSheetBehavior.BottomSheetCallback bottomSheetCallback;
     public DoctordetailsBottomsheetFragment(ProfessionalsActivity professionalsActivity) {
         this.professionalsActivity = professionalsActivity;
     }
@@ -59,14 +61,10 @@ public class DoctordetailsBottomsheetFragment extends BottomSheetDialogFragment 
         callme =view.findViewById(R.id.callme);
         callme.isClickable();
         emailme =view.findViewById(R.id.emailme);
-        callme.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse(SharedPref.read("doctorPhone","")));
-                startActivity(intent);
-                dismiss();
-            }
+        callme.setOnClickListener(v -> {
+            dismiss();
+            professionalsActivity.hey();
+            //dismiss();
         });
 
 

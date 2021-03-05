@@ -30,12 +30,13 @@
                     android:src="@drawable/fish" />
 
                 <TextView
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="serif-monospace"
                     android:lineSpacingExtra="4dp"
                     android:text="@string/fish_medicine_header"
-                    android:textColor="@color/black" />
+                    android:textColor="#385623" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -54,7 +55,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Used For the Treatment of External and Internal Parasites, Flukes, Flatworms and Tapeworms"
-                        android:textColor="@color/black"
+                        android:textColor="#385623"
                         android:textStyle="bold" />
 
                     <TextView
@@ -64,7 +65,8 @@
                         android:fontFamily="sans-serif-light"
                         android:lineSpacingExtra="4dp"
                         android:text="@string/medicine_fish_1"
-                        android:textColor="@color/black" />
+                        android:textColor="#385623"
+                        />
                 </LinearLayout>
 
                 <LinearLayout
@@ -84,8 +86,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Treatment for lice and anchor worms"
-                        android:textColor="@color/black"
-                        android:textStyle="bold" />
+                        android:textColor="#385623"                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -94,7 +95,8 @@
                         android:fontFamily="sans-serif-light"
                         android:lineSpacingExtra="4dp"
                         android:text="@string/medicine_fish_2"
-                        android:textColor="@color/black" />
+                        android:textColor="#385623"
+                        />
                 </LinearLayout>
 
                 <LinearLayout
@@ -114,8 +116,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Formulated with Malachite Green and Formalin. Use for disease caused by Ichthyophithirius (Ich), Chilodonella, Costia, Oodinium, Trichodina and fungal infections."
-                        android:textColor="@color/black"
-                        android:textStyle="bold" />
+                        android:textColor="#385623"                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -124,7 +125,8 @@
                         android:fontFamily="sans-serif-light"
                         android:lineSpacingExtra="4dp"
                         android:text="@string/medicine_fish_3"
-                        android:textColor="@color/black" />
+                        android:textColor="#385623"
+                        />
                 </LinearLayout>
 
                 <LinearLayout
@@ -146,7 +148,8 @@
                         android:fontFamily="sans-serif-light"
                         android:lineSpacingExtra="4dp"
                         android:text="@string/medicine_fish_4"
-                        android:textColor="@color/black" />
+                        android:textColor="#385623"
+                        />
                 </LinearLayout>
 
                 <LinearLayout
@@ -169,7 +172,8 @@
                         android:fontFamily="sans-serif-light"
                         android:lineSpacingExtra="4dp"
                         android:text="@string/medicine_fish_5"
-                        android:textColor="@color/black" />
+                        android:textColor="#385623"
+                        />
                 </LinearLayout>
             </LinearLayout>
 
@@ -193,7 +197,8 @@
                     android:layout_height="wrap_content"
                     android:lineSpacingExtra="4dp"
                     android:text="@string/fish_medicine"
-                    android:textColor="@color/black" />
+                    android:textColor="#385623"
+                    />
 
             </LinearLayout>
 
@@ -217,7 +222,8 @@
                     android:layout_height="wrap_content"
                     android:lineSpacingExtra="4dp"
                     android:text="@string/rabbit_medicine"
-                    android:textColor="@color/black" />
+                    android:textColor="#385623"
+                    />
 
             </LinearLayout>
 
@@ -227,7 +233,7 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:padding="10dp"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="150dp"
@@ -237,10 +243,10 @@
                     android:src="@drawable/cat" />
 
                 <TextView
-                    android:layout_marginBottom="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
                     android:fontFamily="sans-serif-smallcaps"
                     android:lineSpacingExtra="4dp"
                     android:text="The list below contains the most commonly used types of medications in dogs and cats, but is by no means a complete list of all of the types of medications used in veterinary medicine."

@@ -1,10 +1,14 @@
 package code.fortomorrow.animallover;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,6 +22,7 @@ import java.util.List;
 import code.fortomorrow.animallover.ModelClass.ProfessionalData;
 import code.fortomorrow.animallover.adapters.ProfessionalsAdapters;
 import code.fortomorrow.animallover.fragments.DoctordetailsBottomsheetFragment;
+import code.fortomorrow.animallover.utils.SharedPref;
 
 public class ProfessionalsActivity extends AppCompatActivity {
     private RecyclerView professionalsrecylerview;
@@ -63,6 +68,25 @@ public class ProfessionalsActivity extends AppCompatActivity {
 //        if(!professionalName.isEmpty()){
 //            setData(professionalName);
 //        }
+    }
+
+    public void hey() {
+        Log.d("checkhere","I'm here");
+//        Intent intent = new Intent(Intent.ACTION_DIAL);
+//        intent.setData(Uri.parse(SharedPref.read("doctorPhone","")));
+//        this.startActivity(intent);
+        calltoSomeOne();
+    }
+
+    private void calltoSomeOne() {
+        Log.d("ihe","I'm Here");
+        Intent callIntent = new Intent(Intent.ACTION_CALL);
+        callIntent.setData(Uri.parse("tel:0377778888"));
+        if (ActivityCompat.checkSelfPermission(ProfessionalsActivity.this,
+                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        startActivity(callIntent);
     }
 
 }
