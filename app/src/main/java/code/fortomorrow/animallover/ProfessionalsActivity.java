@@ -55,7 +55,7 @@ public class ProfessionalsActivity extends AppCompatActivity {
 
     public void showDoctorDetails(String professionalName) {
         DoctordetailsBottomsheetFragment addPhotoBottomDialogFragment =
-                new DoctordetailsBottomsheetFragment(this);
+                new DoctordetailsBottomsheetFragment(ProfessionalsActivity.this);
         Bundle bundle = new Bundle();
         String json = new Gson().toJson(exampleList);
         bundle.putString("key", json);
@@ -71,22 +71,22 @@ public class ProfessionalsActivity extends AppCompatActivity {
     }
 
     public void hey() {
-        Log.d("checkhere","I'm here");
+        Log.d("checkhere2222222","I'm here");
 //        Intent intent = new Intent(Intent.ACTION_DIAL);
 //        intent.setData(Uri.parse(SharedPref.read("doctorPhone","")));
-//        this.startActivity(intent);
-        calltoSomeOne();
+//        startActivity(intent);
+       // calltoSomeOne();
     }
 
-    private void calltoSomeOne() {
-        Log.d("ihe","I'm Here");
-        Intent callIntent = new Intent(Intent.ACTION_CALL);
-        callIntent.setData(Uri.parse("tel:0377778888"));
-        if (ActivityCompat.checkSelfPermission(ProfessionalsActivity.this,
-                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            return;
-        }
-        startActivity(callIntent);
-    }
+//    private void calltoSomeOne() {
+//        Log.d("ihe","I'm Here");
+//        Intent callIntent = new Intent(Intent.ACTION_CALL);
+//        callIntent.setData(Uri.parse("0377778888"));
+//        if (ActivityCompat.checkSelfPermission(ProfessionalsActivity.this,
+//                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+//            return;
+//        }
+//        startActivity(callIntent);
+
 
 }

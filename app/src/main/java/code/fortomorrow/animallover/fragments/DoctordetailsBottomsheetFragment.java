@@ -36,6 +36,7 @@ public class DoctordetailsBottomsheetFragment extends BottomSheetDialogFragment 
     ProfessionalData[] langs;
     ProfessionalsActivity professionalsActivity;
     private BottomSheetBehavior.BottomSheetCallback bottomSheetCallback;
+
     public DoctordetailsBottomsheetFragment(ProfessionalsActivity professionalsActivity) {
         this.professionalsActivity = professionalsActivity;
     }
@@ -63,7 +64,13 @@ public class DoctordetailsBottomsheetFragment extends BottomSheetDialogFragment 
         emailme =view.findViewById(R.id.emailme);
         callme.setOnClickListener(v -> {
             dismiss();
-            professionalsActivity.hey();
+            Uri uri = Uri.parse("www.google.com");
+//            Intent intent = new Intent(Intent.ACTION_DIAL);
+            //intent.setData(Uri.parse(SharedPref.read("doctorPhone","")));
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+//            startActivity(intent,uri);
+//            v.getContext().startActivity(intent);
+            //professionalsActivity.hey();
             //dismiss();
         });
 

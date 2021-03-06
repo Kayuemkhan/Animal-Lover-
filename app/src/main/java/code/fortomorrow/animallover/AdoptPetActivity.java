@@ -2,6 +2,7 @@ package code.fortomorrow.animallover;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -23,7 +24,7 @@ public class AdoptPetActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adopt_pet);
         petrecylerview = findViewById(R.id.petrecylerview);
-        petrecylerview.setLayoutManager(new GridLayoutManager(AdoptPetActivity.this, 2));
+        petrecylerview.setLayoutManager(new LinearLayoutManager(AdoptPetActivity.this));
         professionalData= new ArrayList<>();
         professionalData.add(new ProfessionalData (R.drawable.peta, "Mew", "Dhaka","","","",""));
         professionalData.add(new ProfessionalData (R.drawable.petb, "Rao", "CTG","","","",""));
