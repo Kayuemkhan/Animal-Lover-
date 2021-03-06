@@ -62,7 +62,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:padding="5dp"
                         android:weightSum="3">
 
                         <LinearLayout
@@ -84,8 +83,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
                             android:background="#FC6600"
                             android:fontFamily="@font/roboto_medium"
                             android:padding="3dp"
@@ -117,7 +114,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:padding="5dp"
                         android:weightSum="3">
 
                         <LinearLayout
@@ -140,8 +136,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
                             android:background="#FC6600"
                             android:fontFamily="@font/roboto_medium"
                             android:padding="3dp"
@@ -181,7 +175,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:padding="5dp"
                         android:weightSum="3">
 
                         <LinearLayout
@@ -202,8 +195,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
                             android:background="#FC6600"
                             android:fontFamily="@font/roboto_medium"
                             android:padding="3dp"
@@ -235,7 +226,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:padding="5dp"
                         android:weightSum="3">
 
                         <LinearLayout
@@ -256,8 +246,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
                             android:background="#FC6600"
                             android:fontFamily="@font/roboto_medium"
                             android:padding="3dp"
@@ -300,7 +288,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:padding="5dp"
                         android:weightSum="3">
 
                         <LinearLayout
@@ -322,8 +309,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
                             android:background="#FC6600"
                             android:fontFamily="@font/roboto_medium"
                             android:padding="3dp"

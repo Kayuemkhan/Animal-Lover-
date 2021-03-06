@@ -77,11 +77,9 @@
                             android:padding="5dp">
 
                             <LinearLayout
-                                android:background="#4B878B"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
-                                android:padding="5dp"
                                 android:weightSum="3">
 
                                 <LinearLayout
@@ -91,6 +89,7 @@
                                     android:gravity="center">
 
                                     <ImageView
+                                        android:layout_margin="8dp"
                                         android:id="@+id/profile_image"
                                         android:layout_width="96dp"
                                         android:layout_height="96dp"
@@ -104,12 +103,13 @@
                                     android:background="@color/overlay_dark_40"
                                     />
                                 <TextView
+                                    android:padding="3dp"
+                                    android:background="#FC6600"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="Cat"
                                     android:textAlignment="center"
                                     android:textColor="@color/white"
-                                    android:padding="5dp"
                                     android:textSize="18sp"
                                     android:fontFamily="@font/roboto_medium"
                                      />
@@ -134,11 +134,9 @@
                             android:padding="5dp">
 
                             <LinearLayout
-                                android:background="#4B878B"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
-                                android:padding="5dp"
                                 android:weightSum="3">
 
                                 <LinearLayout
@@ -148,6 +146,7 @@
                                     android:gravity="center">
 
                                     <ImageView
+                                        android:layout_margin="8dp"
                                         android:id="@+id/profile_image3"
                                         android:layout_width="96dp"
                                         android:layout_height="96dp"
@@ -161,6 +160,7 @@
                                     android:background="@color/overlay_dark_40"
                                     />
                                 <TextView
+                                    android:background="#FC6600"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="Dog"
@@ -168,7 +168,7 @@
                                     android:textAlignment="center"
                                     android:textColor="#FFF"
                                     android:textSize="18sp"
-                                    android:padding="5dp"
+                                    android:padding="3dp"
                                      />
 
 
@@ -199,12 +199,9 @@
                             android:padding="5dp">
 
                             <LinearLayout
-                                android:background="#4B878B"
-
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
-                                android:padding="5dp"
                                 android:weightSum="3">
 
                                 <LinearLayout
@@ -214,7 +211,8 @@
                                     android:layout_weight="1"
                                     android:gravity="center">
 
-                                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_margin="8dp"
                                         android:id="@+id/profile_image2"
                                         android:layout_width="96dp"
                                         android:layout_height="96dp"
@@ -228,6 +226,7 @@
                                     android:background="@color/overlay_dark_40"
                                     />
                                 <TextView
+                                    android:background="#FC6600"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="Bird"
@@ -235,7 +234,7 @@
                                     android:textColor="#FFF"
                                     android:fontFamily="@font/roboto_medium"
                                     android:textSize="18sp"
-                                    android:padding="5dp"
+                                    android:padding="3dp"
                                      />
 
 
@@ -258,12 +257,9 @@
                             android:padding="5dp">
 
                             <LinearLayout
-                                android:background="#4B878B"
-
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
-                                android:padding="5dp"
                                 android:weightSum="3">
 
                                 <LinearLayout
@@ -272,7 +268,8 @@
                                     android:layout_weight="1"
                                     android:gravity="center">
 
-                                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_margin="8dp"
                                         android:id="@+id/profile_image4"
                                         android:layout_width="96dp"
                                         android:layout_height="96dp"
@@ -286,6 +283,8 @@
                                     android:background="@color/overlay_dark_40"
                                     />
                                 <TextView
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:background="#FC6600"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="Fish"
@@ -323,11 +322,9 @@
                             android:padding="5dp">
 
                             <LinearLayout
-                                android:background="#4B878B"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
-                                android:padding="5dp"
                                 android:weightSum="3">
 
                                 <LinearLayout
@@ -337,6 +334,7 @@
                                     android:gravity="center">
 
                                     <ImageView
+                                        android:layout_margin="8dp"
                                         android:id="@+id/profile_image5"
                                         android:layout_width="96dp"
                                         android:layout_height="96dp"
@@ -350,13 +348,14 @@
                                     android:background="@color/overlay_dark_40"
                                     />
                                 <TextView
+                                    android:background="#FC6600"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="Rabbit"
                                     android:textAlignment="center"
                                     android:textColor="#FFF"
                                     android:textSize="18sp"
-                                    android:padding="5dp"
+                                    android:padding="3dp"
                                     />
 
 
