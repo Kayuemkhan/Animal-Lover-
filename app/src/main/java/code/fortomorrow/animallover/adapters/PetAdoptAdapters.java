@@ -1,6 +1,7 @@
 package code.fortomorrow.animallover.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import code.fortomorrow.animallover.AdoptPetActivity;
+import code.fortomorrow.animallover.AdoptPetActivityDetails;
 import code.fortomorrow.animallover.ModelClass.ProfessionalData;
 import code.fortomorrow.animallover.R;
 
@@ -36,7 +38,14 @@ public class PetAdoptAdapters extends RecyclerView.Adapter<PetAdoptAdapters.View
         holder.petadoptIMG.setImageResource(petadopt.get(i).getImageResource());
         holder.petname.setText(petadopt.get(i).getProfessionalName());
         holder.petLocation.setText(petadopt.get(i).getEmail());
+        holder.view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                context.startActivity(new Intent(context,AdoptPetActivityDetails.class));
+
+            }
+        });
     }
 
     @Override
@@ -48,8 +57,10 @@ public class PetAdoptAdapters extends RecyclerView.Adapter<PetAdoptAdapters.View
         private ImageView petadoptIMG;
         private TextView petname;
         private TextView petLocation;
+        private View view;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            view = itemView;
             petadoptIMG = itemView.findViewById(R.id.petadoptIMG);
             petname = itemView.findViewById(R.id.petname);
             petLocation = itemView.findViewById(R.id.petLocation);

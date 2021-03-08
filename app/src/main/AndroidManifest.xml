@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="code.fortomorrow.animallover">
+
     <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_round"
@@ -9,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AnimalLover">
-        <activity android:name=".DiseaseActivity"></activity>
+        <activity android:name=".AdoptPetActivityDetails"></activity>
+        <activity android:name=".DiseaseActivity" />
         <activity android:name=".FirstAidActivity" />
         <activity android:name=".SingleMedicineActivity" />
         <activity android:name=".SingleFoodsActivity" />
