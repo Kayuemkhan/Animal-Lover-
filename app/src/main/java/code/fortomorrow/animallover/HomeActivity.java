@@ -21,6 +21,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -53,6 +54,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 //        }
         drawerLayout = findViewById(R.id.drawerLayout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+        View headerView = navigationView.getHeaderView(0);
+        TextView headerText= (TextView) headerView.findViewById(R.id.tv_profile_name);
+        if(SharedPref.read("LOGGEDIN","").contains("Y") && !SharedPref.read("Phone","").isEmpty()){
+            headerText.setText(SharedPref.read("Phone",""));
+        }
+
         toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("Home");
         ActionBarDrawerToggle actionBarDrawerToggle =new ActionBarDrawerToggle(HomeActivity.this,drawerLayout,toolbar,R.string.open,R.string.close);
