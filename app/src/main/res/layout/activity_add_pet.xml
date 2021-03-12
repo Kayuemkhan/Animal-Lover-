@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPetActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <LinearLayout
+            android:id="@+id/select_product_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/buttonborderonly"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_baseline_add_24_photo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="click here to add pets photo" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/pets_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/select_product_image"
+            android:layout_marginTop="20dp"
+            android:background="@android:drawable/editbox_dropdown_light_frame"
+            android:hint="Pet's Name . . ."
+            android:inputType="textMultiLine"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:id="@+id/genderandage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pets_name"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/pets_age"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/product_name"
+                android:layout_marginTop="6dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:hint="Pet's Age"
+                android:inputType="number"
+                android:padding="10dp" />
+
+            <Spinner
+                android:id="@+id/petSex"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:entries="@array/sex" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/pets_habit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/genderandage"
+            android:layout_marginTop="6dp"
+            android:background="@android:drawable/editbox_dropdown_light_frame"
+            android:hint="Pets Habit ex: Playful"
+            android:inputType="textMultiLine"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/pets_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pets_habit"
+            android:layout_marginTop="6dp"
+            android:background="@android:drawable/editbox_dropdown_light_frame"
+            android:hint="Your place"
+            android:inputType="textMultiLine"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/petColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pets_place"
+            android:layout_marginTop="6dp"
+            android:background="@android:drawable/editbox_dropdown_light_frame"
+            android:hint="Pet's Color"
+            android:inputType="textMultiLine"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/petweight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/petColor"
+            android:layout_marginTop="6dp"
+            android:background="@android:drawable/editbox_dropdown_light_frame"
+            android:hint="Pet's Weight"
+            android:inputType="textMultiLine"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/petbredd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/petweight"
+            android:layout_marginTop="6dp"
+            android:background="@android:drawable/editbox_dropdown_light_frame"
+            android:hint="Pet's Breed"
+            android:inputType="textMultiLine"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/add_new_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/petbredd"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/red"
+            android:padding="17dp"
+            android:text="Add Product"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+</ScrollView>

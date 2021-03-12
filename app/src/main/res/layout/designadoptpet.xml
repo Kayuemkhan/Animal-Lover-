@@ -38,10 +38,10 @@
             android:orientation="vertical">
 
             <TextView
-
                 android:id="@+id/petname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:fontFamily="@font/roboto_medium"
                 android:paddingLeft="10dp"
                 android:text="Benny"
@@ -52,6 +52,7 @@
                 android:id="@+id/petage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:fontFamily="serif-monospace"
                 android:paddingLeft="8dp"
                 android:text="2 Years | playful" />
@@ -63,8 +64,6 @@
                 android:backgroundTint="#E55852"
                 android:drawableLeft="@drawable/ic_baseline_place_24"
                 android:text="Kallanpur, Mirpur"
-
-
                 android:textColor="@color/black" />
         </LinearLayout>
 
@@ -89,6 +88,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:fontFamily=""
                 android:text="\ta"
                 android:visibility="invisible" />
