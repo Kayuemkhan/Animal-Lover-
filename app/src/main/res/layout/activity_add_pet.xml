@@ -131,7 +131,7 @@
             android:inputType="textMultiLine"
             android:padding="10dp" />
 
-        <Button
+        <TextView
             android:id="@+id/add_new_product"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -140,6 +140,7 @@
             android:layout_marginBottom="20dp"
             android:background="@color/red"
             android:padding="17dp"
+            android:textAlignment="center"
             android:text="Add Product"
             android:textAllCaps="false"
             android:textColor="@color/white"

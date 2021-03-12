@@ -29,6 +29,7 @@ import java.util.HashMap;
 import code.fortomorrow.animallover.HomeActivity;
 import code.fortomorrow.animallover.MainActivity;
 import code.fortomorrow.animallover.R;
+import code.fortomorrow.animallover.utils.SharedPref;
 
 public class SignUpFragment extends Fragment {
 
@@ -99,6 +100,7 @@ public class SignUpFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (!(dataSnapshot.child("Users").child(phone).exists())) {
                     HashMap<String, Object> userDataMap = new HashMap<>();
+                    SharedPref.write("userName",name);
                     userDataMap.put("phone", phone);
                     userDataMap.put("password", password);
                     userDataMap.put("name", name);
