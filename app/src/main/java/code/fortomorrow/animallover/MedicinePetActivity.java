@@ -53,6 +53,14 @@ public class MedicinePetActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        dogmedicinecard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MedicinePetActivity.this,SingleMedicineActivity.class);
+                intent.putExtra("animalm","dog");
+                startActivity(intent);
+            }
+        });
 //        dogmedicinecard.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {

@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 import code.fortomorrow.animallover.R;
 
 public class FishMedicineFragment extends Fragment {
-    private LinearLayout fishframent, birdfragment,rabbitfragment,catfragment;
+    private LinearLayout fishframent, birdfragment,rabbitfragment,catfragment,dogfragment;
     public FishMedicineFragment() {
     }
     @Override
@@ -41,6 +41,9 @@ public class FishMedicineFragment extends Fragment {
         if(strtext.contains("cat")){
             catfragment.setVisibility(View.VISIBLE);
         }
+        if(strtext.contains("dog")){
+            dogfragment.setVisibility(View.VISIBLE);
+        }
         return view;
     }
 
@@ -49,5 +52,6 @@ public class FishMedicineFragment extends Fragment {
         birdfragment = view.findViewById(R.id.birdfragment);
         rabbitfragment = view.findViewById(R.id.rabbitfragment);
         catfragment = view.findViewById(R.id.catfragment);
+        dogfragment = view.findViewById(R.id.dogfragment);
     }
 }

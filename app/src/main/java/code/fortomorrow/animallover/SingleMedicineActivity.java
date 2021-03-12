@@ -72,5 +72,13 @@ public class SingleMedicineActivity extends AppCompatActivity {
             fragmentTransaction.replace(R.id.framelayoutmedicine,fishMedicineFragment);
             fragmentTransaction.commit();
         }
+        if(animalls.contains("dog")){
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            FishMedicineFragment fishMedicineFragment = new FishMedicineFragment();
+            bundle.putString("animalnow", "dog");
+            fishMedicineFragment.setArguments(bundle);
+            fragmentTransaction.replace(R.id.framelayoutmedicine,fishMedicineFragment);
+            fragmentTransaction.commit();
+        }
     }
 }

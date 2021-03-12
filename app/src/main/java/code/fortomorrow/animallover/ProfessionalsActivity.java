@@ -43,6 +43,10 @@ public class ProfessionalsActivity extends AppCompatActivity {
         exampleList.add(new ProfessionalData(1, "Dr. Arifur Rabbi", "veterinarybd@hotmail.com", "01725-808534", "Ta 173/2 Lake view road, Godara ghat to Hatirjheel Road, Dhaka 1212", "Veterinary Doctor", "DVM, MS (Bangladesh Agricultural University, Mymensingh)"));
         exampleList.add(new ProfessionalData(1, "Vet Dr. Sagir Uddin Ahmed", "bdvet.com@gmail.com", "01912251312", "Dr. Sagir's Pet Clinic & Research Center", "Pet Doctor, Veterinary Surgeon", "DVM, MS in Theriogenology"));
         exampleList.add(new ProfessionalData(1, "Dr. Md. Mahbubul Alam Bhuiyan", "", "01711-146012", "67/2, North Bashaboo, Khilgaon, Dhaka", "Additional Veterinary officer", "Specialist in Treatment, Vaccination & Management of Pet Animal & Birds"));
+        exampleList.add(new ProfessionalData(1, "Dr. Arifur Rabbi", "veterinarybd@hotmail.com", "01785-636036", "Ta 173/2 Lake view road, Godara ghat to Hatirjheel Road, Dhaka ", "Veterinary Doctor", "DVM, MS (Bangladesh Agricultural University, Mymensingh)"));
+        exampleList.add(new ProfessionalData(1, "Dr. Siamak Shamsi Bahar", "", "01711561155", "H-56, R-9/B, Sector: 5, Uttara.", "Veterinary Doctor", "Specialist in Treatment, Vaccination & Management of Pet Animal & Birds"));
+        exampleList.add(new ProfessionalData(1, "Dr. Md. Karim Uddin", "", "01814287986", "Emergency Centre for Transboundary Animal Diseases (ECTAD)", "Additional Veterinary officer", "Specialist in Treatment, Vaccination & Management of Pet Animal & Birds"));
+        exampleList.add(new ProfessionalData(1, "Dr. Motahar Hossain", "", "01711541070", "He attends house calls", "Additional Veterinary officer", "Enlisted vet of USA embassy"));
 
         professionalsrecylerview.setAdapter(new ProfessionalsAdapters(ProfessionalsActivity.this, exampleList));
         backImageViewIdDoctor.setOnClickListener(new View.OnClickListener() {
