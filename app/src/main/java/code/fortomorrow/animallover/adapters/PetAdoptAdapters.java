@@ -2,6 +2,9 @@ package code.fortomorrow.animallover.adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +23,7 @@ import code.fortomorrow.animallover.AdoptPetActivityDetails;
 import code.fortomorrow.animallover.ModelClass.AllAdoptPetsModel;
 import code.fortomorrow.animallover.ModelClass.ProfessionalData;
 import code.fortomorrow.animallover.R;
+import code.fortomorrow.animallover.utils.SharedPref;
 
 public class PetAdoptAdapters extends RecyclerView.Adapter<PetAdoptAdapters.ViewHolder> {
     private List<AllAdoptPetsModel> petadopt;
@@ -28,6 +32,7 @@ public class PetAdoptAdapters extends RecyclerView.Adapter<PetAdoptAdapters.View
     public PetAdoptAdapters(AdoptPetActivity adoptPetActivity, List<AllAdoptPetsModel> allAdoptPetsModels) {
         this.petadopt = allAdoptPetsModels;
         this.context = adoptPetActivity;
+        SharedPref.init(context);
     }
 
     @NonNull
@@ -42,7 +47,13 @@ public class PetAdoptAdapters extends RecyclerView.Adapter<PetAdoptAdapters.View
         holder.petname.setText(petadopt.get(i).getPetsName());
         holder.petLocation.setText(petadopt.get(i).getPetsPlace());
         Glide.with(context).load(petadopt.get(i).getImage()).placeholder(R.drawable.ic_baseline_pets_24).into(holder.petadoptIMG);
-
+        holder.view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPref.write("pid",petadopt.get(i).getPid());
+                context.startActivity(new Intent(context,AdoptPetActivityDetails.class));
+            }
+        });
     }
 
     @Override

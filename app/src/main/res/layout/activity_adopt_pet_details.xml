@@ -20,6 +20,7 @@
            android:layout_weight="1"
            >
            <ImageView
+               android:id="@+id/adoptPetDetailsIV"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:src="@drawable/german_shef_1"
@@ -35,6 +36,7 @@
            >
 
            <TextView
+               android:id="@+id/adoptPetDetailsNameTV"
                android:gravity="center"
                android:layout_width="match_parent"
                android:layout_height="0dp"
@@ -54,6 +56,7 @@
                android:gravity="center"
                >
                <TextView
+
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="Felmale"
@@ -64,6 +67,7 @@
                    android:drawableLeft="@drawable/ic_baseline_female_24"
                    />
                <TextView
+                   android:id="@+id/adoptPetDetailsbreedIV"
                    android:layout_marginLeft="10dp"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -84,6 +88,7 @@
                android:gravity="center"
                >
                <TextView
+                   android:id="@+id/adoptPetDetailsPetsColorTV"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="Brown"
@@ -93,6 +98,7 @@
                    android:drawableLeft="@drawable/ic_baseline_color_lens_24"
                    />
                <TextView
+                   android:id="@+id/adoptPetDetailsHabitsTV"
                    android:layout_marginLeft="10dp"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -113,6 +119,7 @@
                android:gravity="center"
                >
                <TextView
+                   android:id="@+id/adoptPetDetailsWeightTV"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="10KG"
@@ -122,6 +129,7 @@
                    android:drawableLeft="@drawable/ic_baseline_line_weight_24"
                    />
                <TextView
+                   android:id="@+id/adoptPetDetailsAGeTV"
                    android:layout_marginLeft="10dp"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
@@ -134,13 +142,14 @@
            </LinearLayout>
 
            <TextView
+               android:id="@+id/adoptPetDetailsdescripIV"
                android:layout_width="match_parent"
                android:layout_height="0dp"
                android:layout_weight="3.5"
                android:fontFamily="@font/roboto_medium"
                android:padding="10dp"
                android:lineSpacingExtra="2dp"
-               android:text="Hey there, I'm female German Shepherd and my name is Rocky.\nI'm 3 years old having beautiful Brown skin color.\nI'm 20 KG in weight and I'm expert in Running\nIf you adopt me , I'll change your life sure"
+               android:text="Hey there, you have already known about me.  My details and ability\nIf you adopt me , I'll change your life sure"
                android:textColor="#212832" />
            <LinearLayout
                android:layout_width="match_parent"
@@ -152,6 +161,7 @@
                android:backgroundTint="#00ADB4"
                >
                <TextView
+                   android:id="@+id/adoptPetDetailsWeightadoptmeTV"
                    android:layout_width="wrap_content"
                    android:layout_height="match_parent"
                    android:text="Adopt Me"
