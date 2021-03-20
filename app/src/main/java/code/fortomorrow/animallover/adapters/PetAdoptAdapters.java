@@ -11,19 +11,23 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 import code.fortomorrow.animallover.AdoptPetActivity;
 import code.fortomorrow.animallover.AdoptPetActivityDetails;
+import code.fortomorrow.animallover.ModelClass.AllAdoptPetsModel;
 import code.fortomorrow.animallover.ModelClass.ProfessionalData;
 import code.fortomorrow.animallover.R;
 
 public class PetAdoptAdapters extends RecyclerView.Adapter<PetAdoptAdapters.ViewHolder> {
-    private List<ProfessionalData> petadopt;
+    private List<AllAdoptPetsModel> petadopt;
     private Context context;
-    public PetAdoptAdapters(AdoptPetActivity adoptPetActivity, List<ProfessionalData> professionalData) {
+
+    public PetAdoptAdapters(AdoptPetActivity adoptPetActivity, List<AllAdoptPetsModel> allAdoptPetsModels) {
+        this.petadopt = allAdoptPetsModels;
         this.context = adoptPetActivity;
-        this.petadopt = professionalData;
     }
 
     @NonNull
@@ -35,17 +39,10 @@ public class PetAdoptAdapters extends RecyclerView.Adapter<PetAdoptAdapters.View
 
     @Override
     public void onBindViewHolder(@NonNull PetAdoptAdapters.ViewHolder holder, int i) {
-        holder.petadoptIMG.setImageResource(petadopt.get(i).getImageResource());
-        holder.petname.setText(petadopt.get(i).getProfessionalName());
-        holder.petLocation.setText(petadopt.get(i).getEmail());
-        holder.view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        holder.petname.setText(petadopt.get(i).getPetsName());
+        holder.petLocation.setText(petadopt.get(i).getPetsPlace());
+        Glide.with(context).load(petadopt.get(i).getImage()).placeholder(R.drawable.ic_baseline_pets_24).into(holder.petadoptIMG);
 
-                context.startActivity(new Intent(context,AdoptPetActivityDetails.class));
-
-            }
-        });
     }
 
     @Override

@@ -14,6 +14,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
     }
 
     buildTypes {
@@ -41,11 +43,16 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //Third Party Library
     implementation 'com.balysv:material-ripple:1.0.2' // ripple effect
+    // sdp for size
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    // butterknife for view binding
     implementation 'com.jakewharton:butterknife:10.2.3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+    // shared preferences
     implementation "androidx.preference:preference:1.1.1"
+    //circle imageview for circle image showing
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    // firebase database
     implementation platform('com.google.firebase:firebase-bom:26.5.0')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-storage:19.2.0'
@@ -58,6 +65,12 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
 
     implementation 'com.makeramen:roundedimageview:2.3.0'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    //multidex
+    implementation "androidx.multidex:multidex:2.0.1"
+
 
 
 
