@@ -32,9 +32,11 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 
+import code.fortomorrow.animallover.utils.SharedPref;
+
 public class AddPetActivity extends AppCompatActivity {
     private ImageView select_product_image;
-    private EditText pets_name,pets_age,pets_habit,pets_place,petColor,petweight,petbredd;
+    private EditText pets_name, pets_age, pets_habit, pets_place, petColor, petweight, petbredd;
     private Spinner petSex;
     private String petSelectedSex;
     private TextView addNewPet;
@@ -44,15 +46,20 @@ public class AddPetActivity extends AppCompatActivity {
     private Uri ImageUri;
     private ProgressDialog loadingBar;
     private String downloadImageUrl;
-    String  saveCurrentDate;
+    String saveCurrentDate;
     String productRandomKey;
     String saveCurrentTime;
-    private String petsName,petsAge,petsHabbit,petsPlace,petsColor,petsWeight,petsBreed;
+    private String phone_number;
+    private String petsName, petsAge, petsHabbit, petsPlace, petsColor, petsWeight, petsBreed;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_pet);
         init();
+        SharedPref.init(this);
+        phone_number = SharedPref.read("Phone", "");
+
         loadingBar = new ProgressDialog(this);
         ProductImagesRef = FirebaseStorage.getInstance().getReference().child("Product Images");
         ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
@@ -66,7 +73,7 @@ public class AddPetActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 petSelectedSex = petSex.getSelectedItem().toString();
-                Log.d("petsee", "onItemSelected: "+petSelectedSex);
+                Log.d("petsee", "onItemSelected: " + petSelectedSex);
             }
 
             @Override
@@ -81,36 +88,30 @@ public class AddPetActivity extends AppCompatActivity {
             }
         });
     }
+
     private void validateRequest() {
-         petsName = pets_name.getText().toString();
-         petsAge = pets_age.getText().toString();
-         petsHabbit = pets_habit.getText().toString();
-         petsPlace = pets_place.getText().toString();
-         petsColor = petColor.getText().toString();
-         petsWeight = petweight.getText().toString();
-         petsBreed = petbredd.getText().toString();
-        if(petsName.isEmpty()){
+        petsName = pets_name.getText().toString();
+        petsAge = pets_age.getText().toString();
+        petsHabbit = pets_habit.getText().toString();
+        petsPlace = pets_place.getText().toString();
+        petsColor = petColor.getText().toString();
+        petsWeight = petweight.getText().toString();
+        petsBreed = petbredd.getText().toString();
+        if (petsName.isEmpty()) {
             pets_name.setError("Please give a pet name");
-        }
-        else if(petsAge.isEmpty()){
+        } else if (petsAge.isEmpty()) {
             pets_age.setError("Please give a pet age");
-        }
-        else if(petsHabbit.isEmpty()){
+        } else if (petsHabbit.isEmpty()) {
             pets_habit.setError("Please give a pet Habbit");
-        }
-        else if(petsPlace.isEmpty()){
+        } else if (petsPlace.isEmpty()) {
             pets_place.setError("Please give a pet's living Place");
-        }
-        else if(petsColor.isEmpty()){
+        } else if (petsColor.isEmpty()) {
             petColor.setError("Please give a pet's Color");
-        }
-        else if(petsWeight.isEmpty()){
+        } else if (petsWeight.isEmpty()) {
             petweight.setError("Please give a pet weight");
-        }
-        else if(petsBreed.isEmpty()){
+        } else if (petsBreed.isEmpty()) {
             petbredd.setError("Please give a pet breed");
-        }
-        else {
+        } else {
             addingNewPet();
         }
 
@@ -124,7 +125,7 @@ public class AddPetActivity extends AppCompatActivity {
         Calendar calendar = Calendar.getInstance();
 
         SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyyy");
-         saveCurrentDate = currentDate.format(calendar.getTime());
+        saveCurrentDate = currentDate.format(calendar.getTime());
 
         SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
         saveCurrentTime = currentTime.format(calendar.getTime());
@@ -183,6 +184,7 @@ public class AddPetActivity extends AppCompatActivity {
         productMap.put("image", downloadImageUrl);
         productMap.put("petsWeight", petsWeight);
         productMap.put("petsBreed", petsBreed);
+        productMap.put("phone_number", phone_number);
 
         ProductsRef.child(productRandomKey).updateChildren(productMap)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -209,6 +211,7 @@ public class AddPetActivity extends AppCompatActivity {
         galleryIntent.setType("image/*");
         startActivityForResult(galleryIntent, GalleryPick);
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
