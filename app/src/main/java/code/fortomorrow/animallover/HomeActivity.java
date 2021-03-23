@@ -86,6 +86,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
+        if(id == R.id.myOrders){
+            startActivity(new Intent(HomeActivity.this,MyOrdersActivity.class));
+        }
         if(id == R.id.my_profile){
             startActivity(new Intent(HomeActivity.this,MyprofileActivity.class));
         }
