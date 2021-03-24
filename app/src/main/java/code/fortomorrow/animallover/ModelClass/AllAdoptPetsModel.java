@@ -34,6 +34,9 @@ public class AllAdoptPetsModel {
     @SerializedName("petsWeight")
     @Expose
     private String petsWeight;
+    @SerializedName("phone_number")
+    @Expose
+    private String phoneNumber;
     @SerializedName("pid")
     @Expose
     private String pid;
@@ -119,6 +122,14 @@ public class AllAdoptPetsModel {
 
     public void setPetsWeight(String petsWeight) {
         this.petsWeight = petsWeight;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getPid() {

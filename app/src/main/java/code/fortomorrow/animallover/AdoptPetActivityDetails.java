@@ -69,7 +69,7 @@ public class AdoptPetActivityDetails extends AppCompatActivity {
                    productMap.put("image", allAdoptPetsModels.get(i).getImage());
                    productMap.put("petsWeight", allAdoptPetsModels.get(i).getPetsWeight());
                    productMap.put("petsBreed", allAdoptPetsModels.get(i).getPetsBreed());
-                   productMap.put("phone_number",phone_number);
+                   productMap.put("phone_number",phone_number+""+allAdoptPetsModels.get(i).getPhoneNumber());
                }
 
                databaseReference2.child(phone_number).setValue(productMap).addOnCompleteListener(new OnCompleteListener<Void>() {

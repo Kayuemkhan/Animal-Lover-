@@ -21,10 +21,9 @@ import java.util.List;
 
 import code.fortomorrow.animallover.ModelClass.AllAdoptPetsModel;
 import code.fortomorrow.animallover.adapters.MyOrdersAdapters;
-import code.fortomorrow.animallover.adapters.PetAdoptAdapters;
 import code.fortomorrow.animallover.utils.SharedPref;
 
-public class MyOrdersActivity extends AppCompatActivity {
+public class MyRequestActivity extends AppCompatActivity {
     private RecyclerView myOrders;
     private DatabaseReference databaseReference;
     private List<AllAdoptPetsModel> myOrdersListData;
@@ -33,11 +32,11 @@ public class MyOrdersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_orders);
+        setContentView(R.layout.activity_my_request);
         SharedPref.init(this);
         phone_number = SharedPref.read("Phone", "");
         myOrders = findViewById(R.id.myOrders);
-        myOrders.setLayoutManager(new LinearLayoutManager(MyOrdersActivity.this));
+        myOrders.setLayoutManager(new LinearLayoutManager(MyRequestActivity.this));
         myOrdersListData = new ArrayList<>();
         myOrdersListData2 = new ArrayList<>();
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Ordered Pets");
@@ -74,6 +73,6 @@ public class MyOrdersActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
-        });
+        })
     }
 }

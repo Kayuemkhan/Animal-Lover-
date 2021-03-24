@@ -75,6 +75,15 @@
             android:icon="@drawable/ic_baseline_person_24"
             android:title="My Order's" />
     </group>
+    <group
+        android:id="@+id/a"
+        android:checkableBehavior="single">
+        <item
+            android:visible="true"
+            android:id="@+id/reqOrders"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:title="Order's Request" />
+    </group>
 
 
 </menu>
