@@ -46,12 +46,17 @@ public class MyOrdersActivity extends AppCompatActivity {
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 AllAdoptPetsModel orders = snapshot.getValue(AllAdoptPetsModel.class);
                 myOrdersListData.add(orders);
+                for(int i =0;i<myOrdersListData.size();i++){
+                    if(myOrdersListData.get(i).getPhone_number() == phone_number ){
+                        myOrdersListData2.add(myOrdersListData.get(i));
+                    }
+                }
                 Log.d("aaaa111", "here"+new Gson().toJson(myOrdersListData));
                 for(int i =0;i<myOrdersListData.size();i++){
-//                    if(String.valueOf(myOrdersListData.get(i).getPhoneNumber()).contains(phone_number)){
-//                        Log.d("myorderphone",""+myOrdersListData.get(i).getPhoneNumber());
-//                        myOrdersListData2.add(myOrdersListData.get(i));
-//                    }
+                    if(String.valueOf(myOrdersListData.get(i).getPhone_number()).contains(phone_number)){
+                        Log.d("myorderphone",""+myOrdersListData.get(i).getPhone_number());
+                        myOrdersListData2.add(myOrdersListData.get(i));
+                    }
                 }
                 myOrders.setAdapter(new MyOrdersAdapters(MyOrdersActivity.this,myOrdersListData,phone_number));
             }

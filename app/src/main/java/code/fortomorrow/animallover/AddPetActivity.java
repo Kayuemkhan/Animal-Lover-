@@ -130,7 +130,7 @@ public class AddPetActivity extends AppCompatActivity {
         SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
         saveCurrentTime = currentTime.format(calendar.getTime());
 
-        productRandomKey = saveCurrentDate + saveCurrentTime;
+        productRandomKey = saveCurrentDate + saveCurrentTime +phone_number;
 
 
         final StorageReference filePath = ProductImagesRef.child(ImageUri.getLastPathSegment() + productRandomKey + ".jpg");

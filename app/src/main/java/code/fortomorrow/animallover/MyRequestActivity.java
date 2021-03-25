@@ -21,6 +21,7 @@ import java.util.List;
 
 import code.fortomorrow.animallover.ModelClass.AllAdoptPetsModel;
 import code.fortomorrow.animallover.adapters.MyOrdersAdapters;
+import code.fortomorrow.animallover.adapters.MyRequestAdapters;
 import code.fortomorrow.animallover.utils.SharedPref;
 
 public class MyRequestActivity extends AppCompatActivity {
@@ -46,12 +47,12 @@ public class MyRequestActivity extends AppCompatActivity {
                 AllAdoptPetsModel orders = snapshot.getValue(AllAdoptPetsModel.class);
                 myOrdersListData.add(orders);
                 Log.d("aaaa111", "here"+new Gson().toJson(myOrdersListData));
-//                for(int i =0;i<myOrdersListData.size();i++){
-//                    if(String.valueOf(myOrdersListData.get(i).getPhoneNumber()).contains(phone_number)){
-//                        myOrdersListData2.add(myOrdersListData.get(i));
-//                    }
-//                }
-                //myOrders.setAdapter(new MyOrdersAdapters(MyRequestActivity.this,myOrdersListData,phone_number));
+                for(int i =0;i<myOrdersListData.size();i++){
+                    if(String.valueOf(myOrdersListData.get(i).getPid()).contains(phone_number)){
+                        myOrdersListData2.add(myOrdersListData.get(i));
+                    }
+                }
+                myOrders.setAdapter(new MyRequestAdapters(MyRequestActivity.this,myOrdersListData2,phone_number));
             }
 
             @Override

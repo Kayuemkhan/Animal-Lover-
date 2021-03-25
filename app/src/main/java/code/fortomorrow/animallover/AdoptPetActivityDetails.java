@@ -47,6 +47,7 @@ public class AdoptPetActivityDetails extends AppCompatActivity {
         init();
         SharedPref.init(AdoptPetActivityDetails.this);
         pid =  SharedPref.read("pid","");
+        Log.d("pid",pid);
         phone_number =SharedPref.read("Phone","");
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Products");
         allAdoptPetsModels = new ArrayList<>();
