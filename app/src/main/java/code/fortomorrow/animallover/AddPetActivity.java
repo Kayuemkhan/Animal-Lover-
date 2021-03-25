@@ -58,7 +58,7 @@ public class AddPetActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_pet);
         init();
         SharedPref.init(this);
-        phone_number = SharedPref.read("Phone", "");
+        phone_number = String.valueOf(SharedPref.read("Phone", ""));
 
         loadingBar = new ProgressDialog(this);
         ProductImagesRef = FirebaseStorage.getInstance().getReference().child("Product Images");

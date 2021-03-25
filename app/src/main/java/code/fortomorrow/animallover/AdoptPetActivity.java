@@ -44,6 +44,7 @@ public class AdoptPetActivity extends AppCompatActivity {
                 startActivity(new Intent(AdoptPetActivity.this,AddPetActivity.class)));
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Products");
+
     }
 
     @Override
@@ -57,6 +58,7 @@ public class AdoptPetActivity extends AppCompatActivity {
                 AllAdoptPetsModel orders = snapshot.getValue(AllAdoptPetsModel.class);
                 allAdoptPetsModels.add(orders);
                 Log.d("aaaa111", "here"+new Gson().toJson(allAdoptPetsModels));
+
                 petrecylerview.setAdapter(new PetAdoptAdapters(AdoptPetActivity.this,allAdoptPetsModels));
             }
 

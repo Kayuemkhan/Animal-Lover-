@@ -39,6 +39,7 @@ public class AdoptPetActivityDetails extends AppCompatActivity {
     private String phone_number;
     private DatabaseReference databaseReference,databaseReference2;
     private List<AllAdoptPetsModel> allAdoptPetsModels;
+    private boolean haveToInsert = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,37 +52,49 @@ public class AdoptPetActivityDetails extends AppCompatActivity {
         allAdoptPetsModels = new ArrayList<>();
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Products");
         databaseReference2 = FirebaseDatabase.getInstance().getReference().child("Ordered Pets");
-       getProductDetais(pid);
+        getProductDetais(pid);
         adoptPetDetailsWeightadoptmeTV.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               HashMap<String, Object> productMap = new HashMap<>();
-               for (int i =0;i<allAdoptPetsModels.size();i++){
-                   productMap.put("pid", allAdoptPetsModels.get(i).getPid());
-                   productMap.put("date", allAdoptPetsModels.get(i).getDate());
-                   productMap.put("time", allAdoptPetsModels.get(i).getTime());
-                   productMap.put("petsName", allAdoptPetsModels.get(i).getPetsName());
-                   productMap.put("petsAge", allAdoptPetsModels.get(i).getPetsAge());
-                   productMap.put("petsSex", allAdoptPetsModels.get(i).getPetsSex());
-                   productMap.put("petsHabbit", allAdoptPetsModels.get(i).getPetsHabbit());
-                   productMap.put("petsPlace", allAdoptPetsModels.get(i).getPetsPlace());
-                   productMap.put("petsColor", allAdoptPetsModels.get(i).getPetsColor());
-                   productMap.put("image", allAdoptPetsModels.get(i).getImage());
-                   productMap.put("petsWeight", allAdoptPetsModels.get(i).getPetsWeight());
-                   productMap.put("petsBreed", allAdoptPetsModels.get(i).getPetsBreed());
-                   productMap.put("phone_number",phone_number+""+allAdoptPetsModels.get(i).getPhoneNumber());
-               }
-
-               databaseReference2.child(phone_number).setValue(productMap).addOnCompleteListener(new OnCompleteListener<Void>() {
-                   @Override
-                   public void onComplete(@NonNull Task<Void> task) {
-                       Toast.makeText(AdoptPetActivityDetails.this,"Pet adopt req sent",Toast.LENGTH_SHORT).show();
-                       startActivity(new Intent(AdoptPetActivityDetails.this,HomeActivity.class));
-                       finish();
+            @Override
+            public void onClick(View v) {
+                HashMap<String, Object> productMap = new HashMap<>();
+                for (int i =0;i<allAdoptPetsModels.size();i++){
+                   if(allAdoptPetsModels.get(i).getPhone_number().contains(phone_number)){
+                       haveToInsert = false;
+                       Toast.makeText(AdoptPetActivityDetails.this,"You can't send req for your own pets",Toast.LENGTH_SHORT).show();
+                       Log.d("state","here");
+                       return;
                    }
-               });
-           }
-       });
+                   else {
+                       haveToInsert = true;
+                       productMap.put("pid", allAdoptPetsModels.get(i).getPid());
+                       productMap.put("date", allAdoptPetsModels.get(i).getDate());
+                       productMap.put("time", allAdoptPetsModels.get(i).getTime());
+                       productMap.put("petsName", allAdoptPetsModels.get(i).getPetsName());
+                       productMap.put("petsAge", allAdoptPetsModels.get(i).getPetsAge());
+                       productMap.put("petsSex", allAdoptPetsModels.get(i).getPetsSex());
+                       productMap.put("petsHabbit", allAdoptPetsModels.get(i).getPetsHabbit());
+                       productMap.put("petsPlace", allAdoptPetsModels.get(i).getPetsPlace());
+                       productMap.put("petsColor", allAdoptPetsModels.get(i).getPetsColor());
+                       productMap.put("image", allAdoptPetsModels.get(i).getImage());
+                       productMap.put("petsWeight", allAdoptPetsModels.get(i).getPetsWeight());
+                       productMap.put("petsBreed", allAdoptPetsModels.get(i).getPetsBreed());
+                       productMap.put("phone_number",phone_number);
+                   }
+                }
+                if(haveToInsert == true){
+                    databaseReference2.child(phone_number).setValue(productMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            Toast.makeText(AdoptPetActivityDetails.this,"Pet adopt req sent",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(AdoptPetActivityDetails.this,HomeActivity.class));
+                            finish();
+                        }
+                    });
+                }
+
+
+            }
+        });
     }
 
     private void getProductDetais(String pid) {
@@ -90,6 +103,7 @@ public class AdoptPetActivityDetails extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 AllAdoptPetsModel allAdoptPetsModel = snapshot.getValue(AllAdoptPetsModel.class);
                 allAdoptPetsModels.add(allAdoptPetsModel);
+                Log.d("seeall",""+new Gson().toJson(allAdoptPetsModels));
                 adoptPetDetailsNameTV.setText(allAdoptPetsModel.getPetsName());
                 genderAdoptPet.setText(allAdoptPetsModel.getPetsSex());
                 adoptPetDetailsbreedIV.setText(allAdoptPetsModel.getPetsBreed());
@@ -119,25 +133,5 @@ public class AdoptPetActivityDetails extends AppCompatActivity {
         adoptPetDetailsWeightadoptmeTV = findViewById(R.id.adoptPetDetailsWeightadoptmeTV);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
 
-    }
-
-//    private void filtering(List<AllAdoptPetsModel> allAdoptPetsModels) {
-//        for (int i =0;i<allAdoptPetsModels.size();i++){
-//            if(allAdoptPetsModels.get(i).getPid() == pid){
-//                Glide.with(AdoptPetActivityDetails.this).load(allAdoptPetsModels.get(i).getImage()).into(adoptPetDetailsIV);
-//                adoptPetDetailsNameTV.setText(allAdoptPetsModels.get(i).getPetsName());
-//                adoptPetDetailsNameTV.setText(allAdoptPetsModels.get(i).getPetsName());
-//                genderAdoptPet.setText(allAdoptPetsModels.get(i).getPetsSex());
-//                adoptPetDetailsbreedIV.setText(allAdoptPetsModels.get(i).getPetsBreed());
-//                adoptPetDetailsPetsColorTV.setText(allAdoptPetsModels.get(i).getPetsColor());
-//                adoptPetDetailsHabitsTV.setText(allAdoptPetsModels.get(i).getPetsHabbit());
-//                adoptPetDetailsWeightTV.setText(allAdoptPetsModels.get(i).getPetsWeight());
-//                adoptPetDetailsAGeTV.setText(allAdoptPetsModels.get(i).getPetsAge());
-//            }
-//        }
-//    }
 }

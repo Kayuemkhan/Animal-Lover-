@@ -46,12 +46,12 @@ public class MyRequestActivity extends AppCompatActivity {
                 AllAdoptPetsModel orders = snapshot.getValue(AllAdoptPetsModel.class);
                 myOrdersListData.add(orders);
                 Log.d("aaaa111", "here"+new Gson().toJson(myOrdersListData));
-                for(int i =0;i<myOrdersListData.size();i++){
-                    if(myOrdersListData.get(i).getPhoneNumber().contains(phone_number)){
-                        myOrdersListData2.add(myOrdersListData.get(i));
-                    }
-                }
-                myOrders.setAdapter(new MyOrdersAdapters(MyOrdersActivity.this,myOrdersListData,phone_number));
+//                for(int i =0;i<myOrdersListData.size();i++){
+//                    if(String.valueOf(myOrdersListData.get(i).getPhoneNumber()).contains(phone_number)){
+//                        myOrdersListData2.add(myOrdersListData.get(i));
+//                    }
+//                }
+                //myOrders.setAdapter(new MyOrdersAdapters(MyRequestActivity.this,myOrdersListData,phone_number));
             }
 
             @Override
@@ -73,6 +73,6 @@ public class MyRequestActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
-        })
+        });
     }
 }
