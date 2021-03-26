@@ -45,6 +45,7 @@
                     android:weightSum="3">
 
                     <LinearLayout
+                        android:padding="10dp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
@@ -119,6 +120,7 @@
                     android:weightSum="3">
 
                     <LinearLayout
+                        android:padding="10dp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
@@ -127,7 +129,7 @@
                             android:id="@+id/profile_image"
                             android:layout_width="96dp"
                             android:layout_height="96dp"
-                            android:src="@drawable/dp"
+                            android:src="@drawable/sayem"
 
                             app:civ_border_color="#FF000000" />
                     </LinearLayout>
@@ -140,6 +142,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:layout_marginBottom="5dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="MD. ABU SAYEM"
@@ -175,6 +178,7 @@
                     android:weightSum="3">
 
                     <LinearLayout
+                        android:padding="10dp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
@@ -182,7 +186,7 @@
                         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                             android:layout_width="96dp"
                             android:layout_height="96dp"
-                            android:src="@drawable/dp"
+                            android:src="@drawable/madam"
 
                             app:civ_border_color="#FF000000" />
                     </LinearLayout>
@@ -195,6 +199,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:layout_marginBottom="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Safia Khatun"
@@ -230,6 +235,7 @@
                     android:weightSum="3">
 
                     <LinearLayout
+                        android:padding="10dp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
@@ -237,7 +243,7 @@
                         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                             android:layout_width="96dp"
                             android:layout_height="96dp"
-                            android:src="@drawable/dp"
+                            android:src="@drawable/rakib"
 
                             app:civ_border_color="#FF000000" />
                     </LinearLayout>
@@ -250,6 +256,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:layout_marginBottom="5dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Rakib Uddin"

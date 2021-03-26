@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="My Order's Request"
+        android:text="My pet's Request"
         android:background="@color/red"
         android:textColor="@color/white"
         android:padding="15dp"

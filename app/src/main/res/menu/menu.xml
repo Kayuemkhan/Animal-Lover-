@@ -30,6 +30,7 @@
             android:title="My Profile" />
     </group>
     <group
+        android:visible="false"
         android:id="@+id/settings"
         android:checkableBehavior="single">
 
@@ -46,26 +47,9 @@
             android:icon="@drawable/ic_baseline_share_24"
             android:title="Share" />
     </group>
-    <group
-        android:id="@+id/gr"
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/log_out"
-            android:icon="@drawable/ic_baseline_login_24"
-            android:title="Log Out"
-            />
-    </group>
 
-    <group
-        android:id="@+id/group2"
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/about"
-            android:icon="@drawable/ic_baseline_whatshot_24"
-            android:iconTint="@color/white"
-            android:title="About" />
 
-    </group>
+
     <group
         android:id="@+id/ga"
         android:checkableBehavior="single">
@@ -84,6 +68,23 @@
             android:icon="@drawable/ic_baseline_person_24"
             android:title="Order's Request" />
     </group>
+    <group
+        android:id="@+id/gr"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/log_out"
+            android:icon="@drawable/ic_baseline_login_24"
+            android:title="Log Out"
+            />
+    </group>
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/ic_baseline_whatshot_24"
+            android:iconTint="@color/white"
+            android:title="About" />
 
-
+    </group>
 </menu>

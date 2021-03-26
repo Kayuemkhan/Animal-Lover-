@@ -41,6 +41,7 @@ public class MyOrdersActivity extends AppCompatActivity {
         myOrdersListData = new ArrayList<>();
         myOrdersListData2 = new ArrayList<>();
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Ordered Pets");
+        Log.d("State","I'm here");
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
@@ -51,7 +52,7 @@ public class MyOrdersActivity extends AppCompatActivity {
                         myOrdersListData2.add(myOrdersListData.get(i));
                     }
                 }
-                Log.d("aaaa111", "here"+new Gson().toJson(myOrdersListData));
+                Log.d("checkorderlist", "here"+new Gson().toJson(myOrdersListData));
 
                 myOrders.setAdapter(new MyOrdersAdapters(MyOrdersActivity.this,myOrdersListData2,phone_number));
             }
