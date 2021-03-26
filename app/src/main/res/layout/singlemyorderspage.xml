@@ -10,11 +10,13 @@
     app:cardElevation="3dp">
 
     <LinearLayout
+        android:background="@drawable/border"
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/white">
+        >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,7 +28,6 @@
                 android:layout_height="wrap_content"
                 android:text="Staus: "
                 android:id="@+id/zz"
-                android:textColor="@color/black"
                 android:textSize="15sp"/>
 
             <TextView
@@ -51,7 +52,6 @@
                 android:layout_height="wrap_content"
                 android:text="Name: "
                 android:id="@+id/sample22"
-                android:textColor="@color/black"
                 android:textSize="15sp"/>
 
             <TextView
@@ -77,7 +77,6 @@
                 android:layout_height="wrap_content"
                 android:text="Phone Number: "
                 android:id="@+id/sample222"
-                android:textColor="@color/black"
                 android:textSize="15sp" />
 
             <TextView
@@ -105,7 +104,6 @@
                 android:layout_height="wrap_content"
                 android:text="Address City: "
                 android:id="@+id/sample22222"
-                android:textColor="@color/black"
                 android:textSize="15sp" />
 
 
@@ -132,7 +130,6 @@
                 android:layout_height="wrap_content"
                 android:text="Date and Time: "
                 android:id="@+id/sample222222"
-                android:textColor="@color/black"
                 android:textSize="15sp"
                 />
             <TextView

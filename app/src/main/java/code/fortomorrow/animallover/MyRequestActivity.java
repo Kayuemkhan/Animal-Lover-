@@ -2,10 +2,13 @@ package code.fortomorrow.animallover;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -75,5 +78,38 @@ public class MyRequestActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void accpetOrder(String phone_number) {
+        CharSequence options[] = new CharSequence[]{
+                "Yes",
+                "No"
+        };
+        AlertDialog.Builder builder = new  AlertDialog.Builder(MyRequestActivity.this);
+        builder.setTitle("Would you like to accept this order?");
+        builder.setItems(options, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int i) {
+                if(i== 0){
+                    String uID = phone_number;
+                    RemoveOrder(uID);
+                }
+                else {
+                    finish();
+                }
+            }
+
+            private void RemoveOrder(String uID) {
+                databaseReference.child(uID).removeValue();
+                startActivity(new Intent(MyRequestActivity.this,HomeActivity.class));
+            }
+        });
+
+        builder.show();
+
+    }
+
+    public void callme(String phone_number) {
+
     }
 }
