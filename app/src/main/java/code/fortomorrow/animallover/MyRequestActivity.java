@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -110,6 +111,10 @@ public class MyRequestActivity extends AppCompatActivity {
     }
 
     public void callme(String phone_number) {
-
+        String mobileNumber = phone_number;
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_DIAL); // Action for what intent called for
+        intent.setData(Uri.parse("tel: " + mobileNumber)); // Data with intent respective action on intent
+        startActivity(intent);
     }
 }

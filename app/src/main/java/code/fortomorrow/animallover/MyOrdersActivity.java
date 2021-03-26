@@ -52,13 +52,8 @@ public class MyOrdersActivity extends AppCompatActivity {
                     }
                 }
                 Log.d("aaaa111", "here"+new Gson().toJson(myOrdersListData));
-                for(int i =0;i<myOrdersListData.size();i++){
-                    if(String.valueOf(myOrdersListData.get(i).getPhone_number()).contains(phone_number)){
-                        Log.d("myorderphone",""+myOrdersListData.get(i).getPhone_number());
-                        myOrdersListData2.add(myOrdersListData.get(i));
-                    }
-                }
-                myOrders.setAdapter(new MyOrdersAdapters(MyOrdersActivity.this,myOrdersListData,phone_number));
+
+                myOrders.setAdapter(new MyOrdersAdapters(MyOrdersActivity.this,myOrdersListData2,phone_number));
             }
 
             @Override
