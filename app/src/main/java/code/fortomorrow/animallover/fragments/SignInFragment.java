@@ -111,8 +111,10 @@ public class SignInFragment extends Fragment {
                     if(usersData.getPhone().equals(phone)){
                         if(usersData.getPassword().equals(password)){
                             if (parentDbName.equals("Users")) {
+                                String username = usersData.getName();
                                 loadingBar1.dismiss();
                                 Intent intent = new Intent(getActivity(), HomeActivity.class);
+                                SharedPref.write("username",username);
                                 SharedPref.write("LOGGEDIN","Y");
                                 SharedPref.write("Phone",phone);
                                 SharedPref.write("Password",password);

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -12,7 +13,7 @@ import code.fortomorrow.animallover.utils.SharedPref;
 
 public class MyprofileActivity extends AppCompatActivity {
     private ImageView backfrommyprofile,petprofilepic;
-    private TextView username,mypet,mypetcolor,mypetgender;
+    private TextView phoneNumber,mypet,mypetcolor,mypetgender,usernameOftheUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,10 +35,12 @@ public class MyprofileActivity extends AppCompatActivity {
         if (SharedPref.read("Animal", "").contains("bird")) {
             petprofilepic.setImageResource(R.drawable.bird);
         }
-        username.setText(String.valueOf(SharedPref.read("Phone","")));
+        Log.d("useree",String.valueOf(SharedPref.read("username","")));
+        usernameOftheUser.setText(String.valueOf(SharedPref.read("username","")));
+        phoneNumber.setText(String.valueOf(SharedPref.read("Phone","")));
         mypet.setText(String.valueOf(SharedPref.read("Animal", "")));
-        username.setText(String.valueOf(SharedPref.read("Phone","")));
-        username.setText(String.valueOf(SharedPref.read("Phone","")));
+        phoneNumber.setText(String.valueOf(SharedPref.read("Phone","")));
+        phoneNumber.setText(String.valueOf(SharedPref.read("Phone","")));
         backfrommyprofile = findViewById(R.id.backfrommyprofile);
         backfrommyprofile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,10 +52,11 @@ public class MyprofileActivity extends AppCompatActivity {
     }
 
     private void init() {
-        username = findViewById(R.id.username);
+        phoneNumber = findViewById(R.id.username);
         mypet = findViewById(R.id.mypet);
         mypetcolor = findViewById(R.id.mypetcolor);
         mypetgender = findViewById(R.id.mypetgender);
         petprofilepic = findViewById(R.id.petprofilepic);
+        usernameOftheUser = findViewById(R.id.usernameOftheUser);
     }
 }

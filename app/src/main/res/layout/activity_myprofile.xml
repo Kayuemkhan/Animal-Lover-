@@ -68,13 +68,15 @@
                     android:textColor="@color/black" />
 
                 <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/usernameOftheUser"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="sans-serif-thin"
                     android:gravity="center"
                     android:text="\@sayma"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/overlay_dark_40" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
