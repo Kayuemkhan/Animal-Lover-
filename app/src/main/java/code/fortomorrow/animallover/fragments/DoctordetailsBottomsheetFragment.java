@@ -11,11 +11,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import java.util.ArrayList;
@@ -62,8 +64,12 @@ public class DoctordetailsBottomsheetFragment extends BottomSheetDialogFragment 
         callme =view.findViewById(R.id.callme);
         callme.isClickable();
         emailme =view.findViewById(R.id.emailme);
+        BottomSheetDialog dialog =
+                new BottomSheetDialog(getActivity(), R.style.Dialog_Theme);
+
+        dialog.setContentView(R.layout.header);
         callme.setOnClickListener(v -> {
-            dismiss();
+
             Uri uri = Uri.parse("www.google.com");
 //            Intent intent = new Intent(Intent.ACTION_DIAL);
             //intent.setData(Uri.parse(SharedPref.read("doctorPhone","")));

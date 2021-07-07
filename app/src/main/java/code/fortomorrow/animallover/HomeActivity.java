@@ -31,10 +31,11 @@ import code.fortomorrow.animallover.fragments.HomeFragment;
 import code.fortomorrow.animallover.utils.SharedPref;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-   // private ImageView imginhome;
+    // private ImageView imginhome;
     private DrawerLayout drawerLayout;
     Toolbar toolbar;
     MenuItem menuItem;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,21 +56,22 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.drawerLayout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         View headerView = navigationView.getHeaderView(0);
-        TextView headerText= (TextView) headerView.findViewById(R.id.tv_profile_name);
-        if(SharedPref.read("LOGGEDIN","").contains("Y") && !SharedPref.read("Phone","").isEmpty()){
-            headerText.setText(SharedPref.read("Phone",""));
+        TextView headerText = (TextView) headerView.findViewById(R.id.tv_profile_name);
+        if (SharedPref.read("LOGGEDIN", "").contains("Y") && !SharedPref.read("Phone", "").isEmpty()) {
+            headerText.setText(SharedPref.read("Phone", ""));
         }
 
         toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("Home");
-        ActionBarDrawerToggle actionBarDrawerToggle =new ActionBarDrawerToggle(HomeActivity.this,drawerLayout,toolbar,R.string.open,R.string.close);
+        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(HomeActivity.this, drawerLayout, toolbar, R.string.open, R.string.close);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(HomeActivity.this);
-        if(SharedPref.read("LOGGEDIN","").contains("Y")){
-            navigationView.getMenu().setGroupVisible(R.id.grouplogin,false);
-            navigationView.getMenu().setGroupVisible(R.id.groupmyprofile,true);
+        if (SharedPref.read("LOGGEDIN", "").contains("Y")) {
+            navigationView.getMenu().setGroupVisible(R.id.grouplogin, false);
+
+            navigationView.getMenu().setGroupVisible(R.id.groupmyprofile, true);
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             actionBarDrawerToggle.getDrawerArrowDrawable().setColor(getColor(R.color.white));
@@ -86,35 +88,32 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if(id == R.id.reqOrders){
-            startActivity(new Intent(HomeActivity.this,MyRequestActivity.class));
+        if (id == R.id.reqOrders) {
+            startActivity(new Intent(HomeActivity.this, MyRequestActivity.class));
         }
-        if(id == R.id.myOrders){
-            startActivity(new Intent(HomeActivity.this,MyOrdersActivity.class));
+        if (id == R.id.myOrders) {
+            startActivity(new Intent(HomeActivity.this, MyOrdersActivity.class));
         }
-        if(id == R.id.my_profile){
-            startActivity(new Intent(HomeActivity.this,MyprofileActivity.class));
+        if (id == R.id.my_profile) {
+            startActivity(new Intent(HomeActivity.this, MyprofileActivity.class));
         }
-        if(id == R.id.log_out){
-            SharedPref.write("Visited","");
-            SharedPref.write("LOGGEDIN","");
-            startActivity(new Intent(this,MainActivity.class));
+        if (id == R.id.log_out) {
+            SharedPref.write("Visited", "");
+            SharedPref.write("LOGGEDIN", "");
+            startActivity(new Intent(this, MainActivity.class));
         }
-        if(id == R.id.nav_home){
+        if (id == R.id.nav_home) {
             toolbar.setTitle("Home");
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.framelayout, new HomeFragment());
             ft.commit();
-        }
-        else if(id == R.id.log_in){
+        } else if (id == R.id.log_in) {
 
-            startActivity(new Intent(HomeActivity.this,LoginActivity.class));
+            startActivity(new Intent(HomeActivity.this, LoginActivity.class));
 
-        }
-        else if(id == R.id.settings){
+        } else if (id == R.id.settings) {
 
-        }
-        else if(id == R.id.feedback){
+        } else if (id == R.id.feedback) {
             String[] TO = {""};
             String[] CC = {""};
             Intent emailIntent = new Intent(Intent.ACTION_SEND);
@@ -133,8 +132,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             } catch (android.content.ActivityNotFoundException ex) {
                 Toast.makeText(HomeActivity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
             }
-        }
-        else if(id == R.id.share){
+        } else if (id == R.id.share) {
             String[] TO = {""};
             String[] CC = {""};
             Intent emailIntent = new Intent(Intent.ACTION_SEND);
@@ -151,8 +149,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             } catch (android.content.ActivityNotFoundException ex) {
                 Toast.makeText(HomeActivity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
             }
-        }
-        else if(id == R.id.about){
+        } else if (id == R.id.about) {
             toolbar.setTitle("About");
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 // Replace the contents of the container with the new fragment
@@ -165,12 +162,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
     @Override
     public void onBackPressed() {
-        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
-        }
-        else{
+        } else {
             super.onBackPressed();
         }
         super.onBackPressed();

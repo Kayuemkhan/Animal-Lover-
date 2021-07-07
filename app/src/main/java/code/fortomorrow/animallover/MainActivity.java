@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         SharedPref.init(MainActivity.this);
         init();
-        SharedPref.init(MainActivity.this);
         loginstatus =SharedPref.read("Visited","");
         if(loginstatus.contains("Yes")){
             startActivity(new Intent(MainActivity.this,HomeActivity.class));
