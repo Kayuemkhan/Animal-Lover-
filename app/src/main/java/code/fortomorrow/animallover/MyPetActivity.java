@@ -26,7 +26,6 @@ public class MyPetActivity extends AppCompatActivity {
     private EditText notesPet;
     private TextView savePetDetails;
     private String animal = "", petBirthday, petColor;
-    private EditText yourplaceET;
     String petnamelist[] = {"Rabbit", "Cat", "Dog", "Bird", "Fish"};
     String gen[] = {"Male", "Female"};
 
@@ -65,8 +64,7 @@ public class MyPetActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(MyPetActivity.this, HomeActivity.class));
-                finish();
+               save();
             }
         });
         petBirthDay.addTextChangedListener(new TextWatcher() {
@@ -151,6 +149,11 @@ public class MyPetActivity extends AppCompatActivity {
         });
     }
 
+    private void save() {
+
+
+    }
+
     private void init() {
         imageView = findViewById(R.id.imageView);
         petnameSetET = findViewById(R.id.petnameSetET);
@@ -160,6 +163,6 @@ public class MyPetActivity extends AppCompatActivity {
         petColorET = findViewById(R.id.petColorET);
         notesPet = findViewById(R.id.notesPet);
         savePetDetails = findViewById(R.id.savePetDetails);
-        yourplaceET = findViewById(R.id.yourplaceET);
+        EditText yourplaceET = findViewById(R.id.yourplaceET);
     }
 }

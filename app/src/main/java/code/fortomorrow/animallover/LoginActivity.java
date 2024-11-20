@@ -17,7 +17,6 @@ import code.fortomorrow.animallover.utils.SharedPref;
 public class LoginActivity extends AppCompatActivity {
     private TextView loginSelector, signupSelector;
     private View viewborder1, viewborder2;
-    private ImageView backbuttonfromLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
         init();
         SharedPref.init(LoginActivity.this);
         Log.d("logees",SharedPref.read("LOGGEDIN",""));
-        backbuttonfromLogin = findViewById(R.id.backbuttonfromLogin);
+        ImageView backbuttonfromLogin = findViewById(R.id.backbuttonfromLogin);
         backbuttonfromLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,25 +54,19 @@ public class LoginActivity extends AppCompatActivity {
             ft.replace(R.id.signinSignUpFragment, new SignInFragment());
             ft.commit();
         }
-        loginSelector.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewborder1.setVisibility(View.VISIBLE);
-                viewborder2.setVisibility(View.INVISIBLE);
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.signinSignUpFragment, new SignInFragment());
-                ft.commit();
-            }
+        loginSelector.setOnClickListener(v -> {
+            viewborder1.setVisibility(View.VISIBLE);
+            viewborder2.setVisibility(View.INVISIBLE);
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.signinSignUpFragment, new SignInFragment());
+            ft.commit();
         });
-        signupSelector.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewborder1.setVisibility(View.INVISIBLE);
-                viewborder2.setVisibility(View.VISIBLE);
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.signinSignUpFragment, new SignUpFragment());
-                ft.commit();
-            }
+        signupSelector.setOnClickListener(v -> {
+            viewborder1.setVisibility(View.INVISIBLE);
+            viewborder2.setVisibility(View.VISIBLE);
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.signinSignUpFragment, new SignUpFragment());
+            ft.commit();
         });
 
 
