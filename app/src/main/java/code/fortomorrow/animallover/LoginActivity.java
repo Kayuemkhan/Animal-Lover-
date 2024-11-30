@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.FirebaseApp;
+
 import code.fortomorrow.animallover.fragments.SignInFragment;
 import code.fortomorrow.animallover.fragments.SignUpFragment;
 import code.fortomorrow.animallover.utils.SharedPref;
@@ -22,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        FirebaseApp.initializeApp(LoginActivity.this);
         init();
         SharedPref.init(LoginActivity.this);
         Log.d("logees",SharedPref.read("LOGGEDIN",""));

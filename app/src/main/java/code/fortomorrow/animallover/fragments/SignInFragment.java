@@ -20,6 +20,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -50,7 +51,7 @@ public class SignInFragment extends Fragment {
         super.onCreate(savedInstanceState);
         SharedPref.init(this.getActivity());
         Log.d("logeesf",SharedPref.read("LOGGEDIN",""));
-
+        FirebaseApp.initializeApp(requireActivity());
         //SharedPreferences preferences = this.getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
     }
 
@@ -105,6 +106,8 @@ public class SignInFragment extends Fragment {
         Rootref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                System.out.println("dataSnapshot");
+                System.out.println(dataSnapshot);
                 if(dataSnapshot.child(parentDbName).child(phone).exists()){
                     Users usersData = dataSnapshot.child(parentDbName).child(phone).getValue(Users.class);
 

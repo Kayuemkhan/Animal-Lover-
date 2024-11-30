@@ -19,8 +19,11 @@ import code.fortomorrow.animallover.utils.SharedPref;
 
 public class ChildFragment2 extends Fragment {
     private TextView iAmanewuserTV;
-    private MainActivity mainActivity;
     private TextView ihaveanaccountTV;
+
+    public ChildFragment2() {
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,20 +42,14 @@ public class ChildFragment2 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         iAmanewuserTV= view.findViewById(R.id.iAmanewuserTV);
         ihaveanaccountTV = view.findViewById(R.id.ihaveanaccountTV);
-        iAmanewuserTV.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SharedPref.write("UserStatus","SignUp");
-                startActivity(new Intent(getActivity(),LoginActivity.class));
+        iAmanewuserTV.setOnClickListener(v -> {
+            SharedPref.write("UserStatus","SignUp");
+            startActivity(new Intent(getActivity(),LoginActivity.class));
 //                ((MainActivity)getActivity()).nextfragment();
-            }
         });
-        ihaveanaccountTV.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SharedPref.write("UserStatus","SignIn");
-                startActivity(new Intent(getActivity(),LoginActivity.class));
-            }
+        ihaveanaccountTV.setOnClickListener(v -> {
+            SharedPref.write("UserStatus","SignIn");
+            startActivity(new Intent(getActivity(),LoginActivity.class));
         });
     }
 }

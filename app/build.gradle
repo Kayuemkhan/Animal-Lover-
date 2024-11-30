@@ -37,7 +37,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'com.google.android.material:material:1.12.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.2.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
     implementation 'com.balysv:material-ripple:1.0.2' // ripple effect
@@ -48,19 +48,20 @@ dependencies {
     // firebase database
     implementation platform('com.google.firebase:firebase-bom:33.6.0')
     implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.google.firebase:firebase-storage:21.0.1'
-    implementation 'com.google.firebase:firebase-database:21.0.0'
+    implementation 'com.google.firebase:firebase-storage'
+    implementation 'com.google.firebase:firebase-database'
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.11.2'
     implementation 'com.google.code.gson:gson:2.10.1'
 
     implementation 'com.makeramen:roundedimageview:2.3.0'
     //glide
-    implementation 'com.github.bumptech.glide:glide:4.12.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.15.1'
     //multidex
     implementation "androidx.multidex:multidex:2.0.1"
 
 
+    implementation 'io.supercharge:shimmerlayout:2.1.0'
 
 
 }

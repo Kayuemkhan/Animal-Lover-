@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
@@ -10,28 +13,65 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AnimalLover">
-        <activity android:name=".MyRequestActivity"></activity>
-        <activity android:name=".MyOrdersActivity" />
-        <activity android:name=".AddPetActivity" />
-        <activity android:name=".AdoptPetActivityDetails" />
-        <activity android:name=".DiseaseActivity" />
-        <activity android:name=".FirstAidActivity" />
-        <activity android:name=".SingleMedicineActivity" />
-        <activity android:name=".SingleFoodsActivity" />
-        <activity android:name=".MyprofileActivity" />
-        <activity android:name=".MedicinePetActivity" />
-        <activity android:name=".MyPetActivity" />
-        <activity android:name=".HealthActivity" />
-        <activity android:name=".FoodActivity" />
-        <activity android:name=".BlogsActivity" />
-        <activity android:name=".ProfessionalsActivity" />
-        <activity android:name=".AdoptPetActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:exported="false"
+            android:name=".MyRequestActivity" />
+        <activity
+            android:exported="false"
+            android:name=".MyOrdersActivity" />
+        <activity
+            android:exported="false"
+            android:name=".AddPetActivity" />
+        <activity
+            android:exported="false"
+            android:name=".AdoptPetActivityDetails" />
+        <activity
+            android:exported="false"
+            android:name=".DiseaseActivity" />
+        <activity
+            android:exported="false"
+            android:name=".FirstAidActivity" />
+        <activity
+            android:exported="false"
+            android:name=".SingleMedicineActivity" />
+        <activity
+            android:exported="false"
+            android:name=".SingleFoodsActivity" />
+        <activity
+            android:exported="false"
+            android:name=".MyprofileActivity" />
+        <activity
+            android:exported="false"
+            android:name=".MedicinePetActivity" />
+        <activity
+            android:exported="false"
+            android:name=".MyPetActivity" />
+        <activity
+            android:exported="false"
+            android:name=".HealthActivity" />
+        <activity
+            android:exported="false"
+            android:name=".FoodActivity" />
+        <activity
+            android:exported="false"
+            android:name=".BlogsActivity" />
+        <activity
+            android:exported="false"
+            android:name=".ProfessionalsActivity" />
+        <activity
+            android:exported="false"
+            android:name=".AdoptPetActivity" />
+        <activity
+            android:exported="false"
+            android:name=".HomeActivity" />
+        <activity
+            android:exported="false"
+            android:name=".LoginActivity" />
+        <activity
+            android:exported="true"
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

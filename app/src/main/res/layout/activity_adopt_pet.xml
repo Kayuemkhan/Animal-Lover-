@@ -8,6 +8,31 @@
     android:orientation="vertical"
     tools:context=".AdoptPetActivity">
 
+    <io.supercharge.shimmerlayout.ShimmerLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        app:duration="800">
+
+        <!-- Adding 7 rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/data_placeholder_layout" />
+            <include layout="@layout/data_placeholder_layout" />
+            <include layout="@layout/data_placeholder_layout" />
+            <include layout="@layout/data_placeholder_layout" />
+            <include layout="@layout/data_placeholder_layout" />
+            <include layout="@layout/data_placeholder_layout" />
+            <include layout="@layout/data_placeholder_layout" />
+        </LinearLayout>
+
+    </io.supercharge.shimmerlayout.ShimmerLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -53,22 +78,7 @@
             android:orientation="vertical"
             android:paddingLeft="10dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_medium"
-                android:text="Hey, Sam"
-                android:textColor="#2b3357"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_medium"
-                android:text="Adopt a new friend near you ! "
-                android:textColor="#DD2B3357"
-                android:textSize="12sp"
-                />
+
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView

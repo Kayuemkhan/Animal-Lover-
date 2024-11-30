@@ -23,17 +23,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 import code.fortomorrow.animallover.ModelClass.AllAdoptPetsModel;
-import code.fortomorrow.animallover.ModelClass.ProfessionalData;
 import code.fortomorrow.animallover.adapters.PetAdoptAdapters;
+import io.supercharge.shimmerlayout.ShimmerLayout;
 
 public class AdoptPetActivity extends AppCompatActivity {
     private RecyclerView petrecylerview;
     private DatabaseReference databaseReference;
     private List<AllAdoptPetsModel> allAdoptPetsModels;
+    private ShimmerLayout mShimmerViewContainer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adopt_pet);
+        mShimmerViewContainer = findViewById(R.id.shimmer_view_container);
+        mShimmerViewContainer.startShimmerAnimation();
+
         petrecylerview = findViewById(R.id.petrecylerview);
         FloatingActionButton fab= findViewById(R.id.animaladd);
         allAdoptPetsModels = new ArrayList<>();
@@ -44,12 +48,6 @@ public class AdoptPetActivity extends AppCompatActivity {
                 startActivity(new Intent(AdoptPetActivity.this,AddPetActivity.class)));
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Products");
-
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Products");
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
@@ -58,7 +56,8 @@ public class AdoptPetActivity extends AppCompatActivity {
                 AllAdoptPetsModel orders = snapshot.getValue(AllAdoptPetsModel.class);
                 allAdoptPetsModels.add(orders);
                 Log.d("aaaa111", "here"+new Gson().toJson(allAdoptPetsModels));
-
+                mShimmerViewContainer.stopShimmerAnimation();
+                mShimmerViewContainer.setVisibility(View.GONE);
                 petrecylerview.setAdapter(new PetAdoptAdapters(AdoptPetActivity.this,allAdoptPetsModels));
             }
 
@@ -82,5 +81,23 @@ public class AdoptPetActivity extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        mShimmerViewContainer.startShimmerAnimation();
+    }
+
+    @Override
+    protected void onPause() {
+        mShimmerViewContainer.stopShimmerAnimation();
+        super.onPause();
     }
 }

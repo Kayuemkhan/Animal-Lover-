@@ -31,7 +31,11 @@ import code.fortomorrow.animallover.utils.SharedPref;
 
 public class DoctordetailsBottomsheetFragment extends BottomSheetDialogFragment {
     private List<ProfessionalData> professionalData;
-    private TextView doctorname,email,chamber,desination,qualification,cell;
+    private TextView email;
+    private TextView chamber;
+    private TextView desination;
+    private TextView qualification;
+    private TextView cell;
     private TextView callme,emailme;
     String data;
     String professionalName;
@@ -55,7 +59,7 @@ public class DoctordetailsBottomsheetFragment extends BottomSheetDialogFragment 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_doctordetails_bottomsheet, container, false);
-        doctorname =view.findViewById(R.id.doctorname);
+        TextView doctorname = view.findViewById(R.id.doctorname);
         email =view.findViewById(R.id.email);
         chamber =view.findViewById(R.id.chamber);
         desination =view.findViewById(R.id.desination);
