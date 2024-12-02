@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import code.fortomorrow.animallover.ModelClass.AllAdoptPetsModel;
-import code.fortomorrow.animallover.MyOrdersActivity;
+import code.fortomorrow.animallover.model.AllAdoptPetsModel;
+import code.fortomorrow.animallover.ui.MyOrdersActivity;
 import code.fortomorrow.animallover.R;
 
 public class MyOrdersAdapters extends RecyclerView.Adapter<MyOrdersAdapters.Viewholder> {

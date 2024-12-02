@@ -1,7 +1,6 @@
 package code.fortomorrow.animallover.adapters;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import code.fortomorrow.animallover.ModelClass.AllAdoptPetsModel;
-import code.fortomorrow.animallover.MyRequestActivity;
+import code.fortomorrow.animallover.model.AllAdoptPetsModel;
+import code.fortomorrow.animallover.ui.MyRequestActivity;
 import code.fortomorrow.animallover.R;
 
 public class MyRequestAdapters extends RecyclerView.Adapter<MyRequestAdapters.Viewholder> {

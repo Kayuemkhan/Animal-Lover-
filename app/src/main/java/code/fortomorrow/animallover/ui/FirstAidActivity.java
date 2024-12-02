@@ -1,4 +1,4 @@
-package code.fortomorrow.animallover;
+package code.fortomorrow.animallover.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import code.fortomorrow.animallover.R;
 
 public class FirstAidActivity extends AppCompatActivity {
     private ImageView backfromfirstaid;

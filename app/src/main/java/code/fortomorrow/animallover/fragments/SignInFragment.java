@@ -1,9 +1,7 @@
 package code.fortomorrow.animallover.fragments;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,7 +12,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -27,9 +24,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import code.fortomorrow.animallover.HomeActivity;
-import code.fortomorrow.animallover.MainActivity;
-import code.fortomorrow.animallover.ModelClass.Users;
+import code.fortomorrow.animallover.ui.HomeActivity;
+import code.fortomorrow.animallover.model.Users;
 import code.fortomorrow.animallover.R;
 import code.fortomorrow.animallover.utils.SharedPref;
 

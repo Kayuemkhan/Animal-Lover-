@@ -2,9 +2,6 @@ package code.fortomorrow.animallover.adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,10 +15,9 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-import code.fortomorrow.animallover.AdoptPetActivity;
-import code.fortomorrow.animallover.AdoptPetActivityDetails;
-import code.fortomorrow.animallover.ModelClass.AllAdoptPetsModel;
-import code.fortomorrow.animallover.ModelClass.ProfessionalData;
+import code.fortomorrow.animallover.ui.AdoptPetActivity;
+import code.fortomorrow.animallover.ui.AdoptPetActivityDetails;
+import code.fortomorrow.animallover.model.AllAdoptPetsModel;
 import code.fortomorrow.animallover.R;
 import code.fortomorrow.animallover.utils.SharedPref;
 

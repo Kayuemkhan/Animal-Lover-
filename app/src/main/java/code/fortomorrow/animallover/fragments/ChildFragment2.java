@@ -12,8 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import code.fortomorrow.animallover.LoginActivity;
-import code.fortomorrow.animallover.MainActivity;
+import code.fortomorrow.animallover.ui.LoginActivity;
 import code.fortomorrow.animallover.R;
 import code.fortomorrow.animallover.utils.SharedPref;
 

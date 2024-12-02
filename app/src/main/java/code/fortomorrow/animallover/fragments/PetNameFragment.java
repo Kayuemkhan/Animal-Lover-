@@ -15,9 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import code.fortomorrow.animallover.HomeActivity;
-import code.fortomorrow.animallover.LoginActivity;
-import code.fortomorrow.animallover.MainActivity;
+import code.fortomorrow.animallover.ui.HomeActivity;
 import code.fortomorrow.animallover.R;
 import code.fortomorrow.animallover.utils.SharedPref;
 

@@ -1,17 +1,17 @@
-package code.fortomorrow.animallover;
+package code.fortomorrow.animallover.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import code.fortomorrow.animallover.R;
 import com.google.firebase.FirebaseApp;
 
 import code.fortomorrow.animallover.adapters.ViewPagerAdapter;

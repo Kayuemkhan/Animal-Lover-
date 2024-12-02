@@ -1,28 +1,24 @@
-package code.fortomorrow.animallover;
+package code.fortomorrow.animallover.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
+import code.fortomorrow.animallover.R;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import code.fortomorrow.animallover.ModelClass.ProfessionalData;
+import code.fortomorrow.animallover.model.ProfessionalData;
 import code.fortomorrow.animallover.adapters.ProfessionalsAdapters;
 import code.fortomorrow.animallover.fragments.DoctordetailsBottomsheetFragment;
-import code.fortomorrow.animallover.utils.SharedPref;
 
 public class ProfessionalsActivity extends AppCompatActivity {
     private RecyclerView professionalsrecylerview;

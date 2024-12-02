@@ -1,4 +1,4 @@
-package code.fortomorrow.animallover;
+package code.fortomorrow.animallover.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,13 +14,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import code.fortomorrow.animallover.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import code.fortomorrow.animallover.ModelClass.BlogModelClass;
-import code.fortomorrow.animallover.ModelClass.ProfessionalData;
+import code.fortomorrow.animallover.model.BlogModelClass;
 import code.fortomorrow.animallover.adapters.BlogsAdapters;
-import code.fortomorrow.animallover.adapters.ProfessionalsAdapters;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class BlogsActivity extends AppCompatActivity {

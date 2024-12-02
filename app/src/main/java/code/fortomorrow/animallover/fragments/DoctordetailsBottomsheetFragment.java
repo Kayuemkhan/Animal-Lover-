@@ -1,6 +1,5 @@
 package code.fortomorrow.animallover.fragments;
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,7 +10,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -24,8 +22,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import code.fortomorrow.animallover.ModelClass.ProfessionalData;
-import code.fortomorrow.animallover.ProfessionalsActivity;
+import code.fortomorrow.animallover.model.ProfessionalData;
+import code.fortomorrow.animallover.ui.ProfessionalsActivity;
 import code.fortomorrow.animallover.R;
 import code.fortomorrow.animallover.utils.SharedPref;
 

@@ -1,4 +1,4 @@
-package code.fortomorrow.animallover;
+package code.fortomorrow.animallover.ui;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import code.fortomorrow.animallover.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -22,7 +23,7 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
 
-import code.fortomorrow.animallover.ModelClass.AllAdoptPetsModel;
+import code.fortomorrow.animallover.model.AllAdoptPetsModel;
 import code.fortomorrow.animallover.adapters.PetAdoptAdapters;
 import io.supercharge.shimmerlayout.ShimmerLayout;
 

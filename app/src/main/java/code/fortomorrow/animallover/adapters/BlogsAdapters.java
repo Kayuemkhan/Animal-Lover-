@@ -5,8 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,9 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import code.fortomorrow.animallover.BlogsActivity;
-import code.fortomorrow.animallover.ModelClass.BlogModelClass;
-import code.fortomorrow.animallover.ModelClass.ProfessionalData;
+import code.fortomorrow.animallover.ui.BlogsActivity;
+import code.fortomorrow.animallover.model.BlogModelClass;
 import code.fortomorrow.animallover.R;
 
 public class BlogsAdapters extends RecyclerView.Adapter<BlogsAdapters.ViewHolder> {
