@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".AdoptPetActivity">
-
     <io.supercharge.shimmerlayout.ShimmerLayout
         android:id="@+id/shimmer_view_container"
         android:layout_width="wrap_content"
@@ -17,7 +16,6 @@
         android:orientation="vertical"
         app:duration="800">
 
-        <!-- Adding 7 rows of placeholders -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,10 +27,11 @@
             <include layout="@layout/data_placeholder_layout" />
             <include layout="@layout/data_placeholder_layout" />
             <include layout="@layout/data_placeholder_layout" />
+            <include layout="@layout/data_placeholder_layout" />
+            <include layout="@layout/data_placeholder_layout" />
         </LinearLayout>
 
     </io.supercharge.shimmerlayout.ShimmerLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -78,7 +77,22 @@
             android:orientation="vertical"
             android:paddingLeft="10dp">
 
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Hey, Sam"
+                android:textColor="#2b3357"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Adopt a new friend near you ! "
+                android:textColor="#DD2B3357"
+                android:textSize="12sp"
+                />
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -96,10 +110,14 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom|end"
-        android:background="@color/overlay_dark_30"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_add_24"
+        android:background="@color/white"
+        android:backgroundTint="#E55852"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:fabSize="normal"
         android:layout_margin="16dp"
         android:id="@+id/animaladd"
         />
