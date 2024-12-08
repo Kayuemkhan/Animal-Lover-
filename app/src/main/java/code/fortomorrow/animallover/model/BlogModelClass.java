@@ -1,4 +1,4 @@
-package code.fortomorrow.animallover.ModelClass;
+package code.fortomorrow.animallover.model;
 
 public class BlogModelClass {
     private int imageResource;

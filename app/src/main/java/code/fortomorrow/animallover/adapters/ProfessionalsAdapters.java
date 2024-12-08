@@ -7,15 +7,13 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import code.fortomorrow.animallover.ModelClass.ProfessionalData;
-import code.fortomorrow.animallover.ProfessionalsActivity;
+import code.fortomorrow.animallover.model.ProfessionalData;
+import code.fortomorrow.animallover.ui.ProfessionalsActivity;
 import code.fortomorrow.animallover.R;
-import code.fortomorrow.animallover.fragments.DoctordetailsBottomsheetFragment;
 
 public class ProfessionalsAdapters extends RecyclerView.Adapter<ProfessionalsAdapters.ViewHolder> {
     private Context context;

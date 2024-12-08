@@ -11,14 +11,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import code.fortomorrow.animallover.ModelClass.AllAdoptPetsModel;
-import code.fortomorrow.animallover.MyOrdersActivity;
+import code.fortomorrow.animallover.model.AllAdoptPetsModel;
+import code.fortomorrow.animallover.ui.MyOrdersActivity;
 import code.fortomorrow.animallover.R;
 
 public class MyOrdersAdapters extends RecyclerView.Adapter<MyOrdersAdapters.Viewholder> {
-    private Context context;
-    private List<AllAdoptPetsModel> myOders;
-    private String phone;
+    private final Context context;
+    private final List<AllAdoptPetsModel> myOders;
+    private final String phone;
     public MyOrdersAdapters(MyOrdersActivity myOrdersActivity, List<AllAdoptPetsModel> myOrdersListData, String phone_number) {
         this.context = myOrdersActivity;
         this.myOders = myOrdersListData;
@@ -29,7 +29,7 @@ public class MyOrdersAdapters extends RecyclerView.Adapter<MyOrdersAdapters.View
     @Override
     public Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.singlemyorderspage,parent,false);
-        return new MyOrdersAdapters.Viewholder(view);
+        return new Viewholder(view);
     }
 
     @Override
@@ -45,8 +45,11 @@ public class MyOrdersAdapters extends RecyclerView.Adapter<MyOrdersAdapters.View
         return myOders.size();
     }
 
-    public class Viewholder extends RecyclerView.ViewHolder {
-        private TextView order_user_name, order_phone_number,order_address_city,order_date_time;
+    public static class Viewholder extends RecyclerView.ViewHolder {
+        private final TextView order_user_name;
+      private final TextView order_phone_number;
+      private final TextView order_address_city;
+      private final TextView order_date_time;
         public Viewholder(@NonNull View itemView) {
             super(itemView);
             order_user_name = itemView.findViewById(R.id.order_user_name);

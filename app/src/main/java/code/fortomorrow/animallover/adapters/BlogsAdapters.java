@@ -5,8 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,15 +12,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import code.fortomorrow.animallover.BlogsActivity;
-import code.fortomorrow.animallover.ModelClass.BlogModelClass;
-import code.fortomorrow.animallover.ModelClass.ProfessionalData;
+import code.fortomorrow.animallover.ui.BlogsActivity;
+import code.fortomorrow.animallover.model.BlogModelClass;
 import code.fortomorrow.animallover.R;
 
 public class BlogsAdapters extends RecyclerView.Adapter<BlogsAdapters.ViewHolder> {
-    private Context context;
-    private List<BlogModelClass> blogslist;
-    private BlogsActivity blogsActivity;
+    private final Context context;
+    private final List<BlogModelClass> blogslist;
+    private final BlogsActivity blogsActivity;
 
     public BlogsAdapters(BlogsActivity blogsActivity, List<BlogModelClass> exampleList, BlogsActivity activity) {
         this.context = blogsActivity;
@@ -34,7 +31,7 @@ public class BlogsAdapters extends RecyclerView.Adapter<BlogsAdapters.ViewHolder
     @Override
     public BlogsAdapters.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.designblog,parent,false);
-        return new BlogsAdapters.ViewHolder(view);
+        return new ViewHolder(view);
     }
 
     @Override
@@ -55,11 +52,11 @@ public class BlogsAdapters extends RecyclerView.Adapter<BlogsAdapters.ViewHolder
         return blogslist.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        private ImageView blogpicture;
-        private TextView blogheadline;
-        private TextView writeer;
-        private View view;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        private final ImageView blogpicture;
+        private final TextView blogheadline;
+        private final TextView writeer;
+        private final View view;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             view = itemView;

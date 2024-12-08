@@ -2,9 +2,6 @@ package code.fortomorrow.animallover.adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,16 +15,15 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-import code.fortomorrow.animallover.AdoptPetActivity;
-import code.fortomorrow.animallover.AdoptPetActivityDetails;
-import code.fortomorrow.animallover.ModelClass.AllAdoptPetsModel;
-import code.fortomorrow.animallover.ModelClass.ProfessionalData;
+import code.fortomorrow.animallover.ui.AdoptPetActivity;
+import code.fortomorrow.animallover.ui.AdoptPetActivityDetails;
+import code.fortomorrow.animallover.model.AllAdoptPetsModel;
 import code.fortomorrow.animallover.R;
 import code.fortomorrow.animallover.utils.SharedPref;
 
 public class PetAdoptAdapters extends RecyclerView.Adapter<PetAdoptAdapters.ViewHolder> {
-    private List<AllAdoptPetsModel> petadopt;
-    private Context context;
+    private final List<AllAdoptPetsModel> petadopt;
+    private final Context context;
 
     public PetAdoptAdapters(AdoptPetActivity adoptPetActivity, List<AllAdoptPetsModel> allAdoptPetsModels) {
         this.petadopt = allAdoptPetsModels;
@@ -39,7 +35,7 @@ public class PetAdoptAdapters extends RecyclerView.Adapter<PetAdoptAdapters.View
     @Override
     public PetAdoptAdapters.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.designadoptpet,parent,false);
-        return new PetAdoptAdapters.ViewHolder(view);
+        return new ViewHolder(view);
     }
 
     @Override
@@ -61,11 +57,11 @@ public class PetAdoptAdapters extends RecyclerView.Adapter<PetAdoptAdapters.View
         return petadopt.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        private ImageView petadoptIMG;
-        private TextView petname;
-        private TextView petLocation;
-        private View view;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        private final ImageView petadoptIMG;
+        private final TextView petname;
+        private final TextView petLocation;
+        private final View view;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             view = itemView;

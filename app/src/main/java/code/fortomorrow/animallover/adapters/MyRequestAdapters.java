@@ -1,7 +1,6 @@
 package code.fortomorrow.animallover.adapters;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,15 +11,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import code.fortomorrow.animallover.ModelClass.AllAdoptPetsModel;
-import code.fortomorrow.animallover.MyRequestActivity;
+import code.fortomorrow.animallover.model.AllAdoptPetsModel;
+import code.fortomorrow.animallover.ui.MyRequestActivity;
 import code.fortomorrow.animallover.R;
 
 public class MyRequestAdapters extends RecyclerView.Adapter<MyRequestAdapters.Viewholder> {
-    private Context context;
-    private List<AllAdoptPetsModel> allAdoptPetsModels;
-    private String phone_number;
-    private MyRequestActivity myRequestActivity;
+    private final Context context;
+    private final List<AllAdoptPetsModel> allAdoptPetsModels;
+    private final String phone_number;
+    private final MyRequestActivity myRequestActivity;
     public MyRequestAdapters(MyRequestActivity myRequestActivity, List<AllAdoptPetsModel> myOrdersListData, String phone_number) {
         this.context = myRequestActivity;
         this.allAdoptPetsModels = myOrdersListData;
@@ -46,12 +45,8 @@ public class MyRequestAdapters extends RecyclerView.Adapter<MyRequestAdapters.Vi
                 myRequestActivity.accpetOrder(allAdoptPetsModels.get(position).getPhone_number());
             }
         });
-        holder.callme.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                myRequestActivity.callme(allAdoptPetsModels.get(position).getPhone_number());
-            }
-        });
+        holder.callme.setOnClickListener(
+            v -> myRequestActivity.callme(allAdoptPetsModels.get(position).getPhone_number()));
     }
 
     @Override
@@ -60,7 +55,13 @@ public class MyRequestAdapters extends RecyclerView.Adapter<MyRequestAdapters.Vi
     }
 
     public class Viewholder extends RecyclerView.ViewHolder {
-        private TextView order_user_name,order_phone_number,order_address_city,order_date_time,cellnow,callme,acceptOrder;
+        private TextView order_user_name;
+      private TextView order_phone_number;
+      private final TextView order_address_city;
+      private final TextView order_date_time;
+      private final TextView cellnow;
+      private final TextView callme;
+      private final TextView acceptOrder;
         public Viewholder(@NonNull View itemView) {
             super(itemView);
             order_address_city = itemView.findViewById(R.id.order_address_city);

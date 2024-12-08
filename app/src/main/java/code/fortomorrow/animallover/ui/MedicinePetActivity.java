@@ -1,17 +1,13 @@
-package code.fortomorrow.animallover;
+package code.fortomorrow.animallover.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import android.app.AlertDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
+import code.fortomorrow.animallover.R;
 
 public class MedicinePetActivity extends AppCompatActivity {
     private CardView carmedicinecard,birdmedicinecard,dogmedicinecard,fishmedicinecard,rabbitMedicinefood;

@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import code.fortomorrow.animallover.MainActivity;
+import code.fortomorrow.animallover.ui.MainActivity;
 import code.fortomorrow.animallover.R;
 
 public class WelcomeFragment extends Fragment {

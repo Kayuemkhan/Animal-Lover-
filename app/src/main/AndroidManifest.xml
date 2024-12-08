@@ -15,61 +15,61 @@
         android:theme="@style/Theme.AnimalLover">
         <activity
             android:exported="false"
-            android:name=".MyRequestActivity" />
+            android:name=".ui.MyRequestActivity" />
         <activity
             android:exported="false"
-            android:name=".MyOrdersActivity" />
+            android:name=".ui.MyOrdersActivity" />
         <activity
             android:exported="false"
-            android:name=".AddPetActivity" />
+            android:name=".ui.AddPetActivity" />
         <activity
             android:exported="false"
-            android:name=".AdoptPetActivityDetails" />
+            android:name=".ui.AdoptPetActivityDetails" />
         <activity
             android:exported="false"
-            android:name=".DiseaseActivity" />
+            android:name=".ui.DiseaseActivity" />
         <activity
             android:exported="false"
-            android:name=".FirstAidActivity" />
+            android:name=".ui.FirstAidActivity" />
         <activity
             android:exported="false"
-            android:name=".SingleMedicineActivity" />
+            android:name=".ui.SingleMedicineActivity" />
         <activity
             android:exported="false"
-            android:name=".SingleFoodsActivity" />
+            android:name=".ui.SingleFoodsActivity" />
         <activity
             android:exported="false"
-            android:name=".MyprofileActivity" />
+            android:name=".ui.MyprofileActivity" />
         <activity
             android:exported="false"
-            android:name=".MedicinePetActivity" />
+            android:name=".ui.MedicinePetActivity" />
         <activity
             android:exported="false"
-            android:name=".MyPetActivity" />
+            android:name=".ui.MyPetActivity" />
         <activity
             android:exported="false"
-            android:name=".HealthActivity" />
+            android:name=".ui.HealthActivity" />
         <activity
             android:exported="false"
-            android:name=".FoodActivity" />
+            android:name=".ui.FoodActivity" />
         <activity
             android:exported="false"
-            android:name=".BlogsActivity" />
+            android:name=".ui.BlogsActivity" />
         <activity
             android:exported="false"
-            android:name=".ProfessionalsActivity" />
+            android:name=".ui.ProfessionalsActivity" />
         <activity
             android:exported="false"
-            android:name=".AdoptPetActivity" />
+            android:name=".ui.AdoptPetActivity" />
         <activity
             android:exported="false"
-            android:name=".HomeActivity" />
+            android:name=".ui.HomeActivity" />
         <activity
             android:exported="false"
-            android:name=".LoginActivity" />
+            android:name=".ui.LoginActivity" />
         <activity
             android:exported="true"
-            android:name=".MainActivity">
+            android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

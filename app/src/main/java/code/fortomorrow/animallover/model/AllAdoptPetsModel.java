@@ -1,4 +1,4 @@
-package code.fortomorrow.animallover.ModelClass;
+package code.fortomorrow.animallover.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

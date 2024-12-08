@@ -1,4 +1,4 @@
-package code.fortomorrow.animallover;
+package code.fortomorrow.animallover.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import code.fortomorrow.animallover.R;
 import code.fortomorrow.animallover.utils.SharedPref;
 
 public class MyPetActivity extends AppCompatActivity {

@@ -8,16 +8,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.LinearLayout;
 
-import code.fortomorrow.animallover.AdoptPetActivity;
-import code.fortomorrow.animallover.BlogsActivity;
-import code.fortomorrow.animallover.FoodActivity;
-import code.fortomorrow.animallover.HealthActivity;
-import code.fortomorrow.animallover.LoginActivity;
-import code.fortomorrow.animallover.MyPetActivity;
-import code.fortomorrow.animallover.ProfessionalsActivity;
+import code.fortomorrow.animallover.ui.AdoptPetActivity;
+import code.fortomorrow.animallover.ui.BlogsActivity;
+import code.fortomorrow.animallover.ui.FoodActivity;
+import code.fortomorrow.animallover.ui.HealthActivity;
+import code.fortomorrow.animallover.ui.LoginActivity;
+import code.fortomorrow.animallover.ui.MyPetActivity;
+import code.fortomorrow.animallover.ui.ProfessionalsActivity;
 import code.fortomorrow.animallover.R;
 import code.fortomorrow.animallover.utils.SharedPref;
 

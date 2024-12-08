@@ -11,7 +11,6 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,8 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 
-import code.fortomorrow.animallover.HomeActivity;
-import code.fortomorrow.animallover.MainActivity;
+import code.fortomorrow.animallover.ui.HomeActivity;
 import code.fortomorrow.animallover.R;
 import code.fortomorrow.animallover.utils.SharedPref;
 
