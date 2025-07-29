@@ -45,7 +45,7 @@ public class AddPetActivity extends AppCompatActivity {
     private static final int GalleryPick = 1;
     private Uri ImageUri;
     private ProgressDialog loadingBar;
-    private String downloadImageUrl;
+    private String downloadImageUrl = "";
     String saveCurrentDate;
     String productRandomKey;
     String saveCurrentTime;
@@ -132,42 +132,8 @@ public class AddPetActivity extends AppCompatActivity {
 
         productRandomKey = saveCurrentDate + saveCurrentTime +phone_number;
 
+        SaveProductInfoToDatabase();
 
-        final StorageReference filePath = ProductImagesRef.child(ImageUri.getLastPathSegment() + productRandomKey + ".jpg");
-
-        final UploadTask uploadTask = filePath.putFile(ImageUri);
-        uploadTask.addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                String message = e.toString();
-                loadingBar.dismiss();
-            }
-        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-
-                Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
-                    @Override
-                    public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
-                        if (!task.isSuccessful()) {
-                            throw task.getException();
-                        }
-
-                        downloadImageUrl = filePath.getDownloadUrl().toString();
-                        return filePath.getDownloadUrl();
-                    }
-                }).addOnCompleteListener(new OnCompleteListener<Uri>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Uri> task) {
-                        if (task.isSuccessful()) {
-                            downloadImageUrl = task.getResult().toString();
-
-                            SaveProductInfoToDatabase();
-                        }
-                    }
-                });
-            }
-        });
     }
 
     private void SaveProductInfoToDatabase() {
@@ -187,19 +153,16 @@ public class AddPetActivity extends AppCompatActivity {
         productMap.put("phone_number", phone_number);
 
         ProductsRef.child(productRandomKey).updateChildren(productMap)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
-                            Intent intent = new Intent(AddPetActivity.this, HomeActivity.class);
-                            startActivity(intent);
-                            loadingBar.dismiss();
-                            Toast.makeText(AddPetActivity.this, "Product is added successfully..", Toast.LENGTH_SHORT).show();
-                        } else {
-                            loadingBar.dismiss();
-                            String message = task.getException().toString();
-                            Toast.makeText(AddPetActivity.this, "Error: " + message, Toast.LENGTH_SHORT).show();
-                        }
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        Intent intent = new Intent(AddPetActivity.this, HomeActivity.class);
+                        startActivity(intent);
+                        loadingBar.dismiss();
+                        Toast.makeText(AddPetActivity.this, "Product is added successfully..", Toast.LENGTH_SHORT).show();
+                    } else {
+                        loadingBar.dismiss();
+                        String message = task.getException().toString();
+                        Toast.makeText(AddPetActivity.this, "Error: " + message, Toast.LENGTH_SHORT).show();
                     }
                 });
     }

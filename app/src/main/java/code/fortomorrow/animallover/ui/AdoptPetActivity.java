@@ -49,7 +49,6 @@ public class AdoptPetActivity extends AppCompatActivity {
                 startActivity(new Intent(AdoptPetActivity.this,AddPetActivity.class)));
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Products");
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("Products");
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
