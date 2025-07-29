@@ -24,6 +24,24 @@
           "other_platform_oauth_client": []
         }
       }
+    },    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599450493680:android:ed4d2bd8b5f81cdb171835",
+        "android_client_info": {
+          "package_name": "com.enca.grtlrfbl"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpAuLku1NLvd4CjNrxCLmLf9ES_CRr8mE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
     }
   ],
   "configuration_version": "1"
