@@ -9,21 +9,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import code.fortomorrow.animallover.ui.AdoptPetActivity;
 import code.fortomorrow.animallover.ui.BlogsActivity;
 import code.fortomorrow.animallover.ui.FoodActivity;
 import code.fortomorrow.animallover.ui.HealthActivity;
-import code.fortomorrow.animallover.ui.LoginActivity;
 import code.fortomorrow.animallover.ui.MyPetActivity;
 import code.fortomorrow.animallover.ui.ProfessionalsActivity;
 import code.fortomorrow.animallover.R;
-import code.fortomorrow.animallover.utils.SharedPref;
 
 
 public class HomeFragment extends Fragment {
     private LinearLayout adopt;
     private LinearLayout professionals,blogs,food,health,mypetsIcon;
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -31,7 +31,6 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -40,70 +39,21 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home,container,false);
         init(view);
-        adopt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(SharedPref.read("LOGGEDIN","").contains("Y")){
-                    startActivity(new Intent(getActivity(), AdoptPetActivity.class));
-                }
-                else {
-                    startActivity(new Intent(getActivity(), LoginActivity.class));
-                }
-            }
 
-        });
-        professionals.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(SharedPref.read("LOGGEDIN","").contains("Y")){
-                    startActivity(new Intent(getActivity(), ProfessionalsActivity.class));
-                }
-                else {
-                    startActivity(new Intent(getActivity(), LoginActivity.class));
-                }
-            }
-        });
-        blogs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(SharedPref.read("LOGGEDIN","").contains("Y")){
-                    startActivity(new Intent(getActivity(), BlogsActivity.class));
-                }
-                else {
-                    startActivity(new Intent(getActivity(), LoginActivity.class));
-                }
-            }
-        });
+        adopt.setOnClickListener(v -> Toast.makeText(requireActivity(), "The feature will be coming soon", Toast.LENGTH_SHORT).show());
+
+        professionals.setOnClickListener(v -> startActivity(new Intent(getActivity(), ProfessionalsActivity.class)));
+
+        blogs.setOnClickListener(v -> startActivity(new Intent(getActivity(), BlogsActivity.class)));
+
         food.setOnClickListener(v -> {
-            if(SharedPref.read("LOGGEDIN","").contains("Y")){
-                startActivity(new Intent(getActivity(), FoodActivity.class));
-            }
-            else {
-                startActivity(new Intent(getActivity(), LoginActivity.class));
-            }
+            startActivity(new Intent(getActivity(), FoodActivity.class));
         });
-        health.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(SharedPref.read("LOGGEDIN","").contains("Y")){
-                    startActivity(new Intent(getActivity(), HealthActivity.class));
-                }
-                else {
-                    startActivity(new Intent(getActivity(), LoginActivity.class));
-                }
-            }
-        });
-        mypetsIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(SharedPref.read("LOGGEDIN","").contains("Y")){
-                    startActivity(new Intent(getActivity(), MyPetActivity.class));
-                }
-                else {
-                    startActivity(new Intent(getActivity(), LoginActivity.class));
-                }
-            }
-        });
+
+        health.setOnClickListener(v -> startActivity(new Intent(getActivity(), HealthActivity.class)));
+
+        mypetsIcon.setOnClickListener(v -> startActivity(new Intent(getActivity(), MyPetActivity.class)));
+
         return view;
     }
 

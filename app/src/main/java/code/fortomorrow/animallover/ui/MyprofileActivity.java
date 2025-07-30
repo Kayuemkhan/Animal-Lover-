@@ -18,14 +18,13 @@ import code.fortomorrow.animallover.utils.SharedPref;
 
 public class MyprofileActivity extends AppCompatActivity {
     private ImageView backfrommyprofile,petprofilepic;
-    private TextView phoneNumber,mypet,mypetcolor,mypetgender,usernameOftheUser,deletethisaccount;
+    private TextView mypet,mypetcolor,mypetgender;
     private DatabaseReference databaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myprofile);
        init();
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("Users");
         SharedPref.init(MyprofileActivity.this);
         if (SharedPref.read("Animal", "").contains("dog")) {
             petprofilepic.setImageResource(R.drawable.dog);
@@ -42,60 +41,19 @@ public class MyprofileActivity extends AppCompatActivity {
         if (SharedPref.read("Animal", "").contains("bird")) {
             petprofilepic.setImageResource(R.drawable.bird);
         }
-        usernameOftheUser.setText(String.valueOf(SharedPref.read("username","")));
-        phoneNumber.setText(String.valueOf(SharedPref.read("Phone","")));
+//        usernameOftheUser.setText(String.valueOf(SharedPref.read("username","")));
         mypet.setText(String.valueOf(SharedPref.read("Animal", "")));
-        phoneNumber.setText(String.valueOf(SharedPref.read("Phone","")));
         backfrommyprofile = findViewById(R.id.backfrommyprofile);
-        backfrommyprofile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MyprofileActivity.this,HomeActivity.class));
-                finish();
-            }
-        });
-        deletethisaccount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CharSequence options[] = new CharSequence[]{
-                        "Yes",
-                        "No"
-                };
-                AlertDialog.Builder builder = new  AlertDialog.Builder(MyprofileActivity.this);
-                builder.setTitle("Would you like to delete your account?");
-                builder.setItems(options, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int i) {
-                        if(i== 0){
-                            databaseReference.child(String.valueOf(SharedPref.read("Phone",""))).removeValue();
-                            SharedPref.write("Visited","");
-                            SharedPref.write("LOGGEDIN","");
-                            SharedPref.write("username","");
-                            SharedPref.write("Phone","");
-
-                            startActivity(new Intent(MyprofileActivity.this,MainActivity.class));
-                        }
-                        else {
-                            finish();
-                        }
-                    }
-
-
-                });
-
-                builder.show();
-
-            }
+        backfrommyprofile.setOnClickListener(v -> {
+            startActivity(new Intent(MyprofileActivity.this,HomeActivity.class));
+            finish();
         });
     }
 
     private void init() {
-        phoneNumber = findViewById(R.id.username);
         mypet = findViewById(R.id.mypet);
         mypetcolor = findViewById(R.id.mypetcolor);
         mypetgender = findViewById(R.id.mypetgender);
         petprofilepic = findViewById(R.id.petprofilepic);
-        usernameOftheUser = findViewById(R.id.usernameOftheUser);
-        deletethisaccount = findViewById(R.id.deletethisaccount);
     }
 }

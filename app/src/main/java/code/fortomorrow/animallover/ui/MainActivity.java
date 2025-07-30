@@ -27,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FirebaseApp.initializeApp(this); // Initialize Firebase
+        SharedPref.init(MainActivity.this);
+        SharedPref.write("LOGGEDIN","Y");
+        SharedPref.write("Phone","01684762673");
+        SharedPref.write("Password","12345678");
+
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);

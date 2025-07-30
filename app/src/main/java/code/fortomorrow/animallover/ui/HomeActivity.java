@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import code.fortomorrow.animallover.R;
+
 import com.google.android.material.navigation.NavigationView;
 
 import code.fortomorrow.animallover.fragments.AboutFragment;
@@ -53,9 +54,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = findViewById(R.id.nav_view);
         View headerView = navigationView.getHeaderView(0);
         TextView headerText = (TextView) headerView.findViewById(R.id.tv_profile_name);
-        if (SharedPref.read("LOGGEDIN", "").contains("Y") && !SharedPref.read("Phone", "").isEmpty()) {
-            headerText.setText(SharedPref.read("Phone", ""));
-        }
 
         toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("Home");
@@ -64,11 +62,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         actionBarDrawerToggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(HomeActivity.this);
-        if (SharedPref.read("LOGGEDIN", "").contains("Y")) {
-            navigationView.getMenu().setGroupVisible(R.id.grouplogin, false);
 
-            navigationView.getMenu().setGroupVisible(R.id.groupmyprofile, true);
-        }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             actionBarDrawerToggle.getDrawerArrowDrawable().setColor(getColor(R.color.white));
         } else {
@@ -93,21 +87,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         if (id == R.id.my_profile) {
             startActivity(new Intent(HomeActivity.this, MyprofileActivity.class));
         }
-        if (id == R.id.log_out) {
-            SharedPref.write("Visited", "");
-            SharedPref.write("LOGGEDIN", "");
-            startActivity(new Intent(this, MainActivity.class));
-        }
         if (id == R.id.nav_home) {
             toolbar.setTitle("Home");
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.framelayout, new HomeFragment());
             ft.commit();
-        } else if (id == R.id.log_in) {
-
-            startActivity(new Intent(HomeActivity.this, LoginActivity.class));
-
-        } else if (id == R.id.settings) {
+        }
+        else if (id == R.id.settings) {
 
         } else if (id == R.id.feedback) {
             String[] TO = {""};

@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import code.fortomorrow.animallover.ui.LoginActivity;
 import code.fortomorrow.animallover.R;
 import code.fortomorrow.animallover.utils.SharedPref;
 
@@ -41,14 +40,14 @@ public class ChildFragment2 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         iAmanewuserTV= view.findViewById(R.id.iAmanewuserTV);
         ihaveanaccountTV = view.findViewById(R.id.ihaveanaccountTV);
-        iAmanewuserTV.setOnClickListener(v -> {
-            SharedPref.write("UserStatus","SignUp");
-            startActivity(new Intent(getActivity(),LoginActivity.class));
-//                ((MainActivity)getActivity()).nextfragment();
-        });
-        ihaveanaccountTV.setOnClickListener(v -> {
-            SharedPref.write("UserStatus","SignIn");
-            startActivity(new Intent(getActivity(),LoginActivity.class));
-        });
+//        iAmanewuserTV.setOnClickListener(v -> {
+//            SharedPref.write("UserStatus","SignUp");
+//            startActivity(new Intent(getActivity(),LoginActivity.class));
+////                ((MainActivity)getActivity()).nextfragment();
+//        });
+//        ihaveanaccountTV.setOnClickListener(v -> {
+//            SharedPref.write("UserStatus","SignIn");
+//            startActivity(new Intent(getActivity(),LoginActivity.class));
+//        });
     }
 }
