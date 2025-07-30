@@ -78,24 +78,16 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.reqOrders) {
-            startActivity(new Intent(HomeActivity.this, MyRequestActivity.class));
-        }
-        if (id == R.id.myOrders) {
-            startActivity(new Intent(HomeActivity.this, MyOrdersActivity.class));
-        }
         if (id == R.id.my_profile) {
             startActivity(new Intent(HomeActivity.this, MyprofileActivity.class));
         }
-        if (id == R.id.nav_home) {
+       else if (id == R.id.nav_home) {
             toolbar.setTitle("Home");
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.framelayout, new HomeFragment());
             ft.commit();
         }
-        else if (id == R.id.settings) {
-
-        } else if (id == R.id.feedback) {
+        else if (id == R.id.feedback) {
             String[] TO = {""};
             String[] CC = {""};
             Intent emailIntent = new Intent(Intent.ACTION_SEND);

@@ -43,24 +43,6 @@
 
 
     <group
-        android:id="@+id/ga"
-        android:checkableBehavior="single">
-        <item
-            android:visible="true"
-            android:id="@+id/myOrders"
-            android:icon="@drawable/ic_baseline_person_24"
-            android:title="My Order's" />
-    </group>
-    <group
-        android:id="@+id/a"
-        android:checkableBehavior="single">
-        <item
-            android:visible="true"
-            android:id="@+id/reqOrders"
-            android:icon="@drawable/ic_baseline_person_24"
-            android:title="Order's Request" />
-    </group>
-    <group
         android:id="@+id/group2"
         android:checkableBehavior="single">
         <item

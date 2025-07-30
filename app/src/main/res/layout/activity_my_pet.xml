@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/ThemeOverlay.Material3.Light"
     tools:context=".ui.MyPetActivity">
 
     <ScrollView
@@ -105,14 +105,11 @@
                 android:weightSum="3">
 
 
-
-
                 <EditText
                     android:id="@+id/petBirthDay"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:hint="Birthday" />
-
 
 
                 <EditText
@@ -126,12 +123,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:hint="Notes" />
+
                 <EditText
+                    android:id="@+id/yourplaceET"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
-                    android:id="@+id/yourplaceET"
-                    android:hint="Your Place"
-                    />
+                    android:hint="Your Place" />
             </LinearLayout>
 
         </LinearLayout>
@@ -139,13 +136,13 @@
 
     <TextView
         android:id="@+id/savePetDetails"
-        android:textColor="@color/white"
-        android:background="@color/red"
-        android:padding="15dp"
-        android:textSize="15sp"
-        android:textAlignment="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:padding="15dp"
         android:text="Save"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/scrollView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

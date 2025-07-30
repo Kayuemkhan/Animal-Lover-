@@ -2,30 +2,306 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/overlay_dark_10"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.AboutFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- App Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Animal Lover"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/indigo_A700"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Images Copied from"
+            android:text="Your Complete Pet Care Companion"
+            android:textSize="16sp"
+            android:textColor="@color/grey_60"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
 
-            />
+        <!-- App Description -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About This App"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Animal Lover is your all-in-one pet care application designed to help you provide the best care for your beloved pets. Whether you're a new pet owner or an experienced animal lover, our app provides essential tools and information to keep your pets healthy and happy."
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:lineSpacing="1.2"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Features Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Key Features"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Feature 1: My Pet Set -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:background="@color/primary2"
+                android:layout_marginEnd="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🐾 My Pet Profile"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary2"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Create detailed profiles for all your pets including their personal information, photos, birthday, color, and important notes. Keep all your pet's information organized in one place."
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:lineSpacing="1.1" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Feature 2: Pet Disease -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:background="@color/primary2"
+                android:layout_marginEnd="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🏥 Pet Health & Disease Guide"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary2"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Access comprehensive information about common pet diseases, symptoms, and health conditions. Stay informed about your pet's health and know when to seek veterinary care."
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:lineSpacing="1.1" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Feature 3: Pet Food -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:background="@color/primary2"
+                android:layout_marginEnd="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🍖 Pet Nutrition Guide"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary2"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Discover the best nutrition options for your pets. Learn about proper feeding schedules, recommended foods, dietary requirements, and foods to avoid for different types of pets."
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:lineSpacing="1.1" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Feature 4: Professional Links -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:background="@color/primary2"
+                android:layout_marginEnd="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="👨‍⚕️ Pet Professional Network"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary2"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Connect with trusted veterinarians, pet trainers, groomers, and other pet care professionals in your area. Find the right expert for your pet's specific needs."
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:lineSpacing="1.1" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_40"
+            android:layout_marginVertical="16dp" />
+
+        <!-- Mission Statement -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Our Mission"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We believe that every pet deserves the best care possible. Our mission is to empower pet owners with the knowledge, tools, and connections they need to provide exceptional care for their furry, feathered, and scaled family members."
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:lineSpacing="1.2"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_40"
+            android:layout_marginVertical="16dp" />
+
+        <!-- Credits Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Credits & Acknowledgments"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Images sourced from:"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Pexels.com - Free stock photography"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="4dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="https://www.pexels.com/photo/brown-squirrel-47547/"
+            android:textSize="12sp"
+            android:textColor="@color/primary2"
+            android:autoLink="web"
+            android:layout_marginBottom="16dp" />
 
-            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We thank all photographers and contributors who make their work available for projects like ours."
+            android:textSize="14sp"
+            android:textColor="@color/grey_60"
+            android:lineSpacing="1.1"
+            android:layout_marginBottom="24dp" />
 
+        <!-- Version Info -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Version 1.0"
+            android:textSize="12sp"
+            android:textColor="@color/grey_60"
+            android:gravity="center"
+            android:layout_marginTop="16dp" />
 
     </LinearLayout>
 
