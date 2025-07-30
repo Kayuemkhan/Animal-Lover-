@@ -80,14 +80,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
         if (id == R.id.my_profile) {
             startActivity(new Intent(HomeActivity.this, MyprofileActivity.class));
-        }
-       else if (id == R.id.nav_home) {
+        } else if (id == R.id.nav_home) {
             toolbar.setTitle("Home");
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.framelayout, new HomeFragment());
             ft.commit();
-        }
-        else if (id == R.id.feedback) {
+        } else if (id == R.id.feedback) {
             String[] TO = {""};
             String[] CC = {""};
             Intent emailIntent = new Intent(Intent.ACTION_SEND);
@@ -107,21 +105,34 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(HomeActivity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
             }
         } else if (id == R.id.share) {
-            String[] TO = {""};
-            String[] CC = {""};
-            Intent emailIntent = new Intent(Intent.ACTION_SEND);
+            // Create share intent for the Animal Lover app
+            Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            shareIntent.setType("text/plain");
 
-            emailIntent.setData(Uri.parse("mailto:"));
-            emailIntent.setType("text/plain");
-            emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
-            emailIntent.putExtra(Intent.EXTRA_CC, CC);
-            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Your subject");
-            emailIntent.putExtra(Intent.EXTRA_TEXT, "Email message goes here");
+            // App details
+            String appName = "Animal Lover";
+            String appDescription = "Your Complete Pet Care Companion";
+            String playStoreLink = "https://play.google.com/store/apps/details?id=" + getPackageName();
+
+            // Share message
+            String shareMessage = "🐾 Check out " + appName + "!\n\n" +
+                    appDescription + "\n\n" +
+                    "Features:\n" +
+                    "• 🐾 Create detailed pet profiles\n" +
+                    "• 🏥 Pet health & disease guide\n" +
+                    "• 🍖 Pet nutrition information\n" +
+                    "• 👨‍⚕️ Connect with pet professionals\n\n" +
+                    "Download now: " + playStoreLink + "\n\n" +
+                    "#AnimalLover #PetCare #PetApp";
+
+            shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
+            shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Check out " + appName + " - Pet Care App!");
+
             try {
-                startActivity(Intent.createChooser(emailIntent, "Send mail..."));
-                Log.i("Finished sending email...", "");
+                startActivity(Intent.createChooser(shareIntent, "Share " + appName + " via..."));
+                Log.i("Share", "App shared successfully");
             } catch (android.content.ActivityNotFoundException ex) {
-                Toast.makeText(HomeActivity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(HomeActivity.this, "No app available to share", Toast.LENGTH_SHORT).show();
             }
         } else if (id == R.id.about) {
             toolbar.setTitle("About");

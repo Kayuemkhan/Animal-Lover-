@@ -21,7 +21,7 @@
             android:text="Animal Lover"
             android:textSize="28sp"
             android:textStyle="bold"
-            android:textColor="@color/indigo_A700"
+            android:textColor="@color/primary2"
             android:gravity="center"
             android:layout_marginBottom="8dp" />
 
@@ -50,7 +50,7 @@
             android:text="Animal Lover is your all-in-one pet care application designed to help you provide the best care for your beloved pets. Whether you're a new pet owner or an experienced animal lover, our app provides essential tools and information to keep your pets healthy and happy."
             android:textSize="14sp"
             android:textColor="@color/black"
-            android:lineSpacing="1.2"
+            android:lineSpacingExtra="4dp"
             android:layout_marginBottom="24dp" />
 
         <!-- Features Section -->
@@ -96,7 +96,7 @@
                     android:text="Create detailed profiles for all your pets including their personal information, photos, birthday, color, and important notes. Keep all your pet's information organized in one place."
                     android:textSize="14sp"
                     android:textColor="@color/black"
-                    android:lineSpacing="1.1" />
+                    android:lineSpacingExtra="2dp" />
 
             </LinearLayout>
         </LinearLayout>
@@ -122,7 +122,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="🏥 Pet Health & Disease Guide"
+                    android:text="🏥 Pet Health  Disease Guide"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@color/primary2"
@@ -134,7 +134,7 @@
                     android:text="Access comprehensive information about common pet diseases, symptoms, and health conditions. Stay informed about your pet's health and know when to seek veterinary care."
                     android:textSize="14sp"
                     android:textColor="@color/black"
-                    android:lineSpacing="1.1" />
+                    android:lineSpacingExtra="2dp" />
 
             </LinearLayout>
         </LinearLayout>
@@ -172,7 +172,7 @@
                     android:text="Discover the best nutrition options for your pets. Learn about proper feeding schedules, recommended foods, dietary requirements, and foods to avoid for different types of pets."
                     android:textSize="14sp"
                     android:textColor="@color/black"
-                    android:lineSpacing="1.1" />
+                    android:lineSpacingExtra="2dp" />
 
             </LinearLayout>
         </LinearLayout>
@@ -210,7 +210,7 @@
                     android:text="Connect with trusted veterinarians, pet trainers, groomers, and other pet care professionals in your area. Find the right expert for your pet's specific needs."
                     android:textSize="14sp"
                     android:textColor="@color/black"
-                    android:lineSpacing="1.1" />
+                    android:lineSpacingExtra="2dp" />
 
             </LinearLayout>
         </LinearLayout>
@@ -238,7 +238,7 @@
             android:text="We believe that every pet deserves the best care possible. Our mission is to empower pet owners with the knowledge, tools, and connections they need to provide exceptional care for their furry, feathered, and scaled family members."
             android:textSize="14sp"
             android:textColor="@color/black"
-            android:lineSpacing="1.2"
+            android:lineSpacingExtra="4dp"
             android:layout_marginBottom="24dp" />
 
         <!-- Divider -->
@@ -252,7 +252,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Credits & Acknowledgments"
+            android:text="Credits  Acknowledgments"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/black"
@@ -290,7 +290,7 @@
             android:text="We thank all photographers and contributors who make their work available for projects like ours."
             android:textSize="14sp"
             android:textColor="@color/grey_60"
-            android:lineSpacing="1.1"
+            android:lineSpacingExtra="4dp"
             android:layout_marginBottom="24dp" />
 
         <!-- Version Info -->
