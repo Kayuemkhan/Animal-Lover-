@@ -24,11 +24,12 @@
           "other_platform_oauth_client": []
         }
       }
-    },    {
+    },
+    {
       "client_info": {
         "mobilesdk_app_id": "1:599450493680:android:ed4d2bd8b5f81cdb171835",
         "android_client_info": {
-          "package_name": "com.enca.grtlrfbl"
+          "package_name": "com.arnodo.msclblntr"
         }
       },
       "oauth_client": [],

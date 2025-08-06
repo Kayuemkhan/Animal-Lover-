@@ -26,7 +26,7 @@
                 android:layout_width="@dimen/_300sdp"
                 android:layout_height="@dimen/_200sdp"
                 android:layout_gravity="center"
-                android:src="@drawable/icon"
+                android:src="@drawable/play_store_512"
 
                 />
 
